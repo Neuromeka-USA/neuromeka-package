@@ -10,3 +10,6 @@
 **/*.bak
 **/*.bk
 **/*.egg-info/
+grpc_protos_new
+cpp/proto_backup
+cpp/neuromeka_cpp/reconstructed_protos
