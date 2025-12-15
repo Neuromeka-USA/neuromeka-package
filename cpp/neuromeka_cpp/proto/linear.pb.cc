@@ -4,338 +4,284 @@
 #include "linear.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
-// @@protoc_insertion_point(includes)
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
+// @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace Nrmk {
 namespace IndyFramework {
-        template <typename>
-PROTOBUF_CONSTEXPR LinearTarget::LinearTarget(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.start_mm_)*/ {},
-      /*decltype(_impl_.target_mm_)*/ {},
-      /*decltype(_impl_.vel_mm_)*/ 0,
-      /*decltype(_impl_.acc_mm_)*/ 0,
-      /*decltype(_impl_.is_absolute_)*/ false,
-      /*decltype(_impl_.teaching_mode_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_CONSTEXPR LinearTarget::LinearTarget(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.start_mm_)*/{}
+  , /*decltype(_impl_.target_mm_)*/{}
+  , /*decltype(_impl_.vel_mm_)*/0
+  , /*decltype(_impl_.acc_mm_)*/0
+  , /*decltype(_impl_.is_absolute_)*/false
+  , /*decltype(_impl_.teaching_mode_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LinearTargetDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR LinearTargetDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LinearTargetDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~LinearTargetDefaultTypeInternal() {}
   union {
     LinearTarget _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LinearTargetDefaultTypeInternal _LinearTarget_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR TargetTorque::TargetTorque(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.target_nm_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LinearTargetDefaultTypeInternal _LinearTarget_default_instance_;
+PROTOBUF_CONSTEXPR TargetTorque::TargetTorque(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.target_nm_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct TargetTorqueDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR TargetTorqueDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TargetTorqueDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~TargetTorqueDefaultTypeInternal() {}
   union {
     TargetTorque _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TargetTorqueDefaultTypeInternal _TargetTorque_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ControlGains::ControlGains(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.index_)*/ 0u,
-      /*decltype(_impl_.kp_)*/ 0,
-      /*decltype(_impl_.kv_)*/ 0,
-      /*decltype(_impl_.ki_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TargetTorqueDefaultTypeInternal _TargetTorque_default_instance_;
+PROTOBUF_CONSTEXPR ControlGains::ControlGains(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.index_)*/0u
+  , /*decltype(_impl_.kp_)*/0
+  , /*decltype(_impl_.kv_)*/0
+  , /*decltype(_impl_.ki_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ControlGainsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ControlGainsDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ControlGainsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ControlGainsDefaultTypeInternal() {}
   union {
     ControlGains _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ControlGainsDefaultTypeInternal _ControlGains_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR Index::Index(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.index_)*/ 0u,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ControlGainsDefaultTypeInternal _ControlGains_default_instance_;
+PROTOBUF_CONSTEXPR Index::Index(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.index_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IndexDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR IndexDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR IndexDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~IndexDefaultTypeInternal() {}
   union {
     Index _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IndexDefaultTypeInternal _Index_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR LinearAxisServoData::LinearAxisServoData(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.index_)*/ 0u,
-      /*decltype(_impl_.zero_pos_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IndexDefaultTypeInternal _Index_default_instance_;
+PROTOBUF_CONSTEXPR LinearAxisServoData::LinearAxisServoData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.index_)*/0u
+  , /*decltype(_impl_.zero_pos_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LinearAxisServoDataDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR LinearAxisServoDataDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LinearAxisServoDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~LinearAxisServoDataDefaultTypeInternal() {}
   union {
     LinearAxisServoData _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LinearAxisServoDataDefaultTypeInternal _LinearAxisServoData_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR AxesInfo::AxesInfo(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.active_)*/ {},
-      /*decltype(_impl_.pos_mm_)*/ {},
-      /*decltype(_impl_.vel_mm_)*/ {},
-      /*decltype(_impl_.despos_mm_)*/ {},
-      /*decltype(_impl_.desvel_mm_)*/ {},
-      /*decltype(_impl_.desacc_mm_)*/ {},
-      /*decltype(_impl_.axis_type_)*/ {},
-      /*decltype(_impl_._axis_type_cached_byte_size_)*/ {0},
-      /*decltype(_impl_.num_axes_)*/ 0u,
-      /*decltype(_impl_.op_state_)*/ 0,
-      /*decltype(_impl_.traj_state_)*/ 0,
-      /*decltype(_impl_.recover_time_)*/ 0,
-      /*decltype(_impl_.is_target_reached_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LinearAxisServoDataDefaultTypeInternal _LinearAxisServoData_default_instance_;
+PROTOBUF_CONSTEXPR AxesInfo::AxesInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.active_)*/{}
+  , /*decltype(_impl_.pos_mm_)*/{}
+  , /*decltype(_impl_.vel_mm_)*/{}
+  , /*decltype(_impl_.despos_mm_)*/{}
+  , /*decltype(_impl_.desvel_mm_)*/{}
+  , /*decltype(_impl_.desacc_mm_)*/{}
+  , /*decltype(_impl_.axis_type_)*/{}
+  , /*decltype(_impl_._axis_type_cached_byte_size_)*/{0}
+  , /*decltype(_impl_.num_axes_)*/0u
+  , /*decltype(_impl_.op_state_)*/0
+  , /*decltype(_impl_.traj_state_)*/0
+  , /*decltype(_impl_.recover_time_)*/0
+  , /*decltype(_impl_.is_target_reached_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct AxesInfoDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AxesInfoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AxesInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~AxesInfoDefaultTypeInternal() {}
   union {
     AxesInfo _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AxesInfoDefaultTypeInternal _AxesInfo_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AxesInfoDefaultTypeInternal _AxesInfo_default_instance_;
 }  // namespace IndyFramework
 }  // namespace Nrmk
 static ::_pb::Metadata file_level_metadata_linear_2eproto[6];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_linear_2eproto[2];
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_linear_2eproto = nullptr;
-const ::uint32_t TableStruct_linear_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.start_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.target_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.vel_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.acc_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.is_absolute_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.teaching_mode_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::TargetTorque, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::TargetTorque, _impl_.target_nm_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.index_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.kp_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.kv_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.ki_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::Index, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::Index, _impl_.index_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _impl_.index_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _impl_.zero_pos_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.active_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.pos_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.vel_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.despos_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.desvel_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.desacc_mm_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.num_axes_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.op_state_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.traj_state_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.recover_time_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.axis_type_),
-    PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.is_target_reached_),
-};
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_linear_2eproto = nullptr;
 
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::Nrmk::IndyFramework::LinearTarget)},
-        {14, -1, -1, sizeof(::Nrmk::IndyFramework::TargetTorque)},
-        {23, -1, -1, sizeof(::Nrmk::IndyFramework::ControlGains)},
-        {35, -1, -1, sizeof(::Nrmk::IndyFramework::Index)},
-        {44, -1, -1, sizeof(::Nrmk::IndyFramework::LinearAxisServoData)},
-        {54, -1, -1, sizeof(::Nrmk::IndyFramework::AxesInfo)},
+const uint32_t TableStruct_linear_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.start_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.target_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.vel_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.acc_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.is_absolute_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearTarget, _impl_.teaching_mode_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::TargetTorque, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::TargetTorque, _impl_.target_nm_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.index_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.kp_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.kv_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::ControlGains, _impl_.ki_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::Index, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::Index, _impl_.index_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _impl_.index_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::LinearAxisServoData, _impl_.zero_pos_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.active_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.pos_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.vel_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.despos_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.desvel_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.desacc_mm_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.num_axes_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.op_state_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.traj_state_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.recover_time_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.axis_type_),
+  PROTOBUF_FIELD_OFFSET(::Nrmk::IndyFramework::AxesInfo, _impl_.is_target_reached_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::Nrmk::IndyFramework::LinearTarget)},
+  { 12, -1, -1, sizeof(::Nrmk::IndyFramework::TargetTorque)},
+  { 19, -1, -1, sizeof(::Nrmk::IndyFramework::ControlGains)},
+  { 29, -1, -1, sizeof(::Nrmk::IndyFramework::Index)},
+  { 36, -1, -1, sizeof(::Nrmk::IndyFramework::LinearAxisServoData)},
+  { 44, -1, -1, sizeof(::Nrmk::IndyFramework::AxesInfo)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::Nrmk::IndyFramework::_LinearTarget_default_instance_._instance,
-    &::Nrmk::IndyFramework::_TargetTorque_default_instance_._instance,
-    &::Nrmk::IndyFramework::_ControlGains_default_instance_._instance,
-    &::Nrmk::IndyFramework::_Index_default_instance_._instance,
-    &::Nrmk::IndyFramework::_LinearAxisServoData_default_instance_._instance,
-    &::Nrmk::IndyFramework::_AxesInfo_default_instance_._instance,
-};
-const char descriptor_table_protodef_linear_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\014linear.proto\022\022Nrmk.IndyFramework\032\021comm"
-    "on_msgs.proto\"\177\n\014LinearTarget\022\020\n\010start_m"
-    "m\030\001 \003(\002\022\021\n\ttarget_mm\030\002 \003(\002\022\016\n\006vel_mm\030\003 \001"
-    "(\002\022\016\n\006acc_mm\030\004 \001(\002\022\023\n\013is_absolute\030\005 \001(\010\022"
-    "\025\n\rteaching_mode\030\n \001(\010\"!\n\014TargetTorque\022\021"
-    "\n\ttarget_nm\030\001 \001(\002\"A\n\014ControlGains\022\r\n\005ind"
-    "ex\030\001 \001(\r\022\n\n\002kp\030\002 \001(\002\022\n\n\002kv\030\003 \001(\002\022\n\n\002ki\030\004"
-    " \001(\002\"\026\n\005Index\022\r\n\005index\030\001 \001(\r\"6\n\023LinearAx"
-    "isServoData\022\r\n\005index\030\001 \001(\r\022\020\n\010zero_pos\030\002"
-    " \001(\002\"\242\005\n\010AxesInfo\022\016\n\006active\030\001 \003(\010\022\016\n\006pos"
-    "_mm\030\002 \003(\002\022\016\n\006vel_mm\030\003 \003(\002\022\021\n\tdespos_mm\030\004"
-    " \003(\002\022\021\n\tdesvel_mm\030\005 \003(\002\022\021\n\tdesacc_mm\030\006 \003"
-    "(\002\022\020\n\010num_axes\030\n \001(\r\0226\n\010op_state\030\013 \001(\0162$"
-    ".Nrmk.IndyFramework.AxesInfo.OpState\022:\n\n"
-    "traj_state\030\014 \001(\0162&.Nrmk.IndyFramework.Ax"
-    "esInfo.TrajState\022\024\n\014recover_time\030\r \001(\002\022/"
-    "\n\taxis_type\030\020 \003(\0162\034.Nrmk.IndyFramework.A"
-    "xisType\022\031\n\021is_target_reached\030\024 \001(\010\"\245\001\n\007O"
-    "pState\022\016\n\nSYSTEM_OFF\020\000\022\r\n\tSYSTEM_ON\020\001\022\013\n"
-    "\007VIOLATE\020\002\022\020\n\014RECOVER_HARD\020\003\022\020\n\014RECOVER_"
-    "SOFT\020\004\022\010\n\004IDLE\020\005\022\n\n\006MOVING\020\006\022\013\n\007PAUSING\020"
-    "\007\022\023\n\017COLLISION_PAUSE\020\010\022\022\n\016COLLISION_STOP"
-    "\020\t\"\234\001\n\tTrajState\022\r\n\tTRAJ_NONE\020\000\022\r\n\tTRAJ_"
-    "INIT\020\001\022\r\n\tTRAJ_CALC\020\002\022\r\n\tTRAJ_STBY\020\003\022\014\n\010"
-    "TRAJ_ACC\020\004\022\014\n\010TRAJ_CRZ\020\005\022\014\n\010TRAJ_DEC\020\006\022\r"
-    "\n\tTRAJ_CANC\020\007\022\014\n\010TRAJ_FIN\020\010\022\014\n\010TRAJ_ERR\020"
-    "\t2\207\007\n\rLinearControl\022H\n\013SetServoAll\022\031.Nrm"
-    "k.IndyFramework.State\032\034.Nrmk.IndyFramewo"
-    "rk.Response\"\000\022N\n\nMoveLinear\022 .Nrmk.IndyF"
-    "ramework.LinearTarget\032\034.Nrmk.IndyFramewo"
-    "rk.Response\"\000\022I\n\nStopMotion\022\033.Nrmk.IndyF"
-    "ramework.StopCat\032\034.Nrmk.IndyFramework.Re"
-    "sponse\"\000\022K\n\013PauseMotion\022\034.Nrmk.IndyFrame"
-    "work.PauseCat\032\034.Nrmk.IndyFramework.Respo"
-    "nse\"\000\022I\n\014ResumeMotion\022\031.Nrmk.IndyFramewo"
-    "rk.Empty\032\034.Nrmk.IndyFramework.Response\"\000"
-    "\022H\n\013GetAxesInfo\022\031.Nrmk.IndyFramework.Emp"
-    "ty\032\034.Nrmk.IndyFramework.AxesInfo\"\000\022S\n\017Se"
-    "tTargetTorque\022 .Nrmk.IndyFramework.Targe"
-    "tTorque\032\034.Nrmk.IndyFramework.Response\"\000\022"
-    "S\n\017SetControlGains\022 .Nrmk.IndyFramework."
-    "ControlGains\032\034.Nrmk.IndyFramework.Respon"
-    "se\"\000\022P\n\017GetControlGains\022\031.Nrmk.IndyFrame"
-    "work.Index\032 .Nrmk.IndyFramework.ControlG"
-    "ains\"\000\022Z\n\017SetZeroPosition\022\'.Nrmk.IndyFra"
-    "mework.LinearAxisServoData\032\034.Nrmk.IndyFr"
-    "amework.Response\"\000\022W\n\017GetZeroPosition\022\031."
-    "Nrmk.IndyFramework.Empty\032\'.Nrmk.IndyFram"
-    "ework.LinearAxisServoData\"\000b\006proto3"
-};
-static const ::_pbi::DescriptorTable* const descriptor_table_linear_2eproto_deps[1] =
-    {
-        &::descriptor_table_common_5fmsgs_2eproto,
-};
-static ::absl::once_flag descriptor_table_linear_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_linear_2eproto = {
-    false,
-    false,
-    1955,
-    descriptor_table_protodef_linear_2eproto,
-    "linear.proto",
-    &descriptor_table_linear_2eproto_once,
-    descriptor_table_linear_2eproto_deps,
-    1,
-    6,
-    schemas,
-    file_default_instances,
-    TableStruct_linear_2eproto::offsets,
-    file_level_metadata_linear_2eproto,
-    file_level_enum_descriptors_linear_2eproto,
-    file_level_service_descriptors_linear_2eproto,
+  &::Nrmk::IndyFramework::_LinearTarget_default_instance_._instance,
+  &::Nrmk::IndyFramework::_TargetTorque_default_instance_._instance,
+  &::Nrmk::IndyFramework::_ControlGains_default_instance_._instance,
+  &::Nrmk::IndyFramework::_Index_default_instance_._instance,
+  &::Nrmk::IndyFramework::_LinearAxisServoData_default_instance_._instance,
+  &::Nrmk::IndyFramework::_AxesInfo_default_instance_._instance,
 };
 
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
+const char descriptor_table_protodef_linear_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\014linear.proto\022\022Nrmk.IndyFramework\032\021comm"
+  "on_msgs.proto\"\177\n\014LinearTarget\022\020\n\010start_m"
+  "m\030\001 \003(\002\022\021\n\ttarget_mm\030\002 \003(\002\022\016\n\006vel_mm\030\003 \001"
+  "(\002\022\016\n\006acc_mm\030\004 \001(\002\022\023\n\013is_absolute\030\005 \001(\010\022"
+  "\025\n\rteaching_mode\030\n \001(\010\"!\n\014TargetTorque\022\021"
+  "\n\ttarget_nm\030\001 \001(\002\"A\n\014ControlGains\022\r\n\005ind"
+  "ex\030\001 \001(\r\022\n\n\002kp\030\002 \001(\002\022\n\n\002kv\030\003 \001(\002\022\n\n\002ki\030\004"
+  " \001(\002\"\026\n\005Index\022\r\n\005index\030\001 \001(\r\"6\n\023LinearAx"
+  "isServoData\022\r\n\005index\030\001 \001(\r\022\020\n\010zero_pos\030\002"
+  " \001(\002\"\242\005\n\010AxesInfo\022\016\n\006active\030\001 \003(\010\022\016\n\006pos"
+  "_mm\030\002 \003(\002\022\016\n\006vel_mm\030\003 \003(\002\022\021\n\tdespos_mm\030\004"
+  " \003(\002\022\021\n\tdesvel_mm\030\005 \003(\002\022\021\n\tdesacc_mm\030\006 \003"
+  "(\002\022\020\n\010num_axes\030\n \001(\r\0226\n\010op_state\030\013 \001(\0162$"
+  ".Nrmk.IndyFramework.AxesInfo.OpState\022:\n\n"
+  "traj_state\030\014 \001(\0162&.Nrmk.IndyFramework.Ax"
+  "esInfo.TrajState\022\024\n\014recover_time\030\r \001(\002\022/"
+  "\n\taxis_type\030\020 \003(\0162\034.Nrmk.IndyFramework.A"
+  "xisType\022\031\n\021is_target_reached\030\024 \001(\010\"\245\001\n\007O"
+  "pState\022\016\n\nSYSTEM_OFF\020\000\022\r\n\tSYSTEM_ON\020\001\022\013\n"
+  "\007VIOLATE\020\002\022\020\n\014RECOVER_HARD\020\003\022\020\n\014RECOVER_"
+  "SOFT\020\004\022\010\n\004IDLE\020\005\022\n\n\006MOVING\020\006\022\013\n\007PAUSING\020"
+  "\007\022\023\n\017COLLISION_PAUSE\020\010\022\022\n\016COLLISION_STOP"
+  "\020\t\"\234\001\n\tTrajState\022\r\n\tTRAJ_NONE\020\000\022\r\n\tTRAJ_"
+  "INIT\020\001\022\r\n\tTRAJ_CALC\020\002\022\r\n\tTRAJ_STBY\020\003\022\014\n\010"
+  "TRAJ_ACC\020\004\022\014\n\010TRAJ_CRZ\020\005\022\014\n\010TRAJ_DEC\020\006\022\r"
+  "\n\tTRAJ_CANC\020\007\022\014\n\010TRAJ_FIN\020\010\022\014\n\010TRAJ_ERR\020"
+  "\t2\207\007\n\rLinearControl\022H\n\013SetServoAll\022\031.Nrm"
+  "k.IndyFramework.State\032\034.Nrmk.IndyFramewo"
+  "rk.Response\"\000\022N\n\nMoveLinear\022 .Nrmk.IndyF"
+  "ramework.LinearTarget\032\034.Nrmk.IndyFramewo"
+  "rk.Response\"\000\022I\n\nStopMotion\022\033.Nrmk.IndyF"
+  "ramework.StopCat\032\034.Nrmk.IndyFramework.Re"
+  "sponse\"\000\022K\n\013PauseMotion\022\034.Nrmk.IndyFrame"
+  "work.PauseCat\032\034.Nrmk.IndyFramework.Respo"
+  "nse\"\000\022I\n\014ResumeMotion\022\031.Nrmk.IndyFramewo"
+  "rk.Empty\032\034.Nrmk.IndyFramework.Response\"\000"
+  "\022H\n\013GetAxesInfo\022\031.Nrmk.IndyFramework.Emp"
+  "ty\032\034.Nrmk.IndyFramework.AxesInfo\"\000\022S\n\017Se"
+  "tTargetTorque\022 .Nrmk.IndyFramework.Targe"
+  "tTorque\032\034.Nrmk.IndyFramework.Response\"\000\022"
+  "S\n\017SetControlGains\022 .Nrmk.IndyFramework."
+  "ControlGains\032\034.Nrmk.IndyFramework.Respon"
+  "se\"\000\022P\n\017GetControlGains\022\031.Nrmk.IndyFrame"
+  "work.Index\032 .Nrmk.IndyFramework.ControlG"
+  "ains\"\000\022Z\n\017SetZeroPosition\022\'.Nrmk.IndyFra"
+  "mework.LinearAxisServoData\032\034.Nrmk.IndyFr"
+  "amework.Response\"\000\022W\n\017GetZeroPosition\022\031."
+  "Nrmk.IndyFramework.Empty\032\'.Nrmk.IndyFram"
+  "ework.LinearAxisServoData\"\000b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_linear_2eproto_deps[1] = {
+  &::descriptor_table_common_5fmsgs_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_linear_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_linear_2eproto = {
+    false, false, 1955, descriptor_table_protodef_linear_2eproto,
+    "linear.proto",
+    &descriptor_table_linear_2eproto_once, descriptor_table_linear_2eproto_deps, 1, 6,
+    schemas, file_default_instances, TableStruct_linear_2eproto::offsets,
+    file_level_metadata_linear_2eproto, file_level_enum_descriptors_linear_2eproto,
+    file_level_service_descriptors_linear_2eproto,
+};
 PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_linear_2eproto_getter() {
   return &descriptor_table_linear_2eproto;
 }
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_linear_2eproto(&descriptor_table_linear_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_linear_2eproto(&descriptor_table_linear_2eproto);
 namespace Nrmk {
 namespace IndyFramework {
-const ::google::protobuf::EnumDescriptor* AxesInfo_OpState_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&descriptor_table_linear_2eproto);
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AxesInfo_OpState_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_linear_2eproto);
   return file_level_enum_descriptors_linear_2eproto[0];
 }
 bool AxesInfo_OpState_IsValid(int value) {
@@ -355,9 +301,8 @@ bool AxesInfo_OpState_IsValid(int value) {
       return false;
   }
 }
-#if (__cplusplus < 201703) && \
-  (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 constexpr AxesInfo_OpState AxesInfo::SYSTEM_OFF;
 constexpr AxesInfo_OpState AxesInfo::SYSTEM_ON;
 constexpr AxesInfo_OpState AxesInfo::VIOLATE;
@@ -371,11 +316,9 @@ constexpr AxesInfo_OpState AxesInfo::COLLISION_STOP;
 constexpr AxesInfo_OpState AxesInfo::OpState_MIN;
 constexpr AxesInfo_OpState AxesInfo::OpState_MAX;
 constexpr int AxesInfo::OpState_ARRAYSIZE;
-
-#endif  // (__cplusplus < 201703) &&
-        // (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
-const ::google::protobuf::EnumDescriptor* AxesInfo_TrajState_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&descriptor_table_linear_2eproto);
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AxesInfo_TrajState_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_linear_2eproto);
   return file_level_enum_descriptors_linear_2eproto[1];
 }
 bool AxesInfo_TrajState_IsValid(int value) {
@@ -395,9 +338,8 @@ bool AxesInfo_TrajState_IsValid(int value) {
       return false;
   }
 }
-#if (__cplusplus < 201703) && \
-  (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 constexpr AxesInfo_TrajState AxesInfo::TRAJ_NONE;
 constexpr AxesInfo_TrajState AxesInfo::TRAJ_INIT;
 constexpr AxesInfo_TrajState AxesInfo::TRAJ_CALC;
@@ -411,153 +353,175 @@ constexpr AxesInfo_TrajState AxesInfo::TRAJ_ERR;
 constexpr AxesInfo_TrajState AxesInfo::TrajState_MIN;
 constexpr AxesInfo_TrajState AxesInfo::TrajState_MAX;
 constexpr int AxesInfo::TrajState_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
-#endif  // (__cplusplus < 201703) &&
-        // (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 // ===================================================================
 
 class LinearTarget::_Internal {
  public:
 };
 
-LinearTarget::LinearTarget(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+LinearTarget::LinearTarget(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.LinearTarget)
 }
-LinearTarget::LinearTarget(const LinearTarget& from) : ::google::protobuf::Message() {
-  LinearTarget* const _this = this;
-  (void)_this;
+LinearTarget::LinearTarget(const LinearTarget& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LinearTarget* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.start_mm_){from._impl_.start_mm_},
-      decltype(_impl_.target_mm_){from._impl_.target_mm_},
-      decltype(_impl_.vel_mm_){},
-      decltype(_impl_.acc_mm_){},
-      decltype(_impl_.is_absolute_){},
-      decltype(_impl_.teaching_mode_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  ::memcpy(&_impl_.vel_mm_, &from._impl_.vel_mm_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.teaching_mode_) -
-    reinterpret_cast<char*>(&_impl_.vel_mm_)) + sizeof(_impl_.teaching_mode_));
+      decltype(_impl_.start_mm_){from._impl_.start_mm_}
+    , decltype(_impl_.target_mm_){from._impl_.target_mm_}
+    , decltype(_impl_.vel_mm_){}
+    , decltype(_impl_.acc_mm_){}
+    , decltype(_impl_.is_absolute_){}
+    , decltype(_impl_.teaching_mode_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.vel_mm_, &from._impl_.vel_mm_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.teaching_mode_) -
+    reinterpret_cast<char*>(&_impl_.vel_mm_)) + sizeof(_impl_.teaching_mode_));
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.LinearTarget)
 }
-inline void LinearTarget::SharedCtor(::_pb::Arena* arena) {
+
+inline void LinearTarget::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.start_mm_){arena},
-      decltype(_impl_.target_mm_){arena},
-      decltype(_impl_.vel_mm_){0},
-      decltype(_impl_.acc_mm_){0},
-      decltype(_impl_.is_absolute_){false},
-      decltype(_impl_.teaching_mode_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.start_mm_){arena}
+    , decltype(_impl_.target_mm_){arena}
+    , decltype(_impl_.vel_mm_){0}
+    , decltype(_impl_.acc_mm_){0}
+    , decltype(_impl_.is_absolute_){false}
+    , decltype(_impl_.teaching_mode_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 LinearTarget::~LinearTarget() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.LinearTarget)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void LinearTarget::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.start_mm_.~RepeatedField();
   _impl_.target_mm_.~RepeatedField();
 }
+
 void LinearTarget::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void LinearTarget::Clear() {
+void LinearTarget::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.LinearTarget)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_start_mm()->Clear();
-  _internal_mutable_target_mm()->Clear();
-  ::memset(&_impl_.vel_mm_, 0, static_cast<::size_t>(
+  _impl_.start_mm_.Clear();
+  _impl_.target_mm_.Clear();
+  ::memset(&_impl_.vel_mm_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.teaching_mode_) -
       reinterpret_cast<char*>(&_impl_.vel_mm_)) + sizeof(_impl_.teaching_mode_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LinearTarget::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* LinearTarget::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated float start_mm = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_start_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 13) {
+          _internal_add_start_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float target_mm = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_target_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 21) {
+          _internal_add_target_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float vel_mm = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _impl_.vel_mm_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float acc_mm = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+          _impl_.acc_mm_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool is_absolute = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.is_absolute_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool teaching_mode = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _impl_.teaching_mode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 0, 0, 2> LinearTarget::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    10, 56,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294966752,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    6,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_LinearTarget_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // repeated float start_mm = 1;
-    {::_pbi::TcParser::FastF32P1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.start_mm_)}},
-    // repeated float target_mm = 2;
-    {::_pbi::TcParser::FastF32P1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.target_mm_)}},
-    // float vel_mm = 3;
-    {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.vel_mm_)}},
-    // float acc_mm = 4;
-    {::_pbi::TcParser::FastF32S1,
-     {37, 63, 0, PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.acc_mm_)}},
-    // bool is_absolute = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(LinearTarget, _impl_.is_absolute_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.is_absolute_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // repeated float start_mm = 1;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.start_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float target_mm = 2;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.target_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // float vel_mm = 3;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.vel_mm_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float acc_mm = 4;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.acc_mm_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // bool is_absolute = 5;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.is_absolute_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool teaching_mode = 10;
-    {PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.teaching_mode_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* LinearTarget::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* LinearTarget::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.LinearTarget)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // repeated float start_mm = 1;
   if (this->_internal_start_mm_size() > 0) {
@@ -570,146 +534,133 @@ const ::_pbi::TcParseTable<3, 6, 0, 0, 2> LinearTarget::_table_ = {
   }
 
   // float vel_mm = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_vel_mm = this->_internal_vel_mm();
-  ::uint32_t raw_vel_mm;
+  uint32_t raw_vel_mm;
   memcpy(&raw_vel_mm, &tmp_vel_mm, sizeof(tmp_vel_mm));
   if (raw_vel_mm != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        3, this->_internal_vel_mm(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_vel_mm(), target);
   }
 
   // float acc_mm = 4;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_acc_mm = this->_internal_acc_mm();
-  ::uint32_t raw_acc_mm;
+  uint32_t raw_acc_mm;
   memcpy(&raw_acc_mm, &tmp_acc_mm, sizeof(tmp_acc_mm));
   if (raw_acc_mm != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        4, this->_internal_acc_mm(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_acc_mm(), target);
   }
 
   // bool is_absolute = 5;
   if (this->_internal_is_absolute() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        5, this->_internal_is_absolute(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_is_absolute(), target);
   }
 
   // bool teaching_mode = 10;
   if (this->_internal_teaching_mode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        10, this->_internal_teaching_mode(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(10, this->_internal_teaching_mode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.LinearTarget)
   return target;
 }
 
-::size_t LinearTarget::ByteSizeLong() const {
+size_t LinearTarget::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.LinearTarget)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float start_mm = 1;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_start_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_start_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // repeated float target_mm = 2;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_target_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_target_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // float vel_mm = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_vel_mm = this->_internal_vel_mm();
-  ::uint32_t raw_vel_mm;
+  uint32_t raw_vel_mm;
   memcpy(&raw_vel_mm, &tmp_vel_mm, sizeof(tmp_vel_mm));
   if (raw_vel_mm != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // float acc_mm = 4;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_acc_mm = this->_internal_acc_mm();
-  ::uint32_t raw_acc_mm;
+  uint32_t raw_acc_mm;
   memcpy(&raw_acc_mm, &tmp_acc_mm, sizeof(tmp_acc_mm));
   if (raw_acc_mm != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // bool is_absolute = 5;
   if (this->_internal_is_absolute() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   // bool teaching_mode = 10;
   if (this->_internal_teaching_mode() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData LinearTarget::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LinearTarget::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     LinearTarget::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*LinearTarget::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LinearTarget::GetClassData() const { return &_class_data_; }
 
 
-void LinearTarget::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void LinearTarget::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<LinearTarget*>(&to_msg);
   auto& from = static_cast<const LinearTarget&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.LinearTarget)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_start_mm()->MergeFrom(from._internal_start_mm());
-  _this->_internal_mutable_target_mm()->MergeFrom(from._internal_target_mm());
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  _this->_impl_.start_mm_.MergeFrom(from._impl_.start_mm_);
+  _this->_impl_.target_mm_.MergeFrom(from._impl_.target_mm_);
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_vel_mm = from._internal_vel_mm();
-  ::uint32_t raw_vel_mm;
+  uint32_t raw_vel_mm;
   memcpy(&raw_vel_mm, &tmp_vel_mm, sizeof(tmp_vel_mm));
   if (raw_vel_mm != 0) {
     _this->_internal_set_vel_mm(from._internal_vel_mm());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_acc_mm = from._internal_acc_mm();
-  ::uint32_t raw_acc_mm;
+  uint32_t raw_acc_mm;
   memcpy(&raw_acc_mm, &tmp_acc_mm, sizeof(tmp_acc_mm));
   if (raw_acc_mm != 0) {
     _this->_internal_set_acc_mm(from._internal_acc_mm());
@@ -720,7 +671,7 @@ void LinearTarget::MergeImpl(::google::protobuf::Message& to_msg, const ::google
   if (from._internal_teaching_mode() != 0) {
     _this->_internal_set_teaching_mode(from._internal_teaching_mode());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LinearTarget::CopyFrom(const LinearTarget& from) {
@@ -730,7 +681,7 @@ void LinearTarget::CopyFrom(const LinearTarget& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool LinearTarget::IsInitialized() const {
+bool LinearTarget::IsInitialized() const {
   return true;
 }
 
@@ -739,7 +690,7 @@ void LinearTarget::InternalSwap(LinearTarget* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.start_mm_.InternalSwap(&other->_impl_.start_mm_);
   _impl_.target_mm_.InternalSwap(&other->_impl_.target_mm_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.teaching_mode_)
       + sizeof(LinearTarget::_impl_.teaching_mode_)
       - PROTOBUF_FIELD_OFFSET(LinearTarget, _impl_.vel_mm_)>(
@@ -747,167 +698,177 @@ void LinearTarget::InternalSwap(LinearTarget* other) {
           reinterpret_cast<char*>(&other->_impl_.vel_mm_));
 }
 
-::google::protobuf::Metadata LinearTarget::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LinearTarget::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[0]);
 }
+
 // ===================================================================
 
 class TargetTorque::_Internal {
  public:
 };
 
-TargetTorque::TargetTorque(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+TargetTorque::TargetTorque(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.TargetTorque)
 }
 TargetTorque::TargetTorque(const TargetTorque& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  TargetTorque* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.target_nm_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.target_nm_ = from._impl_.target_nm_;
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.TargetTorque)
 }
-inline void TargetTorque::SharedCtor(::_pb::Arena* arena) {
+
+inline void TargetTorque::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.target_nm_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.target_nm_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 TargetTorque::~TargetTorque() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.TargetTorque)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void TargetTorque::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void TargetTorque::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void TargetTorque::Clear() {
+void TargetTorque::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.TargetTorque)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.target_nm_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* TargetTorque::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* TargetTorque::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // float target_nm = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
+          _impl_.target_nm_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> TargetTorque::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_TargetTorque_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // float target_nm = 1;
-    {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(TargetTorque, _impl_.target_nm_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // float target_nm = 1;
-    {PROTOBUF_FIELD_OFFSET(TargetTorque, _impl_.target_nm_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* TargetTorque::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* TargetTorque::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.TargetTorque)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // float target_nm = 1;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_target_nm = this->_internal_target_nm();
-  ::uint32_t raw_target_nm;
+  uint32_t raw_target_nm;
   memcpy(&raw_target_nm, &tmp_target_nm, sizeof(tmp_target_nm));
   if (raw_target_nm != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        1, this->_internal_target_nm(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_target_nm(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.TargetTorque)
   return target;
 }
 
-::size_t TargetTorque::ByteSizeLong() const {
+size_t TargetTorque::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.TargetTorque)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // float target_nm = 1;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_target_nm = this->_internal_target_nm();
-  ::uint32_t raw_target_nm;
+  uint32_t raw_target_nm;
   memcpy(&raw_target_nm, &tmp_target_nm, sizeof(tmp_target_nm));
   if (raw_target_nm != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData TargetTorque::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TargetTorque::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     TargetTorque::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*TargetTorque::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TargetTorque::GetClassData() const { return &_class_data_; }
 
 
-void TargetTorque::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void TargetTorque::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TargetTorque*>(&to_msg);
   auto& from = static_cast<const TargetTorque&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.TargetTorque)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_target_nm = from._internal_target_nm();
-  ::uint32_t raw_target_nm;
+  uint32_t raw_target_nm;
   memcpy(&raw_target_nm, &tmp_target_nm, sizeof(tmp_target_nm));
   if (raw_target_nm != 0) {
     _this->_internal_set_target_nm(from._internal_target_nm());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TargetTorque::CopyFrom(const TargetTorque& from) {
@@ -917,276 +878,287 @@ void TargetTorque::CopyFrom(const TargetTorque& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool TargetTorque::IsInitialized() const {
+bool TargetTorque::IsInitialized() const {
   return true;
 }
 
 void TargetTorque::InternalSwap(TargetTorque* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.target_nm_, other->_impl_.target_nm_);
+  swap(_impl_.target_nm_, other->_impl_.target_nm_);
 }
 
-::google::protobuf::Metadata TargetTorque::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata TargetTorque::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[1]);
 }
+
 // ===================================================================
 
 class ControlGains::_Internal {
  public:
 };
 
-ControlGains::ControlGains(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ControlGains::ControlGains(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.ControlGains)
 }
 ControlGains::ControlGains(const ControlGains& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ControlGains* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.index_){}
+    , decltype(_impl_.kp_){}
+    , decltype(_impl_.kv_){}
+    , decltype(_impl_.ki_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.index_, &from._impl_.index_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.ki_) -
+    reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.ki_));
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.ControlGains)
 }
-inline void ControlGains::SharedCtor(::_pb::Arena* arena) {
+
+inline void ControlGains::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.index_){0u},
-      decltype(_impl_.kp_){0},
-      decltype(_impl_.kv_){0},
-      decltype(_impl_.ki_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.index_){0u}
+    , decltype(_impl_.kp_){0}
+    , decltype(_impl_.kv_){0}
+    , decltype(_impl_.ki_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 ControlGains::~ControlGains() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.ControlGains)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ControlGains::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void ControlGains::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ControlGains::Clear() {
+void ControlGains::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.ControlGains)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.index_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.index_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.ki_) -
       reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.ki_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ControlGains::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ControlGains::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // uint32 index = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // float kp = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.kp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float kv = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _impl_.kv_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float ki = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+          _impl_.ki_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 0, 2> ControlGains::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ControlGains_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // float ki = 4;
-    {::_pbi::TcParser::FastF32S1,
-     {37, 63, 0, PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.ki_)}},
-    // uint32 index = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ControlGains, _impl_.index_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.index_)}},
-    // float kp = 2;
-    {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.kp_)}},
-    // float kv = 3;
-    {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.kv_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // uint32 index = 1;
-    {PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.index_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // float kp = 2;
-    {PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.kp_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float kv = 3;
-    {PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.kv_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float ki = 4;
-    {PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.ki_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* ControlGains::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ControlGains::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.ControlGains)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        1, this->_internal_index(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_index(), target);
   }
 
   // float kp = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kp = this->_internal_kp();
-  ::uint32_t raw_kp;
+  uint32_t raw_kp;
   memcpy(&raw_kp, &tmp_kp, sizeof(tmp_kp));
   if (raw_kp != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        2, this->_internal_kp(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_kp(), target);
   }
 
   // float kv = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kv = this->_internal_kv();
-  ::uint32_t raw_kv;
+  uint32_t raw_kv;
   memcpy(&raw_kv, &tmp_kv, sizeof(tmp_kv));
   if (raw_kv != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        3, this->_internal_kv(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_kv(), target);
   }
 
   // float ki = 4;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_ki = this->_internal_ki();
-  ::uint32_t raw_ki;
+  uint32_t raw_ki;
   memcpy(&raw_ki, &tmp_ki, sizeof(tmp_ki));
   if (raw_ki != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        4, this->_internal_ki(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_ki(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.ControlGains)
   return target;
 }
 
-::size_t ControlGains::ByteSizeLong() const {
+size_t ControlGains::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.ControlGains)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_index());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_index());
   }
 
   // float kp = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kp = this->_internal_kp();
-  ::uint32_t raw_kp;
+  uint32_t raw_kp;
   memcpy(&raw_kp, &tmp_kp, sizeof(tmp_kp));
   if (raw_kp != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // float kv = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kv = this->_internal_kv();
-  ::uint32_t raw_kv;
+  uint32_t raw_kv;
   memcpy(&raw_kv, &tmp_kv, sizeof(tmp_kv));
   if (raw_kv != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // float ki = 4;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_ki = this->_internal_ki();
-  ::uint32_t raw_ki;
+  uint32_t raw_ki;
   memcpy(&raw_ki, &tmp_ki, sizeof(tmp_ki));
   if (raw_ki != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ControlGains::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ControlGains::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ControlGains::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ControlGains::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ControlGains::GetClassData() const { return &_class_data_; }
 
 
-void ControlGains::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ControlGains::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ControlGains*>(&to_msg);
   auto& from = static_cast<const ControlGains&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.ControlGains)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_index() != 0) {
     _this->_internal_set_index(from._internal_index());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kp = from._internal_kp();
-  ::uint32_t raw_kp;
+  uint32_t raw_kp;
   memcpy(&raw_kp, &tmp_kp, sizeof(tmp_kp));
   if (raw_kp != 0) {
     _this->_internal_set_kp(from._internal_kp());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_kv = from._internal_kv();
-  ::uint32_t raw_kv;
+  uint32_t raw_kv;
   memcpy(&raw_kv, &tmp_kv, sizeof(tmp_kv));
   if (raw_kv != 0) {
     _this->_internal_set_kv(from._internal_kv());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_ki = from._internal_ki();
-  ::uint32_t raw_ki;
+  uint32_t raw_ki;
   memcpy(&raw_ki, &tmp_ki, sizeof(tmp_ki));
   if (raw_ki != 0) {
     _this->_internal_set_ki(from._internal_ki());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ControlGains::CopyFrom(const ControlGains& from) {
@@ -1196,14 +1168,14 @@ void ControlGains::CopyFrom(const ControlGains& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ControlGains::IsInitialized() const {
+bool ControlGains::IsInitialized() const {
   return true;
 }
 
 void ControlGains::InternalSwap(ControlGains* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.ki_)
       + sizeof(ControlGains::_impl_.ki_)
       - PROTOBUF_FIELD_OFFSET(ControlGains, _impl_.index_)>(
@@ -1211,153 +1183,165 @@ void ControlGains::InternalSwap(ControlGains* other) {
           reinterpret_cast<char*>(&other->_impl_.index_));
 }
 
-::google::protobuf::Metadata ControlGains::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ControlGains::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[2]);
 }
+
 // ===================================================================
 
 class Index::_Internal {
  public:
 };
 
-Index::Index(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Index::Index(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.Index)
 }
 Index::Index(const Index& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Index* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.index_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.index_ = from._impl_.index_;
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.Index)
 }
-inline void Index::SharedCtor(::_pb::Arena* arena) {
+
+inline void Index::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.index_){0u},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.index_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 Index::~Index() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.Index)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void Index::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void Index::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void Index::Clear() {
+void Index::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.Index)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.index_ = 0u;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Index::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Index::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // uint32 index = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> Index::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Index_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // uint32 index = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Index, _impl_.index_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Index, _impl_.index_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // uint32 index = 1;
-    {PROTOBUF_FIELD_OFFSET(Index, _impl_.index_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* Index::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* Index::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.Index)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        1, this->_internal_index(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_index(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.Index)
   return target;
 }
 
-::size_t Index::ByteSizeLong() const {
+size_t Index::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.Index)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_index());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_index());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Index::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Index::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     Index::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Index::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Index::GetClassData() const { return &_class_data_; }
 
 
-void Index::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void Index::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Index*>(&to_msg);
   auto& from = static_cast<const Index&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.Index)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_index() != 0) {
     _this->_internal_set_index(from._internal_index());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Index::CopyFrom(const Index& from) {
@@ -1367,202 +1351,215 @@ void Index::CopyFrom(const Index& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Index::IsInitialized() const {
+bool Index::IsInitialized() const {
   return true;
 }
 
 void Index::InternalSwap(Index* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.index_, other->_impl_.index_);
+  swap(_impl_.index_, other->_impl_.index_);
 }
 
-::google::protobuf::Metadata Index::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Index::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[3]);
 }
+
 // ===================================================================
 
 class LinearAxisServoData::_Internal {
  public:
 };
 
-LinearAxisServoData::LinearAxisServoData(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+LinearAxisServoData::LinearAxisServoData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.LinearAxisServoData)
 }
 LinearAxisServoData::LinearAxisServoData(const LinearAxisServoData& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LinearAxisServoData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.index_){}
+    , decltype(_impl_.zero_pos_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.index_, &from._impl_.index_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.zero_pos_) -
+    reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.zero_pos_));
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.LinearAxisServoData)
 }
-inline void LinearAxisServoData::SharedCtor(::_pb::Arena* arena) {
+
+inline void LinearAxisServoData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.index_){0u},
-      decltype(_impl_.zero_pos_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.index_){0u}
+    , decltype(_impl_.zero_pos_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 LinearAxisServoData::~LinearAxisServoData() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.LinearAxisServoData)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void LinearAxisServoData::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void LinearAxisServoData::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void LinearAxisServoData::Clear() {
+void LinearAxisServoData::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.LinearAxisServoData)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.index_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.index_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.zero_pos_) -
       reinterpret_cast<char*>(&_impl_.index_)) + sizeof(_impl_.zero_pos_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LinearAxisServoData::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* LinearAxisServoData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // uint32 index = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // float zero_pos = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.zero_pos_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> LinearAxisServoData::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_LinearAxisServoData_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // float zero_pos = 2;
-    {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.zero_pos_)}},
-    // uint32 index = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(LinearAxisServoData, _impl_.index_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.index_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // uint32 index = 1;
-    {PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.index_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // float zero_pos = 2;
-    {PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.zero_pos_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* LinearAxisServoData::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* LinearAxisServoData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.LinearAxisServoData)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        1, this->_internal_index(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_index(), target);
   }
 
   // float zero_pos = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_zero_pos = this->_internal_zero_pos();
-  ::uint32_t raw_zero_pos;
+  uint32_t raw_zero_pos;
   memcpy(&raw_zero_pos, &tmp_zero_pos, sizeof(tmp_zero_pos));
   if (raw_zero_pos != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        2, this->_internal_zero_pos(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_zero_pos(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.LinearAxisServoData)
   return target;
 }
 
-::size_t LinearAxisServoData::ByteSizeLong() const {
+size_t LinearAxisServoData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.LinearAxisServoData)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 index = 1;
   if (this->_internal_index() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_index());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_index());
   }
 
   // float zero_pos = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_zero_pos = this->_internal_zero_pos();
-  ::uint32_t raw_zero_pos;
+  uint32_t raw_zero_pos;
   memcpy(&raw_zero_pos, &tmp_zero_pos, sizeof(tmp_zero_pos));
   if (raw_zero_pos != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData LinearAxisServoData::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LinearAxisServoData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     LinearAxisServoData::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*LinearAxisServoData::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LinearAxisServoData::GetClassData() const { return &_class_data_; }
 
 
-void LinearAxisServoData::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void LinearAxisServoData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<LinearAxisServoData*>(&to_msg);
   auto& from = static_cast<const LinearAxisServoData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.LinearAxisServoData)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_index() != 0) {
     _this->_internal_set_index(from._internal_index());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_zero_pos = from._internal_zero_pos();
-  ::uint32_t raw_zero_pos;
+  uint32_t raw_zero_pos;
   memcpy(&raw_zero_pos, &tmp_zero_pos, sizeof(tmp_zero_pos));
   if (raw_zero_pos != 0) {
     _this->_internal_set_zero_pos(from._internal_zero_pos());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LinearAxisServoData::CopyFrom(const LinearAxisServoData& from) {
@@ -1572,14 +1569,14 @@ void LinearAxisServoData::CopyFrom(const LinearAxisServoData& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool LinearAxisServoData::IsInitialized() const {
+bool LinearAxisServoData::IsInitialized() const {
   return true;
 }
 
 void LinearAxisServoData::InternalSwap(LinearAxisServoData* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.zero_pos_)
       + sizeof(LinearAxisServoData::_impl_.zero_pos_)
       - PROTOBUF_FIELD_OFFSET(LinearAxisServoData, _impl_.index_)>(
@@ -1587,217 +1584,269 @@ void LinearAxisServoData::InternalSwap(LinearAxisServoData* other) {
           reinterpret_cast<char*>(&other->_impl_.index_));
 }
 
-::google::protobuf::Metadata LinearAxisServoData::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LinearAxisServoData::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[4]);
 }
+
 // ===================================================================
 
 class AxesInfo::_Internal {
  public:
 };
 
-AxesInfo::AxesInfo(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+AxesInfo::AxesInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:Nrmk.IndyFramework.AxesInfo)
 }
-AxesInfo::AxesInfo(const AxesInfo& from) : ::google::protobuf::Message() {
-  AxesInfo* const _this = this;
-  (void)_this;
+AxesInfo::AxesInfo(const AxesInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AxesInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.active_){from._impl_.active_},
-      decltype(_impl_.pos_mm_){from._impl_.pos_mm_},
-      decltype(_impl_.vel_mm_){from._impl_.vel_mm_},
-      decltype(_impl_.despos_mm_){from._impl_.despos_mm_},
-      decltype(_impl_.desvel_mm_){from._impl_.desvel_mm_},
-      decltype(_impl_.desacc_mm_){from._impl_.desacc_mm_},
-      decltype(_impl_.axis_type_){from._internal_axis_type()},
-      /*decltype(_impl_._axis_type_cached_byte_size_)*/ {0},
-      decltype(_impl_.num_axes_){},
-      decltype(_impl_.op_state_){},
-      decltype(_impl_.traj_state_){},
-      decltype(_impl_.recover_time_){},
-      decltype(_impl_.is_target_reached_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  ::memcpy(&_impl_.num_axes_, &from._impl_.num_axes_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.is_target_reached_) -
-    reinterpret_cast<char*>(&_impl_.num_axes_)) + sizeof(_impl_.is_target_reached_));
+      decltype(_impl_.active_){from._impl_.active_}
+    , decltype(_impl_.pos_mm_){from._impl_.pos_mm_}
+    , decltype(_impl_.vel_mm_){from._impl_.vel_mm_}
+    , decltype(_impl_.despos_mm_){from._impl_.despos_mm_}
+    , decltype(_impl_.desvel_mm_){from._impl_.desvel_mm_}
+    , decltype(_impl_.desacc_mm_){from._impl_.desacc_mm_}
+    , decltype(_impl_.axis_type_){from._impl_.axis_type_}
+    , /*decltype(_impl_._axis_type_cached_byte_size_)*/{0}
+    , decltype(_impl_.num_axes_){}
+    , decltype(_impl_.op_state_){}
+    , decltype(_impl_.traj_state_){}
+    , decltype(_impl_.recover_time_){}
+    , decltype(_impl_.is_target_reached_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.num_axes_, &from._impl_.num_axes_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.is_target_reached_) -
+    reinterpret_cast<char*>(&_impl_.num_axes_)) + sizeof(_impl_.is_target_reached_));
   // @@protoc_insertion_point(copy_constructor:Nrmk.IndyFramework.AxesInfo)
 }
-inline void AxesInfo::SharedCtor(::_pb::Arena* arena) {
+
+inline void AxesInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.active_){arena},
-      decltype(_impl_.pos_mm_){arena},
-      decltype(_impl_.vel_mm_){arena},
-      decltype(_impl_.despos_mm_){arena},
-      decltype(_impl_.desvel_mm_){arena},
-      decltype(_impl_.desacc_mm_){arena},
-      decltype(_impl_.axis_type_){arena},
-      /*decltype(_impl_._axis_type_cached_byte_size_)*/ {0},
-      decltype(_impl_.num_axes_){0u},
-      decltype(_impl_.op_state_){0},
-      decltype(_impl_.traj_state_){0},
-      decltype(_impl_.recover_time_){0},
-      decltype(_impl_.is_target_reached_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.active_){arena}
+    , decltype(_impl_.pos_mm_){arena}
+    , decltype(_impl_.vel_mm_){arena}
+    , decltype(_impl_.despos_mm_){arena}
+    , decltype(_impl_.desvel_mm_){arena}
+    , decltype(_impl_.desacc_mm_){arena}
+    , decltype(_impl_.axis_type_){arena}
+    , /*decltype(_impl_._axis_type_cached_byte_size_)*/{0}
+    , decltype(_impl_.num_axes_){0u}
+    , decltype(_impl_.op_state_){0}
+    , decltype(_impl_.traj_state_){0}
+    , decltype(_impl_.recover_time_){0}
+    , decltype(_impl_.is_target_reached_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 AxesInfo::~AxesInfo() {
   // @@protoc_insertion_point(destructor:Nrmk.IndyFramework.AxesInfo)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void AxesInfo::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.active_.~RepeatedField();
   _impl_.pos_mm_.~RepeatedField();
   _impl_.vel_mm_.~RepeatedField();
   _impl_.despos_mm_.~RepeatedField();
   _impl_.desvel_mm_.~RepeatedField();
   _impl_.desacc_mm_.~RepeatedField();
-  _internal_mutable_axis_type()->~RepeatedField();
+  _impl_.axis_type_.~RepeatedField();
 }
+
 void AxesInfo::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void AxesInfo::Clear() {
+void AxesInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:Nrmk.IndyFramework.AxesInfo)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_active()->Clear();
-  _internal_mutable_pos_mm()->Clear();
-  _internal_mutable_vel_mm()->Clear();
-  _internal_mutable_despos_mm()->Clear();
-  _internal_mutable_desvel_mm()->Clear();
-  _internal_mutable_desacc_mm()->Clear();
-  _internal_mutable_axis_type()->Clear();
-  ::memset(&_impl_.num_axes_, 0, static_cast<::size_t>(
+  _impl_.active_.Clear();
+  _impl_.pos_mm_.Clear();
+  _impl_.vel_mm_.Clear();
+  _impl_.despos_mm_.Clear();
+  _impl_.desvel_mm_.Clear();
+  _impl_.desacc_mm_.Clear();
+  _impl_.axis_type_.Clear();
+  ::memset(&_impl_.num_axes_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.is_target_reached_) -
       reinterpret_cast<char*>(&_impl_.num_axes_)) + sizeof(_impl_.is_target_reached_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AxesInfo::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* AxesInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated bool active = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedBoolParser(_internal_mutable_active(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 8) {
+          _internal_add_active(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float pos_mm = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_pos_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 21) {
+          _internal_add_pos_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float vel_mm = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_vel_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 29) {
+          _internal_add_vel_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float despos_mm = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_despos_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 37) {
+          _internal_add_despos_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float desvel_mm = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_desvel_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 45) {
+          _internal_add_desvel_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float desacc_mm = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_desacc_mm(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 53) {
+          _internal_add_desacc_mm(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 num_axes = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _impl_.num_axes_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .Nrmk.IndyFramework.AxesInfo.OpState op_state = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_op_state(static_cast<::Nrmk::IndyFramework::AxesInfo_OpState>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // .Nrmk.IndyFramework.AxesInfo.TrajState traj_state = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_traj_state(static_cast<::Nrmk::IndyFramework::AxesInfo_TrajState>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // float recover_time = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 109)) {
+          _impl_.recover_time_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedEnumParser(_internal_mutable_axis_type(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 128) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_add_axis_type(static_cast<::Nrmk::IndyFramework::AxisType>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // bool is_target_reached = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
+          _impl_.is_target_reached_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<4, 12, 0, 0, 2> AxesInfo::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    20, 120,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294402496,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    12,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_AxesInfo_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
-    {::_pbi::TcParser::FastV32P2,
-     {386, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.axis_type_)}},
-    // repeated bool active = 1;
-    {::_pbi::TcParser::FastV8P1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.active_)}},
-    // repeated float pos_mm = 2;
-    {::_pbi::TcParser::FastF32P1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.pos_mm_)}},
-    // repeated float vel_mm = 3;
-    {::_pbi::TcParser::FastF32P1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.vel_mm_)}},
-    // repeated float despos_mm = 4;
-    {::_pbi::TcParser::FastF32P1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.despos_mm_)}},
-    // repeated float desvel_mm = 5;
-    {::_pbi::TcParser::FastF32P1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.desvel_mm_)}},
-    // repeated float desacc_mm = 6;
-    {::_pbi::TcParser::FastF32P1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.desacc_mm_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    // uint32 num_axes = 10;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(AxesInfo, _impl_.num_axes_), 63>(),
-     {80, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.num_axes_)}},
-    // .Nrmk.IndyFramework.AxesInfo.OpState op_state = 11;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(AxesInfo, _impl_.op_state_), 63>(),
-     {88, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.op_state_)}},
-    // .Nrmk.IndyFramework.AxesInfo.TrajState traj_state = 12;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(AxesInfo, _impl_.traj_state_), 63>(),
-     {96, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.traj_state_)}},
-    // float recover_time = 13;
-    {::_pbi::TcParser::FastF32S1,
-     {109, 63, 0, PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.recover_time_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // repeated bool active = 1;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.active_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedBool)},
-    // repeated float pos_mm = 2;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.pos_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float vel_mm = 3;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.vel_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float despos_mm = 4;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.despos_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float desvel_mm = 5;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.desvel_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float desacc_mm = 6;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.desacc_mm_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // uint32 num_axes = 10;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.num_axes_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // .Nrmk.IndyFramework.AxesInfo.OpState op_state = 11;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.op_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // .Nrmk.IndyFramework.AxesInfo.TrajState traj_state = 12;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.traj_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // float recover_time = 13;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.recover_time_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.axis_type_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedOpenEnum)},
-    // bool is_target_reached = 20;
-    {PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.is_target_reached_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* AxesInfo::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* AxesInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Nrmk.IndyFramework.AxesInfo)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // repeated bool active = 1;
   if (this->_internal_active_size() > 0) {
@@ -1832,216 +1881,203 @@ const ::_pbi::TcParseTable<4, 12, 0, 0, 2> AxesInfo::_table_ = {
   // uint32 num_axes = 10;
   if (this->_internal_num_axes() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        10, this->_internal_num_axes(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_num_axes(), target);
   }
 
   // .Nrmk.IndyFramework.AxesInfo.OpState op_state = 11;
   if (this->_internal_op_state() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
-        11, this->_internal_op_state(), target);
+      11, this->_internal_op_state(), target);
   }
 
   // .Nrmk.IndyFramework.AxesInfo.TrajState traj_state = 12;
   if (this->_internal_traj_state() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
-        12, this->_internal_traj_state(), target);
+      12, this->_internal_traj_state(), target);
   }
 
   // float recover_time = 13;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_recover_time = this->_internal_recover_time();
-  ::uint32_t raw_recover_time;
+  uint32_t raw_recover_time;
   memcpy(&raw_recover_time, &tmp_recover_time, sizeof(tmp_recover_time));
   if (raw_recover_time != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        13, this->_internal_recover_time(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(13, this->_internal_recover_time(), target);
   }
 
   // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
   {
-    int byte_size = _impl_._axis_type_cached_byte_size_.Get();
+    int byte_size = _impl_._axis_type_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
-      target = stream->WriteEnumPacked(16, _internal_axis_type(),
-                                       byte_size, target);
+      target = stream->WriteEnumPacked(
+          16, _impl_.axis_type_, byte_size, target);
     }
   }
 
   // bool is_target_reached = 20;
   if (this->_internal_is_target_reached() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        20, this->_internal_is_target_reached(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(20, this->_internal_is_target_reached(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Nrmk.IndyFramework.AxesInfo)
   return target;
 }
 
-::size_t AxesInfo::ByteSizeLong() const {
+size_t AxesInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Nrmk.IndyFramework.AxesInfo)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated bool active = 1;
   {
-    std::size_t data_size = std::size_t{1} *
-        ::_pbi::FromIntSize(this->_internal_active_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated float pos_mm = 2;
-  {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_pos_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated float vel_mm = 3;
-  {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_vel_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated float despos_mm = 4;
-  {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_despos_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated float desvel_mm = 5;
-  {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_desvel_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated float desacc_mm = 6;
-  {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_desacc_mm_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
-  }
-  // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
-  {
-    std::size_t data_size = 0;
-    auto count = static_cast<std::size_t>(this->_internal_axis_type_size());
-
-    for (std::size_t i = 0; i < count; ++i) {
-      data_size += ::_pbi::WireFormatLite::EnumSize(
-          this->_internal_axis_type().Get(static_cast<int>(i)));
+    unsigned int count = static_cast<unsigned int>(this->_internal_active_size());
+    size_t data_size = 1UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
     total_size += data_size;
-    if (data_size > 0) {
-      total_size += 2;
-      total_size += ::_pbi::WireFormatLite::Int32Size(
-          static_cast<int32_t>(data_size));
-    }
-    _impl_._axis_type_cached_byte_size_.Set(::_pbi::ToCachedSize(data_size));
   }
+
+  // repeated float pos_mm = 2;
+  {
+    unsigned int count = static_cast<unsigned int>(this->_internal_pos_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
+  }
+
+  // repeated float vel_mm = 3;
+  {
+    unsigned int count = static_cast<unsigned int>(this->_internal_vel_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
+  }
+
+  // repeated float despos_mm = 4;
+  {
+    unsigned int count = static_cast<unsigned int>(this->_internal_despos_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
+  }
+
+  // repeated float desvel_mm = 5;
+  {
+    unsigned int count = static_cast<unsigned int>(this->_internal_desvel_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
+  }
+
+  // repeated float desacc_mm = 6;
+  {
+    unsigned int count = static_cast<unsigned int>(this->_internal_desacc_mm_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
+  }
+
+  // repeated .Nrmk.IndyFramework.AxisType axis_type = 16;
+  {
+    size_t data_size = 0;
+    unsigned int count = static_cast<unsigned int>(this->_internal_axis_type_size());for (unsigned int i = 0; i < count; i++) {
+      data_size += ::_pbi::WireFormatLite::EnumSize(
+        this->_internal_axis_type(static_cast<int>(i)));
+    }
+    if (data_size > 0) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._axis_type_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
   // uint32 num_axes = 10;
   if (this->_internal_num_axes() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_num_axes());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_num_axes());
   }
 
   // .Nrmk.IndyFramework.AxesInfo.OpState op_state = 11;
   if (this->_internal_op_state() != 0) {
     total_size += 1 +
-                  ::_pbi::WireFormatLite::EnumSize(this->_internal_op_state());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_op_state());
   }
 
   // .Nrmk.IndyFramework.AxesInfo.TrajState traj_state = 12;
   if (this->_internal_traj_state() != 0) {
     total_size += 1 +
-                  ::_pbi::WireFormatLite::EnumSize(this->_internal_traj_state());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_traj_state());
   }
 
   // float recover_time = 13;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_recover_time = this->_internal_recover_time();
-  ::uint32_t raw_recover_time;
+  uint32_t raw_recover_time;
   memcpy(&raw_recover_time, &tmp_recover_time, sizeof(tmp_recover_time));
   if (raw_recover_time != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // bool is_target_reached = 20;
   if (this->_internal_is_target_reached() != 0) {
-    total_size += 3;
+    total_size += 2 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData AxesInfo::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AxesInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     AxesInfo::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*AxesInfo::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AxesInfo::GetClassData() const { return &_class_data_; }
 
 
-void AxesInfo::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void AxesInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AxesInfo*>(&to_msg);
   auto& from = static_cast<const AxesInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:Nrmk.IndyFramework.AxesInfo)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_active()->MergeFrom(from._internal_active());
-  _this->_internal_mutable_pos_mm()->MergeFrom(from._internal_pos_mm());
-  _this->_internal_mutable_vel_mm()->MergeFrom(from._internal_vel_mm());
-  _this->_internal_mutable_despos_mm()->MergeFrom(from._internal_despos_mm());
-  _this->_internal_mutable_desvel_mm()->MergeFrom(from._internal_desvel_mm());
-  _this->_internal_mutable_desacc_mm()->MergeFrom(from._internal_desacc_mm());
-  _this->_internal_mutable_axis_type()->MergeFrom(from._internal_axis_type());
+  _this->_impl_.active_.MergeFrom(from._impl_.active_);
+  _this->_impl_.pos_mm_.MergeFrom(from._impl_.pos_mm_);
+  _this->_impl_.vel_mm_.MergeFrom(from._impl_.vel_mm_);
+  _this->_impl_.despos_mm_.MergeFrom(from._impl_.despos_mm_);
+  _this->_impl_.desvel_mm_.MergeFrom(from._impl_.desvel_mm_);
+  _this->_impl_.desacc_mm_.MergeFrom(from._impl_.desacc_mm_);
+  _this->_impl_.axis_type_.MergeFrom(from._impl_.axis_type_);
   if (from._internal_num_axes() != 0) {
     _this->_internal_set_num_axes(from._internal_num_axes());
   }
@@ -2051,10 +2087,9 @@ void AxesInfo::MergeImpl(::google::protobuf::Message& to_msg, const ::google::pr
   if (from._internal_traj_state() != 0) {
     _this->_internal_set_traj_state(from._internal_traj_state());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_recover_time = from._internal_recover_time();
-  ::uint32_t raw_recover_time;
+  uint32_t raw_recover_time;
   memcpy(&raw_recover_time, &tmp_recover_time, sizeof(tmp_recover_time));
   if (raw_recover_time != 0) {
     _this->_internal_set_recover_time(from._internal_recover_time());
@@ -2062,7 +2097,7 @@ void AxesInfo::MergeImpl(::google::protobuf::Message& to_msg, const ::google::pr
   if (from._internal_is_target_reached() != 0) {
     _this->_internal_set_is_target_reached(from._internal_is_target_reached());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AxesInfo::CopyFrom(const AxesInfo& from) {
@@ -2072,7 +2107,7 @@ void AxesInfo::CopyFrom(const AxesInfo& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool AxesInfo::IsInitialized() const {
+bool AxesInfo::IsInitialized() const {
   return true;
 }
 
@@ -2086,7 +2121,7 @@ void AxesInfo::InternalSwap(AxesInfo* other) {
   _impl_.desvel_mm_.InternalSwap(&other->_impl_.desvel_mm_);
   _impl_.desacc_mm_.InternalSwap(&other->_impl_.desacc_mm_);
   _impl_.axis_type_.InternalSwap(&other->_impl_.axis_type_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.is_target_reached_)
       + sizeof(AxesInfo::_impl_.is_target_reached_)
       - PROTOBUF_FIELD_OFFSET(AxesInfo, _impl_.num_axes_)>(
@@ -2094,17 +2129,41 @@ void AxesInfo::InternalSwap(AxesInfo* other) {
           reinterpret_cast<char*>(&other->_impl_.num_axes_));
 }
 
-::google::protobuf::Metadata AxesInfo::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AxesInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_linear_2eproto_getter, &descriptor_table_linear_2eproto_once,
       file_level_metadata_linear_2eproto[5]);
 }
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace IndyFramework
 }  // namespace Nrmk
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::LinearTarget*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::LinearTarget >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::LinearTarget >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::TargetTorque*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::TargetTorque >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::TargetTorque >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::ControlGains*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::ControlGains >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::ControlGains >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::Index*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::Index >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::Index >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::LinearAxisServoData*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::LinearAxisServoData >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::LinearAxisServoData >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Nrmk::IndyFramework::AxesInfo*
+Arena::CreateMaybeMessage< ::Nrmk::IndyFramework::AxesInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Nrmk::IndyFramework::AxesInfo >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>

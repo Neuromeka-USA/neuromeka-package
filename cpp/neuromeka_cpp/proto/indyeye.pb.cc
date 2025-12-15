@@ -4,1179 +4,1001 @@
 #include "indyeye.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
-// @@protoc_insertion_point(includes)
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
+// @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace IndyFramework {
 namespace Protobuf {
 namespace EyeTask {
-        template <typename>
-PROTOBUF_CONSTEXPR Point::Point(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.x_)*/ 0,
-      /*decltype(_impl_.y_)*/ 0,
-      /*decltype(_impl_.z_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_CONSTEXPR Point::Point(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.x_)*/0
+  , /*decltype(_impl_.y_)*/0
+  , /*decltype(_impl_.z_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct PointDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR PointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR PointDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~PointDefaultTypeInternal() {}
   union {
     Point _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PointDefaultTypeInternal _Point_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR WeldingLinesInfo::WeldingLinesInfo(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.name_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.start_point_)*/ nullptr,
-      /*decltype(_impl_.end_point_)*/ nullptr,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PointDefaultTypeInternal _Point_default_instance_;
+PROTOBUF_CONSTEXPR WeldingLinesInfo::WeldingLinesInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.start_point_)*/nullptr
+  , /*decltype(_impl_.end_point_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WeldingLinesInfoDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WeldingLinesInfoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR WeldingLinesInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~WeldingLinesInfoDefaultTypeInternal() {}
   union {
     WeldingLinesInfo _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoDefaultTypeInternal _WeldingLinesInfo_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR WeldingLinesInfoRequest::WeldingLinesInfoRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoDefaultTypeInternal _WeldingLinesInfo_default_instance_;
+PROTOBUF_CONSTEXPR WeldingLinesInfoRequest::WeldingLinesInfoRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WeldingLinesInfoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WeldingLinesInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR WeldingLinesInfoRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~WeldingLinesInfoRequestDefaultTypeInternal() {}
   union {
     WeldingLinesInfoRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoRequestDefaultTypeInternal _WeldingLinesInfoRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR WeldingLinesInfoResponse::WeldingLinesInfoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.welding_)*/ {},
-      /*decltype(_impl_.cell_types_)*/ {},
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.error_state_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoRequestDefaultTypeInternal _WeldingLinesInfoRequest_default_instance_;
+PROTOBUF_CONSTEXPR WeldingLinesInfoResponse::WeldingLinesInfoResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.welding_)*/{}
+  , /*decltype(_impl_.cell_types_)*/{}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WeldingLinesInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WeldingLinesInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR WeldingLinesInfoResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~WeldingLinesInfoResponseDefaultTypeInternal() {}
   union {
     WeldingLinesInfoResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoResponseDefaultTypeInternal _WeldingLinesInfoResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR StraightLineInfoRequest::StraightLineInfoRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WeldingLinesInfoResponseDefaultTypeInternal _WeldingLinesInfoResponse_default_instance_;
+PROTOBUF_CONSTEXPR StraightLineInfoRequest::StraightLineInfoRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct StraightLineInfoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR StraightLineInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR StraightLineInfoRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~StraightLineInfoRequestDefaultTypeInternal() {}
   union {
     StraightLineInfoRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StraightLineInfoRequestDefaultTypeInternal _StraightLineInfoRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR StraightLineInfoResponse::StraightLineInfoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.normal_vector_)*/ nullptr,
-      /*decltype(_impl_.start_point_)*/ nullptr,
-      /*decltype(_impl_.end_point_)*/ nullptr,
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.error_state_)*/ false,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StraightLineInfoRequestDefaultTypeInternal _StraightLineInfoRequest_default_instance_;
+PROTOBUF_CONSTEXPR StraightLineInfoResponse::StraightLineInfoResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.normal_vector_)*/nullptr
+  , /*decltype(_impl_.start_point_)*/nullptr
+  , /*decltype(_impl_.end_point_)*/nullptr
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct StraightLineInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR StraightLineInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR StraightLineInfoResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~StraightLineInfoResponseDefaultTypeInternal() {}
   union {
     StraightLineInfoResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StraightLineInfoResponseDefaultTypeInternal _StraightLineInfoResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CircularLineThreePoints::CircularLineThreePoints(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.start_point_)*/ nullptr,
-      /*decltype(_impl_.via_point_)*/ nullptr,
-      /*decltype(_impl_.end_point_)*/ nullptr,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StraightLineInfoResponseDefaultTypeInternal _StraightLineInfoResponse_default_instance_;
+PROTOBUF_CONSTEXPR CircularLineThreePoints::CircularLineThreePoints(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.start_point_)*/nullptr
+  , /*decltype(_impl_.via_point_)*/nullptr
+  , /*decltype(_impl_.end_point_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircularLineThreePointsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CircularLineThreePointsDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircularLineThreePointsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircularLineThreePointsDefaultTypeInternal() {}
   union {
     CircularLineThreePoints _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineThreePointsDefaultTypeInternal _CircularLineThreePoints_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CircularLineCenterRadius::CircularLineCenterRadius(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.center_point_)*/ nullptr,
-      /*decltype(_impl_.radius_)*/ 0,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineThreePointsDefaultTypeInternal _CircularLineThreePoints_default_instance_;
+PROTOBUF_CONSTEXPR CircularLineCenterRadius::CircularLineCenterRadius(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.center_point_)*/nullptr
+  , /*decltype(_impl_.radius_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircularLineCenterRadiusDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CircularLineCenterRadiusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircularLineCenterRadiusDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircularLineCenterRadiusDefaultTypeInternal() {}
   union {
     CircularLineCenterRadius _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineCenterRadiusDefaultTypeInternal _CircularLineCenterRadius_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CircularLineInfoRequest::CircularLineInfoRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineCenterRadiusDefaultTypeInternal _CircularLineCenterRadius_default_instance_;
+PROTOBUF_CONSTEXPR CircularLineInfoRequest::CircularLineInfoRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircularLineInfoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CircularLineInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircularLineInfoRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircularLineInfoRequestDefaultTypeInternal() {}
   union {
     CircularLineInfoRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineInfoRequestDefaultTypeInternal _CircularLineInfoRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CircularLineInfoResponse::CircularLineInfoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.normal_vector_)*/ nullptr,
-      /*decltype(_impl_.reference_vector_)*/ nullptr,
-      /*decltype(_impl_.point_method_)*/ nullptr,
-      /*decltype(_impl_.vector_method_)*/ nullptr,
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.error_state_)*/ false,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineInfoRequestDefaultTypeInternal _CircularLineInfoRequest_default_instance_;
+PROTOBUF_CONSTEXPR CircularLineInfoResponse::CircularLineInfoResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.normal_vector_)*/nullptr
+  , /*decltype(_impl_.reference_vector_)*/nullptr
+  , /*decltype(_impl_.point_method_)*/nullptr
+  , /*decltype(_impl_.vector_method_)*/nullptr
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircularLineInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CircularLineInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircularLineInfoResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircularLineInfoResponseDefaultTypeInternal() {}
   union {
     CircularLineInfoResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineInfoResponseDefaultTypeInternal _CircularLineInfoResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ServerInfoRequest::ServerInfoRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircularLineInfoResponseDefaultTypeInternal _CircularLineInfoResponse_default_instance_;
+PROTOBUF_CONSTEXPR ServerInfoRequest::ServerInfoRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ServerInfoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ServerInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ServerInfoRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ServerInfoRequestDefaultTypeInternal() {}
   union {
     ServerInfoRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ServerInfoRequestDefaultTypeInternal _ServerInfoRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ServerInfoResponse::ServerInfoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.version_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.release_date_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.program_name_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ServerInfoRequestDefaultTypeInternal _ServerInfoRequest_default_instance_;
+PROTOBUF_CONSTEXPR ServerInfoResponse::ServerInfoResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.version_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.release_date_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.program_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ServerInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ServerInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ServerInfoResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ServerInfoResponseDefaultTypeInternal() {}
   union {
     ServerInfoResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ServerInfoResponseDefaultTypeInternal _ServerInfoResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CalibrationRequest::CalibrationRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ServerInfoResponseDefaultTypeInternal _ServerInfoResponse_default_instance_;
+PROTOBUF_CONSTEXPR CalibrationRequest::CalibrationRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CalibrationRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CalibrationRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CalibrationRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CalibrationRequestDefaultTypeInternal() {}
   union {
     CalibrationRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationRequestDefaultTypeInternal _CalibrationRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CalibrationResponse::CalibrationResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.is_succeeded_)*/ {},
-      /*decltype(_impl_.indy_cam_rms_)*/ {},
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationRequestDefaultTypeInternal _CalibrationRequest_default_instance_;
+PROTOBUF_CONSTEXPR CalibrationResponse::CalibrationResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.is_succeeded_)*/{}
+  , /*decltype(_impl_.indy_cam_rms_)*/{}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CalibrationResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CalibrationResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CalibrationResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CalibrationResponseDefaultTypeInternal() {}
   union {
     CalibrationResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationResponseDefaultTypeInternal _CalibrationResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CalibrationDoneRequest::CalibrationDoneRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationResponseDefaultTypeInternal _CalibrationResponse_default_instance_;
+PROTOBUF_CONSTEXPR CalibrationDoneRequest::CalibrationDoneRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CalibrationDoneRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CalibrationDoneRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CalibrationDoneRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CalibrationDoneRequestDefaultTypeInternal() {}
   union {
     CalibrationDoneRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationDoneRequestDefaultTypeInternal _CalibrationDoneRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR CalibrationDoneResponse::CalibrationDoneResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.is_succeeded_)*/ {},
-      /*decltype(_impl_.indy_cam_rms_)*/ {},
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.is_calibrated_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationDoneRequestDefaultTypeInternal _CalibrationDoneRequest_default_instance_;
+PROTOBUF_CONSTEXPR CalibrationDoneResponse::CalibrationDoneResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.is_succeeded_)*/{}
+  , /*decltype(_impl_.indy_cam_rms_)*/{}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.is_calibrated_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CalibrationDoneResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CalibrationDoneResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CalibrationDoneResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CalibrationDoneResponseDefaultTypeInternal() {}
   union {
     CalibrationDoneResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationDoneResponseDefaultTypeInternal _CalibrationDoneResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ImageRequest::ImageRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.type_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CalibrationDoneResponseDefaultTypeInternal _CalibrationDoneResponse_default_instance_;
+PROTOBUF_CONSTEXPR ImageRequest::ImageRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ImageRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ImageRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ImageRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ImageRequestDefaultTypeInternal() {}
   union {
     ImageRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ImageRequestDefaultTypeInternal _ImageRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ImageResponse::ImageResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.color_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.depth_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.type_)*/ 0,
-      /*decltype(_impl_.width_)*/ 0,
-      /*decltype(_impl_.height_)*/ 0,
-      /*decltype(_impl_.depth_scale_)*/ 0,
-      /*decltype(_impl_.error_state_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ImageRequestDefaultTypeInternal _ImageRequest_default_instance_;
+PROTOBUF_CONSTEXPR ImageResponse::ImageResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.depth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.width_)*/0
+  , /*decltype(_impl_.height_)*/0
+  , /*decltype(_impl_.depth_scale_)*/0
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ImageResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ImageResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ImageResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ImageResponseDefaultTypeInternal() {}
   union {
     ImageResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ImageResponseDefaultTypeInternal _ImageResponse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR Request::Request(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ImageResponseDefaultTypeInternal _ImageResponse_default_instance_;
+PROTOBUF_CONSTEXPR Request::Request(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~RequestDefaultTypeInternal() {}
   union {
     Request _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RequestDefaultTypeInternal _Request_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ClassList::ClassList(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.class_names_)*/ {},
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.error_state_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RequestDefaultTypeInternal _Request_default_instance_;
+PROTOBUF_CONSTEXPR ClassList::ClassList(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.class_names_)*/{}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ClassListDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ClassListDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ClassListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ClassListDefaultTypeInternal() {}
   union {
     ClassList _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ClassListDefaultTypeInternal _ClassList_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR DetectRequest::DetectRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.pose_cmd_)*/ {},
-      /*decltype(_impl_.robot_ip_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.cls_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ClassListDefaultTypeInternal _ClassList_default_instance_;
+PROTOBUF_CONSTEXPR DetectRequest::DetectRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.pose_cmd_)*/{}
+  , /*decltype(_impl_.robot_ip_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.cls_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DetectRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DetectRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR DetectRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~DetectRequestDefaultTypeInternal() {}
   union {
     DetectRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DetectRequestDefaultTypeInternal _DetectRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR RetrieveRequest::RetrieveRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.cls_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DetectRequestDefaultTypeInternal _DetectRequest_default_instance_;
+PROTOBUF_CONSTEXPR RetrieveRequest::RetrieveRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.cls_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RetrieveRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RetrieveRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RetrieveRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~RetrieveRequestDefaultTypeInternal() {}
   union {
     RetrieveRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RetrieveRequestDefaultTypeInternal _RetrieveRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR DetectResponse::DetectResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.tar_ee_pose_)*/ {},
-      /*decltype(_impl_.tar_tool_pose_)*/ {},
-      /*decltype(_impl_.tar_obj_pose_)*/ {},
-      /*decltype(_impl_.error_module_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.id_)*/ 0,
-      /*decltype(_impl_.cls_)*/ 0,
-      /*decltype(_impl_.detected_)*/ false,
-      /*decltype(_impl_.passed_)*/ false,
-      /*decltype(_impl_.error_state_)*/ false,
-      /*decltype(_impl_.tool_idx_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RetrieveRequestDefaultTypeInternal _RetrieveRequest_default_instance_;
+PROTOBUF_CONSTEXPR DetectResponse::DetectResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.tar_ee_pose_)*/{}
+  , /*decltype(_impl_.tar_tool_pose_)*/{}
+  , /*decltype(_impl_.tar_obj_pose_)*/{}
+  , /*decltype(_impl_.error_module_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.cls_)*/0
+  , /*decltype(_impl_.detected_)*/false
+  , /*decltype(_impl_.passed_)*/false
+  , /*decltype(_impl_.error_state_)*/false
+  , /*decltype(_impl_.tool_idx_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DetectResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DetectResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR DetectResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~DetectResponseDefaultTypeInternal() {}
   union {
     DetectResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DetectResponseDefaultTypeInternal _DetectResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DetectResponseDefaultTypeInternal _DetectResponse_default_instance_;
 }  // namespace EyeTask
 }  // namespace Protobuf
 }  // namespace IndyFramework
 static ::_pb::Metadata file_level_metadata_indyeye_2eproto[23];
-static constexpr const ::_pb::EnumDescriptor**
-    file_level_enum_descriptors_indyeye_2eproto = nullptr;
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_indyeye_2eproto = nullptr;
-const ::uint32_t TableStruct_indyeye_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.x_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.y_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.z_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.name_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.start_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.end_point_),
-    ~0u,
-    0,
-    1,
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest, _impl_.id_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.welding_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.cell_types_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.error_state_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.normal_vector_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.start_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.end_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.error_state_),
-    ~0u,
-    0,
-    1,
-    2,
-    ~0u,
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.start_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.via_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.end_point_),
-    0,
-    1,
-    2,
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _impl_.center_point_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _impl_.radius_),
-    0,
-    ~0u,
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.normal_vector_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.reference_vector_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.point_method_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.vector_method_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.error_state_),
-    ~0u,
-    0,
-    1,
-    2,
-    3,
-    ~0u,
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest, _impl_.id_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.version_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.release_date_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.program_name_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationRequest, _impl_.id_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.is_succeeded_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.indy_cam_rms_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest, _impl_.id_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.is_calibrated_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.is_succeeded_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.indy_cam_rms_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _impl_.type_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.type_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.width_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.height_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.color_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.depth_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.depth_scale_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.error_state_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Request, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Request, _impl_.id_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.class_names_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.error_state_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.cls_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.pose_cmd_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.robot_ip_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _impl_.cls_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.id_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.detected_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.passed_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.cls_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_ee_pose_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_tool_pose_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_obj_pose_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tool_idx_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.error_state_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.error_module_),
-};
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_indyeye_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_indyeye_2eproto = nullptr;
 
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::Point)},
-        {11, 22, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo)},
-        {25, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest)},
-        {34, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse)},
-        {46, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest)},
-        {55, 68, -1, sizeof(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse)},
-        {73, 84, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints)},
-        {87, 97, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius)},
-        {99, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest)},
-        {108, 122, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse)},
-        {128, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest)},
-        {137, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse)},
-        {149, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationRequest)},
-        {158, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationResponse)},
-        {169, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest)},
-        {178, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse)},
-        {190, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ImageRequest)},
-        {200, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ImageResponse)},
-        {216, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::Request)},
-        {225, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ClassList)},
-        {236, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::DetectRequest)},
-        {248, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::RetrieveRequest)},
-        {258, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::DetectResponse)},
+const uint32_t TableStruct_indyeye_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.x_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.y_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Point, _impl_.z_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.start_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo, _impl_.end_point_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.welding_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.cell_types_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse, _impl_.error_state_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.normal_vector_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.start_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.end_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse, _impl_.error_state_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.start_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.via_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints, _impl_.end_point_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _impl_.center_point_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius, _impl_.radius_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.normal_vector_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.reference_vector_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.point_method_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.vector_method_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse, _impl_.error_state_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.version_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.release_date_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse, _impl_.program_name_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.is_succeeded_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationResponse, _impl_.indy_cam_rms_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.is_calibrated_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.is_succeeded_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse, _impl_.indy_cam_rms_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageRequest, _impl_.type_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.width_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.height_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.depth_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.depth_scale_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ImageResponse, _impl_.error_state_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::Request, _impl_.id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.class_names_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::ClassList, _impl_.error_state_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.cls_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.pose_cmd_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectRequest, _impl_.robot_ip_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::RetrieveRequest, _impl_.cls_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.detected_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.passed_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.cls_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_ee_pose_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_tool_pose_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tar_obj_pose_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.tool_idx_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.error_state_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::EyeTask::DetectResponse, _impl_.error_module_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::Point)},
+  { 9, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo)},
+  { 18, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest)},
+  { 25, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse)},
+  { 35, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest)},
+  { 42, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse)},
+  { 53, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints)},
+  { 62, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius)},
+  { 70, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest)},
+  { 77, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse)},
+  { 89, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ServerInfoRequest)},
+  { 96, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ServerInfoResponse)},
+  { 106, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationRequest)},
+  { 113, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationResponse)},
+  { 122, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest)},
+  { 129, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse)},
+  { 139, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ImageRequest)},
+  { 147, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ImageResponse)},
+  { 161, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::Request)},
+  { 168, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::ClassList)},
+  { 177, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::DetectRequest)},
+  { 187, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::RetrieveRequest)},
+  { 195, -1, -1, sizeof(::IndyFramework::Protobuf::EyeTask::DetectResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::IndyFramework::Protobuf::EyeTask::_Point_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfo_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfoRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfoResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_StraightLineInfoRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_StraightLineInfoResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CircularLineThreePoints_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CircularLineCenterRadius_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CircularLineInfoRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CircularLineInfoResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_ServerInfoRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_ServerInfoResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CalibrationRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CalibrationResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CalibrationDoneRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_CalibrationDoneResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_ImageRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_ImageResponse_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_Request_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_ClassList_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_DetectRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_RetrieveRequest_default_instance_._instance,
-    &::IndyFramework::Protobuf::EyeTask::_DetectResponse_default_instance_._instance,
-};
-const char descriptor_table_protodef_indyeye_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\rindyeye.proto\022\036IndyFramework.Protobuf."
-    "EyeTask\"(\n\005Point\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t"
-    "\n\001z\030\003 \001(\002\"\226\001\n\020WeldingLinesInfo\022\014\n\004name\030\001"
-    " \001(\t\022:\n\013start_point\030\002 \001(\0132%.IndyFramewor"
-    "k.Protobuf.EyeTask.Point\0228\n\tend_point\030\003 "
-    "\001(\0132%.IndyFramework.Protobuf.EyeTask.Poi"
-    "nt\"%\n\027WeldingLinesInfoRequest\022\n\n\002id\030\001 \001("
-    "\005\"\222\001\n\030WeldingLinesInfoResponse\022\n\n\002id\030\001 \001"
-    "(\005\022A\n\007welding\030\002 \003(\01320.IndyFramework.Prot"
-    "obuf.EyeTask.WeldingLinesInfo\022\022\n\ncell_ty"
-    "pes\030\003 \003(\t\022\023\n\013error_state\030\004 \001(\010\"%\n\027Straig"
-    "htLineInfoRequest\022\n\n\002id\030\001 \001(\005\"\357\001\n\030Straig"
-    "htLineInfoResponse\022\n\n\002id\030\001 \001(\005\022<\n\rnormal"
-    "_vector\030\002 \001(\0132%.IndyFramework.Protobuf.E"
-    "yeTask.Point\022:\n\013start_point\030\003 \001(\0132%.Indy"
-    "Framework.Protobuf.EyeTask.Point\0228\n\tend_"
-    "point\030\004 \001(\0132%.IndyFramework.Protobuf.Eye"
-    "Task.Point\022\023\n\013error_state\030\005 \001(\010\"\311\001\n\027Circ"
-    "ularLineThreePoints\022:\n\013start_point\030\001 \001(\013"
-    "2%.IndyFramework.Protobuf.EyeTask.Point\022"
-    "8\n\tvia_point\030\002 \001(\0132%.IndyFramework.Proto"
-    "buf.EyeTask.Point\0228\n\tend_point\030\003 \001(\0132%.I"
-    "ndyFramework.Protobuf.EyeTask.Point\"g\n\030C"
-    "ircularLineCenterRadius\022;\n\014center_point\030"
-    "\001 \001(\0132%.IndyFramework.Protobuf.EyeTask.P"
-    "oint\022\016\n\006radius\030\002 \001(\002\"%\n\027CircularLineInfo"
-    "Request\022\n\n\002id\030\001 \001(\005\"\332\002\n\030CircularLineInfo"
-    "Response\022\n\n\002id\030\001 \001(\005\022<\n\rnormal_vector\030\002 "
-    "\001(\0132%.IndyFramework.Protobuf.EyeTask.Poi"
-    "nt\022\?\n\020reference_vector\030\003 \001(\0132%.IndyFrame"
-    "work.Protobuf.EyeTask.Point\022M\n\014point_met"
-    "hod\030\004 \001(\01327.IndyFramework.Protobuf.EyeTa"
-    "sk.CircularLineThreePoints\022O\n\rvector_met"
-    "hod\030\005 \001(\01328.IndyFramework.Protobuf.EyeTa"
-    "sk.CircularLineCenterRadius\022\023\n\013error_sta"
-    "te\030\006 \001(\010\"\037\n\021ServerInfoRequest\022\n\n\002id\030\001 \001("
-    "\005\"]\n\022ServerInfoResponse\022\n\n\002id\030\001 \001(\005\022\017\n\007v"
-    "ersion\030\002 \001(\t\022\024\n\014release_date\030\003 \001(\t\022\024\n\014pr"
-    "ogram_name\030\004 \001(\t\" \n\022CalibrationRequest\022\n"
-    "\n\002id\030\001 \001(\005\"M\n\023CalibrationResponse\022\n\n\002id\030"
-    "\001 \001(\005\022\024\n\014is_succeeded\030\002 \003(\010\022\024\n\014indy_cam_"
-    "rms\030\003 \003(\002\"$\n\026CalibrationDoneRequest\022\n\n\002i"
-    "d\030\001 \001(\005\"h\n\027CalibrationDoneResponse\022\n\n\002id"
-    "\030\001 \001(\005\022\025\n\ris_calibrated\030\002 \001(\010\022\024\n\014is_succ"
-    "eeded\030\003 \003(\010\022\024\n\014indy_cam_rms\030\004 \003(\002\"(\n\014Ima"
-    "geRequest\022\n\n\002id\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\"\220\001\n\r"
-    "ImageResponse\022\n\n\002id\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022"
-    "\r\n\005width\030\003 \001(\005\022\016\n\006height\030\004 \001(\005\022\r\n\005color\030"
-    "\005 \001(\014\022\r\n\005depth\030\006 \001(\014\022\023\n\013depth_scale\030\007 \001("
-    "\002\022\023\n\013error_state\030\010 \001(\010\"\025\n\007Request\022\n\n\002id\030"
-    "\001 \001(\005\"A\n\tClassList\022\n\n\002id\030\001 \001(\005\022\023\n\013class_"
-    "names\030\002 \003(\t\022\023\n\013error_state\030\010 \001(\010\"L\n\rDete"
-    "ctRequest\022\n\n\002id\030\001 \001(\005\022\013\n\003cls\030\002 \001(\005\022\020\n\010po"
-    "se_cmd\030\003 \003(\002\022\020\n\010robot_ip\030\004 \001(\t\"*\n\017Retrie"
-    "veRequest\022\n\n\002id\030\001 \001(\005\022\013\n\003cls\030\002 \001(\005\"\312\001\n\016D"
-    "etectResponse\022\n\n\002id\030\001 \001(\005\022\020\n\010detected\030\002 "
-    "\001(\010\022\016\n\006passed\030\003 \001(\010\022\013\n\003cls\030\004 \001(\005\022\023\n\013tar_"
-    "ee_pose\030\005 \003(\002\022\025\n\rtar_tool_pose\030\006 \003(\002\022\024\n\014"
-    "tar_obj_pose\030\007 \003(\002\022\020\n\010tool_idx\030\010 \001(\005\022\023\n\013"
-    "error_state\030\t \001(\010\022\024\n\014error_module\030\n \001(\t2"
-    "\332\t\n\007EyeTask\022x\n\rGetServerInfo\0221.IndyFrame"
-    "work.Protobuf.EyeTask.ServerInfoRequest\032"
-    "2.IndyFramework.Protobuf.EyeTask.ServerI"
-    "nfoResponse\"\000\022i\n\010GetImage\022,.IndyFramewor"
-    "k.Protobuf.EyeTask.ImageRequest\032-.IndyFr"
-    "amework.Protobuf.EyeTask.ImageResponse\"\000"
-    "\022d\n\014GetClassList\022\'.IndyFramework.Protobu"
-    "f.EyeTask.Request\032).IndyFramework.Protob"
-    "uf.EyeTask.ClassList\"\000\022i\n\006Detect\022-.IndyF"
-    "ramework.Protobuf.EyeTask.DetectRequest\032"
-    "..IndyFramework.Protobuf.EyeTask.DetectR"
-    "esponse\"\000\022m\n\010Retrieve\022/.IndyFramework.Pr"
-    "otobuf.EyeTask.RetrieveRequest\032..IndyFra"
-    "mework.Protobuf.EyeTask.DetectResponse\"\000"
-    "\022\212\001\n\023GetWeldingLinesInfo\0227.IndyFramework"
-    ".Protobuf.EyeTask.WeldingLinesInfoReques"
-    "t\0328.IndyFramework.Protobuf.EyeTask.Weldi"
-    "ngLinesInfoResponse\"\000\022\212\001\n\023GetStraightLin"
-    "eInfo\0227.IndyFramework.Protobuf.EyeTask.S"
-    "traightLineInfoRequest\0328.IndyFramework.P"
-    "rotobuf.EyeTask.StraightLineInfoResponse"
-    "\"\000\022\212\001\n\023GetCircularLineInfo\0227.IndyFramewo"
-    "rk.Protobuf.EyeTask.CircularLineInfoRequ"
-    "est\0328.IndyFramework.Protobuf.EyeTask.Cir"
-    "cularLineInfoResponse\"\000\022z\n\rDoCalibration"
-    "\0222.IndyFramework.Protobuf.EyeTask.Calibr"
-    "ationRequest\0323.IndyFramework.Protobuf.Ey"
-    "eTask.CalibrationResponse\"\000\022\206\001\n\021IsCalibr"
-    "ationDone\0226.IndyFramework.Protobuf.EyeTa"
-    "sk.CalibrationDoneRequest\0327.IndyFramewor"
-    "k.Protobuf.EyeTask.CalibrationDoneRespon"
-    "se\"\000B9\n io.grpc.custom.neuromeka.EyeTask"
-    "B\014EyeTaskProtoP\001\242\002\004FDDOb\006proto3"
-};
-static ::absl::once_flag descriptor_table_indyeye_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_indyeye_2eproto = {
-    false,
-    false,
-    3711,
-    descriptor_table_protodef_indyeye_2eproto,
-    "indyeye.proto",
-    &descriptor_table_indyeye_2eproto_once,
-    nullptr,
-    0,
-    23,
-    schemas,
-    file_default_instances,
-    TableStruct_indyeye_2eproto::offsets,
-    file_level_metadata_indyeye_2eproto,
-    file_level_enum_descriptors_indyeye_2eproto,
-    file_level_service_descriptors_indyeye_2eproto,
+  &::IndyFramework::Protobuf::EyeTask::_Point_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfo_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfoRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_WeldingLinesInfoResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_StraightLineInfoRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_StraightLineInfoResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CircularLineThreePoints_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CircularLineCenterRadius_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CircularLineInfoRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CircularLineInfoResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_ServerInfoRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_ServerInfoResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CalibrationRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CalibrationResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CalibrationDoneRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_CalibrationDoneResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_ImageRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_ImageResponse_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_Request_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_ClassList_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_DetectRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_RetrieveRequest_default_instance_._instance,
+  &::IndyFramework::Protobuf::EyeTask::_DetectResponse_default_instance_._instance,
 };
 
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
+const char descriptor_table_protodef_indyeye_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\rindyeye.proto\022\036IndyFramework.Protobuf."
+  "EyeTask\"(\n\005Point\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t"
+  "\n\001z\030\003 \001(\002\"\226\001\n\020WeldingLinesInfo\022\014\n\004name\030\001"
+  " \001(\t\022:\n\013start_point\030\002 \001(\0132%.IndyFramewor"
+  "k.Protobuf.EyeTask.Point\0228\n\tend_point\030\003 "
+  "\001(\0132%.IndyFramework.Protobuf.EyeTask.Poi"
+  "nt\"%\n\027WeldingLinesInfoRequest\022\n\n\002id\030\001 \001("
+  "\005\"\222\001\n\030WeldingLinesInfoResponse\022\n\n\002id\030\001 \001"
+  "(\005\022A\n\007welding\030\002 \003(\01320.IndyFramework.Prot"
+  "obuf.EyeTask.WeldingLinesInfo\022\022\n\ncell_ty"
+  "pes\030\003 \003(\t\022\023\n\013error_state\030\004 \001(\010\"%\n\027Straig"
+  "htLineInfoRequest\022\n\n\002id\030\001 \001(\005\"\357\001\n\030Straig"
+  "htLineInfoResponse\022\n\n\002id\030\001 \001(\005\022<\n\rnormal"
+  "_vector\030\002 \001(\0132%.IndyFramework.Protobuf.E"
+  "yeTask.Point\022:\n\013start_point\030\003 \001(\0132%.Indy"
+  "Framework.Protobuf.EyeTask.Point\0228\n\tend_"
+  "point\030\004 \001(\0132%.IndyFramework.Protobuf.Eye"
+  "Task.Point\022\023\n\013error_state\030\005 \001(\010\"\311\001\n\027Circ"
+  "ularLineThreePoints\022:\n\013start_point\030\001 \001(\013"
+  "2%.IndyFramework.Protobuf.EyeTask.Point\022"
+  "8\n\tvia_point\030\002 \001(\0132%.IndyFramework.Proto"
+  "buf.EyeTask.Point\0228\n\tend_point\030\003 \001(\0132%.I"
+  "ndyFramework.Protobuf.EyeTask.Point\"g\n\030C"
+  "ircularLineCenterRadius\022;\n\014center_point\030"
+  "\001 \001(\0132%.IndyFramework.Protobuf.EyeTask.P"
+  "oint\022\016\n\006radius\030\002 \001(\002\"%\n\027CircularLineInfo"
+  "Request\022\n\n\002id\030\001 \001(\005\"\332\002\n\030CircularLineInfo"
+  "Response\022\n\n\002id\030\001 \001(\005\022<\n\rnormal_vector\030\002 "
+  "\001(\0132%.IndyFramework.Protobuf.EyeTask.Poi"
+  "nt\022\?\n\020reference_vector\030\003 \001(\0132%.IndyFrame"
+  "work.Protobuf.EyeTask.Point\022M\n\014point_met"
+  "hod\030\004 \001(\01327.IndyFramework.Protobuf.EyeTa"
+  "sk.CircularLineThreePoints\022O\n\rvector_met"
+  "hod\030\005 \001(\01328.IndyFramework.Protobuf.EyeTa"
+  "sk.CircularLineCenterRadius\022\023\n\013error_sta"
+  "te\030\006 \001(\010\"\037\n\021ServerInfoRequest\022\n\n\002id\030\001 \001("
+  "\005\"]\n\022ServerInfoResponse\022\n\n\002id\030\001 \001(\005\022\017\n\007v"
+  "ersion\030\002 \001(\t\022\024\n\014release_date\030\003 \001(\t\022\024\n\014pr"
+  "ogram_name\030\004 \001(\t\" \n\022CalibrationRequest\022\n"
+  "\n\002id\030\001 \001(\005\"M\n\023CalibrationResponse\022\n\n\002id\030"
+  "\001 \001(\005\022\024\n\014is_succeeded\030\002 \003(\010\022\024\n\014indy_cam_"
+  "rms\030\003 \003(\002\"$\n\026CalibrationDoneRequest\022\n\n\002i"
+  "d\030\001 \001(\005\"h\n\027CalibrationDoneResponse\022\n\n\002id"
+  "\030\001 \001(\005\022\025\n\ris_calibrated\030\002 \001(\010\022\024\n\014is_succ"
+  "eeded\030\003 \003(\010\022\024\n\014indy_cam_rms\030\004 \003(\002\"(\n\014Ima"
+  "geRequest\022\n\n\002id\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\"\220\001\n\r"
+  "ImageResponse\022\n\n\002id\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022"
+  "\r\n\005width\030\003 \001(\005\022\016\n\006height\030\004 \001(\005\022\r\n\005color\030"
+  "\005 \001(\014\022\r\n\005depth\030\006 \001(\014\022\023\n\013depth_scale\030\007 \001("
+  "\002\022\023\n\013error_state\030\010 \001(\010\"\025\n\007Request\022\n\n\002id\030"
+  "\001 \001(\005\"A\n\tClassList\022\n\n\002id\030\001 \001(\005\022\023\n\013class_"
+  "names\030\002 \003(\t\022\023\n\013error_state\030\010 \001(\010\"L\n\rDete"
+  "ctRequest\022\n\n\002id\030\001 \001(\005\022\013\n\003cls\030\002 \001(\005\022\020\n\010po"
+  "se_cmd\030\003 \003(\002\022\020\n\010robot_ip\030\004 \001(\t\"*\n\017Retrie"
+  "veRequest\022\n\n\002id\030\001 \001(\005\022\013\n\003cls\030\002 \001(\005\"\312\001\n\016D"
+  "etectResponse\022\n\n\002id\030\001 \001(\005\022\020\n\010detected\030\002 "
+  "\001(\010\022\016\n\006passed\030\003 \001(\010\022\013\n\003cls\030\004 \001(\005\022\023\n\013tar_"
+  "ee_pose\030\005 \003(\002\022\025\n\rtar_tool_pose\030\006 \003(\002\022\024\n\014"
+  "tar_obj_pose\030\007 \003(\002\022\020\n\010tool_idx\030\010 \001(\005\022\023\n\013"
+  "error_state\030\t \001(\010\022\024\n\014error_module\030\n \001(\t2"
+  "\332\t\n\007EyeTask\022x\n\rGetServerInfo\0221.IndyFrame"
+  "work.Protobuf.EyeTask.ServerInfoRequest\032"
+  "2.IndyFramework.Protobuf.EyeTask.ServerI"
+  "nfoResponse\"\000\022i\n\010GetImage\022,.IndyFramewor"
+  "k.Protobuf.EyeTask.ImageRequest\032-.IndyFr"
+  "amework.Protobuf.EyeTask.ImageResponse\"\000"
+  "\022d\n\014GetClassList\022\'.IndyFramework.Protobu"
+  "f.EyeTask.Request\032).IndyFramework.Protob"
+  "uf.EyeTask.ClassList\"\000\022i\n\006Detect\022-.IndyF"
+  "ramework.Protobuf.EyeTask.DetectRequest\032"
+  "..IndyFramework.Protobuf.EyeTask.DetectR"
+  "esponse\"\000\022m\n\010Retrieve\022/.IndyFramework.Pr"
+  "otobuf.EyeTask.RetrieveRequest\032..IndyFra"
+  "mework.Protobuf.EyeTask.DetectResponse\"\000"
+  "\022\212\001\n\023GetWeldingLinesInfo\0227.IndyFramework"
+  ".Protobuf.EyeTask.WeldingLinesInfoReques"
+  "t\0328.IndyFramework.Protobuf.EyeTask.Weldi"
+  "ngLinesInfoResponse\"\000\022\212\001\n\023GetStraightLin"
+  "eInfo\0227.IndyFramework.Protobuf.EyeTask.S"
+  "traightLineInfoRequest\0328.IndyFramework.P"
+  "rotobuf.EyeTask.StraightLineInfoResponse"
+  "\"\000\022\212\001\n\023GetCircularLineInfo\0227.IndyFramewo"
+  "rk.Protobuf.EyeTask.CircularLineInfoRequ"
+  "est\0328.IndyFramework.Protobuf.EyeTask.Cir"
+  "cularLineInfoResponse\"\000\022z\n\rDoCalibration"
+  "\0222.IndyFramework.Protobuf.EyeTask.Calibr"
+  "ationRequest\0323.IndyFramework.Protobuf.Ey"
+  "eTask.CalibrationResponse\"\000\022\206\001\n\021IsCalibr"
+  "ationDone\0226.IndyFramework.Protobuf.EyeTa"
+  "sk.CalibrationDoneRequest\0327.IndyFramewor"
+  "k.Protobuf.EyeTask.CalibrationDoneRespon"
+  "se\"\000B9\n io.grpc.custom.neuromeka.EyeTask"
+  "B\014EyeTaskProtoP\001\242\002\004FDDOb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_indyeye_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_indyeye_2eproto = {
+    false, false, 3711, descriptor_table_protodef_indyeye_2eproto,
+    "indyeye.proto",
+    &descriptor_table_indyeye_2eproto_once, nullptr, 0, 23,
+    schemas, file_default_instances, TableStruct_indyeye_2eproto::offsets,
+    file_level_metadata_indyeye_2eproto, file_level_enum_descriptors_indyeye_2eproto,
+    file_level_service_descriptors_indyeye_2eproto,
+};
 PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_indyeye_2eproto_getter() {
   return &descriptor_table_indyeye_2eproto;
 }
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_indyeye_2eproto(&descriptor_table_indyeye_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_indyeye_2eproto(&descriptor_table_indyeye_2eproto);
 namespace IndyFramework {
 namespace Protobuf {
 namespace EyeTask {
+
 // ===================================================================
 
 class Point::_Internal {
  public:
 };
 
-Point::Point(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Point::Point(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.Point)
 }
 Point::Point(const Point& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Point* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.x_){}
+    , decltype(_impl_.y_){}
+    , decltype(_impl_.z_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.x_, &from._impl_.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.z_) -
+    reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.z_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.Point)
 }
-inline void Point::SharedCtor(::_pb::Arena* arena) {
+
+inline void Point::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.x_){0},
-      decltype(_impl_.y_){0},
-      decltype(_impl_.z_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.x_){0}
+    , decltype(_impl_.y_){0}
+    , decltype(_impl_.z_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 Point::~Point() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.Point)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void Point::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void Point::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void Point::Clear() {
+void Point::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.Point)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.x_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.x_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.z_) -
       reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.z_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Point::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Point::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // float x = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
+          _impl_.x_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float y = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.y_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // float z = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _impl_.z_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Point::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Point_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // float x = 1;
-    {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Point, _impl_.x_)}},
-    // float y = 2;
-    {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Point, _impl_.y_)}},
-    // float z = 3;
-    {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(Point, _impl_.z_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // float x = 1;
-    {PROTOBUF_FIELD_OFFSET(Point, _impl_.x_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float y = 2;
-    {PROTOBUF_FIELD_OFFSET(Point, _impl_.y_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // float z = 3;
-    {PROTOBUF_FIELD_OFFSET(Point, _impl_.z_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* Point::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* Point::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.Point)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // float x = 1;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_x = this->_internal_x();
-  ::uint32_t raw_x;
+  uint32_t raw_x;
   memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
   if (raw_x != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        1, this->_internal_x(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_x(), target);
   }
 
   // float y = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_y = this->_internal_y();
-  ::uint32_t raw_y;
+  uint32_t raw_y;
   memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
   if (raw_y != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        2, this->_internal_y(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_y(), target);
   }
 
   // float z = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_z = this->_internal_z();
-  ::uint32_t raw_z;
+  uint32_t raw_z;
   memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
   if (raw_z != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        3, this->_internal_z(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_z(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.Point)
   return target;
 }
 
-::size_t Point::ByteSizeLong() const {
+size_t Point::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.Point)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // float x = 1;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_x = this->_internal_x();
-  ::uint32_t raw_x;
+  uint32_t raw_x;
   memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
   if (raw_x != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // float y = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_y = this->_internal_y();
-  ::uint32_t raw_y;
+  uint32_t raw_y;
   memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
   if (raw_y != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // float z = 3;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_z = this->_internal_z();
-  ::uint32_t raw_z;
+  uint32_t raw_z;
   memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
   if (raw_z != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Point::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Point::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     Point::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Point::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Point::GetClassData() const { return &_class_data_; }
 
 
-void Point::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void Point::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Point*>(&to_msg);
   auto& from = static_cast<const Point&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.Point)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_x = from._internal_x();
-  ::uint32_t raw_x;
+  uint32_t raw_x;
   memcpy(&raw_x, &tmp_x, sizeof(tmp_x));
   if (raw_x != 0) {
     _this->_internal_set_x(from._internal_x());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_y = from._internal_y();
-  ::uint32_t raw_y;
+  uint32_t raw_y;
   memcpy(&raw_y, &tmp_y, sizeof(tmp_y));
   if (raw_y != 0) {
     _this->_internal_set_y(from._internal_y());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_z = from._internal_z();
-  ::uint32_t raw_z;
+  uint32_t raw_z;
   memcpy(&raw_z, &tmp_z, sizeof(tmp_z));
   if (raw_z != 0) {
     _this->_internal_set_z(from._internal_z());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Point::CopyFrom(const Point& from) {
@@ -1186,14 +1008,14 @@ void Point::CopyFrom(const Point& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Point::IsInitialized() const {
+bool Point::IsInitialized() const {
   return true;
 }
 
 void Point::InternalSwap(Point* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Point, _impl_.z_)
       + sizeof(Point::_impl_.z_)
       - PROTOBUF_FIELD_OFFSET(Point, _impl_.x_)>(
@@ -1201,275 +1023,267 @@ void Point::InternalSwap(Point* other) {
           reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata Point::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Point::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[0]);
 }
+
 // ===================================================================
 
 class WeldingLinesInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<WeldingLinesInfo>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_._has_bits_);
   static const ::IndyFramework::Protobuf::EyeTask::Point& start_point(const WeldingLinesInfo* msg);
-  static void set_has_start_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& end_point(const WeldingLinesInfo* msg);
-  static void set_has_end_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
 };
 
-const ::IndyFramework::Protobuf::EyeTask::Point& WeldingLinesInfo::_Internal::start_point(const WeldingLinesInfo* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+WeldingLinesInfo::_Internal::start_point(const WeldingLinesInfo* msg) {
   return *msg->_impl_.start_point_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& WeldingLinesInfo::_Internal::end_point(const WeldingLinesInfo* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+WeldingLinesInfo::_Internal::end_point(const WeldingLinesInfo* msg) {
   return *msg->_impl_.end_point_;
 }
-WeldingLinesInfo::WeldingLinesInfo(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+WeldingLinesInfo::WeldingLinesInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
 }
-WeldingLinesInfo::WeldingLinesInfo(const WeldingLinesInfo& from) : ::google::protobuf::Message() {
-  WeldingLinesInfo* const _this = this;
-  (void)_this;
+WeldingLinesInfo::WeldingLinesInfo(const WeldingLinesInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  WeldingLinesInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.name_){},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.name_){}
+    , decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), _this->GetArenaForAllocation());
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
   }
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+  if (from._internal_has_start_point()) {
     _this->_impl_.start_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.start_point_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+  if (from._internal_has_end_point()) {
     _this->_impl_.end_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.end_point_);
   }
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
 }
-inline void WeldingLinesInfo::SharedCtor(::_pb::Arena* arena) {
+
+inline void WeldingLinesInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.name_){},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
+      decltype(_impl_.name_){}
+    , decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 WeldingLinesInfo::~WeldingLinesInfo() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void WeldingLinesInfo::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.name_.Destroy();
   if (this != internal_default_instance()) delete _impl_.start_point_;
   if (this != internal_default_instance()) delete _impl_.end_point_;
 }
+
 void WeldingLinesInfo::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void WeldingLinesInfo::Clear() {
+void WeldingLinesInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.name_.ClearToEmpty();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(_impl_.start_point_ != nullptr);
-      _impl_.start_point_->Clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(_impl_.end_point_ != nullptr);
-      _impl_.end_point_->Clear();
-    }
+  if (GetArenaForAllocation() == nullptr && _impl_.start_point_ != nullptr) {
+    delete _impl_.start_point_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _impl_.start_point_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.end_point_ != nullptr) {
+    delete _impl_.end_point_;
+  }
+  _impl_.end_point_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WeldingLinesInfo::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* WeldingLinesInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.WeldingLinesInfo.name"));
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_start_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_end_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 2, 60, 2> WeldingLinesInfo::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_._has_bits_),
-    0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    2,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_WeldingLinesInfo_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // string name = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.name_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
-    {::_pbi::TcParser::FastMtS1,
-     {18, 0, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.start_point_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    {::_pbi::TcParser::FastMtS1,
-     {26, 1, 1, PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.end_point_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string name = 1;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.name_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.start_point_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.end_point_), _Internal::kHasBitsOffset + 1, 1,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-  }}, {{
-    "\57\4\0\0\0\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.WeldingLinesInfo"
-    "name"
-  }},
-};
-
-::uint8_t* WeldingLinesInfo::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* WeldingLinesInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string name = 1;
   if (!this->_internal_name().empty()) {
-    const std::string& _s = this->_internal_name();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.WeldingLinesInfo.name");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.WeldingLinesInfo.name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
   // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_start_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::start_point(this),
         _Internal::start_point(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_end_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::end_point(this),
         _Internal::end_point(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
   return target;
 }
 
-::size_t WeldingLinesInfo::ByteSizeLong() const {
+size_t WeldingLinesInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string name = 1;
   if (!this->_internal_name().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_name());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.start_point_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.end_point_);
-    }
-
+  // .IndyFramework.Protobuf.EyeTask.Point start_point = 2;
+  if (this->_internal_has_start_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.start_point_);
   }
+
+  // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
+  if (this->_internal_has_end_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.end_point_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData WeldingLinesInfo::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WeldingLinesInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     WeldingLinesInfo::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*WeldingLinesInfo::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WeldingLinesInfo::GetClassData() const { return &_class_data_; }
 
 
-void WeldingLinesInfo::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void WeldingLinesInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<WeldingLinesInfo*>(&to_msg);
   auto& from = static_cast<const WeldingLinesInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfo)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_name().empty()) {
     _this->_internal_set_name(from._internal_name());
   }
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_start_point());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_end_point());
-    }
+  if (from._internal_has_start_point()) {
+    _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_start_point());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_end_point()) {
+    _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_end_point());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void WeldingLinesInfo::CopyFrom(const WeldingLinesInfo& from) {
@@ -1479,7 +1293,7 @@ void WeldingLinesInfo::CopyFrom(const WeldingLinesInfo& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool WeldingLinesInfo::IsInitialized() const {
+bool WeldingLinesInfo::IsInitialized() const {
   return true;
 }
 
@@ -1488,10 +1302,11 @@ void WeldingLinesInfo::InternalSwap(WeldingLinesInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, lhs_arena,
-                                       &other->_impl_.name_, rhs_arena);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.end_point_)
       + sizeof(WeldingLinesInfo::_impl_.end_point_)
       - PROTOBUF_FIELD_OFFSET(WeldingLinesInfo, _impl_.start_point_)>(
@@ -1499,153 +1314,165 @@ void WeldingLinesInfo::InternalSwap(WeldingLinesInfo* other) {
           reinterpret_cast<char*>(&other->_impl_.start_point_));
 }
 
-::google::protobuf::Metadata WeldingLinesInfo::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata WeldingLinesInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[1]);
 }
+
 // ===================================================================
 
 class WeldingLinesInfoRequest::_Internal {
  public:
 };
 
-WeldingLinesInfoRequest::WeldingLinesInfoRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+WeldingLinesInfoRequest::WeldingLinesInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
 }
 WeldingLinesInfoRequest::WeldingLinesInfoRequest(const WeldingLinesInfoRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  WeldingLinesInfoRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
 }
-inline void WeldingLinesInfoRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void WeldingLinesInfoRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 WeldingLinesInfoRequest::~WeldingLinesInfoRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void WeldingLinesInfoRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void WeldingLinesInfoRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void WeldingLinesInfoRequest::Clear() {
+void WeldingLinesInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WeldingLinesInfoRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* WeldingLinesInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> WeldingLinesInfoRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_WeldingLinesInfoRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(WeldingLinesInfoRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfoRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfoRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* WeldingLinesInfoRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* WeldingLinesInfoRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
   return target;
 }
 
-::size_t WeldingLinesInfoRequest::ByteSizeLong() const {
+size_t WeldingLinesInfoRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData WeldingLinesInfoRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WeldingLinesInfoRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     WeldingLinesInfoRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*WeldingLinesInfoRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WeldingLinesInfoRequest::GetClassData() const { return &_class_data_; }
 
 
-void WeldingLinesInfoRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void WeldingLinesInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<WeldingLinesInfoRequest*>(&to_msg);
   auto& from = static_cast<const WeldingLinesInfoRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void WeldingLinesInfoRequest::CopyFrom(const WeldingLinesInfoRequest& from) {
@@ -1655,250 +1482,274 @@ void WeldingLinesInfoRequest::CopyFrom(const WeldingLinesInfoRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool WeldingLinesInfoRequest::IsInitialized() const {
+bool WeldingLinesInfoRequest::IsInitialized() const {
   return true;
 }
 
 void WeldingLinesInfoRequest::InternalSwap(WeldingLinesInfoRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata WeldingLinesInfoRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata WeldingLinesInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[2]);
 }
+
 // ===================================================================
 
 class WeldingLinesInfoResponse::_Internal {
  public:
 };
 
-WeldingLinesInfoResponse::WeldingLinesInfoResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+WeldingLinesInfoResponse::WeldingLinesInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
 }
-WeldingLinesInfoResponse::WeldingLinesInfoResponse(const WeldingLinesInfoResponse& from) : ::google::protobuf::Message() {
-  WeldingLinesInfoResponse* const _this = this;
-  (void)_this;
+WeldingLinesInfoResponse::WeldingLinesInfoResponse(const WeldingLinesInfoResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  WeldingLinesInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.welding_){from._impl_.welding_},
-      decltype(_impl_.cell_types_){from._impl_.cell_types_},
-      decltype(_impl_.id_){},
-      decltype(_impl_.error_state_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
-    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
+      decltype(_impl_.welding_){from._impl_.welding_}
+    , decltype(_impl_.cell_types_){from._impl_.cell_types_}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.error_state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
 }
-inline void WeldingLinesInfoResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void WeldingLinesInfoResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.welding_){arena},
-      decltype(_impl_.cell_types_){arena},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.error_state_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.welding_){arena}
+    , decltype(_impl_.cell_types_){arena}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.error_state_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 WeldingLinesInfoResponse::~WeldingLinesInfoResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void WeldingLinesInfoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.welding_.~RepeatedPtrField();
-  _internal_mutable_cell_types()->~RepeatedPtrField();
+  _impl_.cell_types_.~RepeatedPtrField();
 }
+
 void WeldingLinesInfoResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void WeldingLinesInfoResponse::Clear() {
+void WeldingLinesInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_welding()->Clear();
-  _internal_mutable_cell_types()->Clear();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  _impl_.welding_.Clear();
+  _impl_.cell_types_.Clear();
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.error_state_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WeldingLinesInfoResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* WeldingLinesInfoResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated .IndyFramework.Protobuf.EyeTask.WeldingLinesInfo welding = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_welding(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated string cell_types = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_cell_types();
+            ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse.cell_types"));
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 1, 74, 2> WeldingLinesInfoResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    1,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_WeldingLinesInfoResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // bool error_state = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(WeldingLinesInfoResponse, _impl_.error_state_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.error_state_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(WeldingLinesInfoResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.id_)}},
-    // repeated .IndyFramework.Protobuf.EyeTask.WeldingLinesInfo welding = 2;
-    {::_pbi::TcParser::FastMtR1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.welding_)}},
-    // repeated string cell_types = 3;
-    {::_pbi::TcParser::FastUR1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.cell_types_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // repeated .IndyFramework.Protobuf.EyeTask.WeldingLinesInfo welding = 2;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.welding_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
-    // repeated string cell_types = 3;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.cell_types_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
-    // bool error_state = 4;
-    {PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.error_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo>()},
-  }}, {{
-    "\67\0\0\12\0\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse"
-    "cell_types"
-  }},
-};
-
-::uint8_t* WeldingLinesInfoResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* WeldingLinesInfoResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // repeated .IndyFramework.Protobuf.EyeTask.WeldingLinesInfo welding = 2;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_welding_size()); i < n; i++) {
-    const auto& repfield = this->_internal_welding().Get(i);
-    target = ::google::protobuf::internal::WireFormatLite::
+    const auto& repfield = this->_internal_welding(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated string cell_types = 3;
-  for (int i = 0, n = this->_internal_cell_types_size(); i < n; ++i) {
-    const auto& s = this->_internal_cell_types().Get(i);
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse.cell_types");
+  for (int i = 0, n = this->_internal_cell_types_size(); i < n; i++) {
+    const auto& s = this->_internal_cell_types(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse.cell_types");
     target = stream->WriteString(3, s, target);
   }
 
   // bool error_state = 4;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        4, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_error_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
   return target;
 }
 
-::size_t WeldingLinesInfoResponse::ByteSizeLong() const {
+size_t WeldingLinesInfoResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .IndyFramework.Protobuf.EyeTask.WeldingLinesInfo welding = 2;
   total_size += 1UL * this->_internal_welding_size();
-  for (const auto& msg : this->_internal_welding()) {
+  for (const auto& msg : this->_impl_.welding_) {
     total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
+
   // repeated string cell_types = 3;
-  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_cell_types().size());
-  for (int i = 0, n = _internal_cell_types().size(); i < n; ++i) {
-    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-        _internal_cell_types().Get(i));
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.cell_types_.size());
+  for (int i = 0, n = _impl_.cell_types_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      _impl_.cell_types_.Get(i));
   }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // bool error_state = 4;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData WeldingLinesInfoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WeldingLinesInfoResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     WeldingLinesInfoResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*WeldingLinesInfoResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WeldingLinesInfoResponse::GetClassData() const { return &_class_data_; }
 
 
-void WeldingLinesInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void WeldingLinesInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<WeldingLinesInfoResponse*>(&to_msg);
   auto& from = static_cast<const WeldingLinesInfoResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.WeldingLinesInfoResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_welding()->MergeFrom(from._internal_welding());
-  _this->_internal_mutable_cell_types()->MergeFrom(from._internal_cell_types());
+  _this->_impl_.welding_.MergeFrom(from._impl_.welding_);
+  _this->_impl_.cell_types_.MergeFrom(from._impl_.cell_types_);
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
   if (from._internal_error_state() != 0) {
     _this->_internal_set_error_state(from._internal_error_state());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void WeldingLinesInfoResponse::CopyFrom(const WeldingLinesInfoResponse& from) {
@@ -1908,7 +1759,7 @@ void WeldingLinesInfoResponse::CopyFrom(const WeldingLinesInfoResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool WeldingLinesInfoResponse::IsInitialized() const {
+bool WeldingLinesInfoResponse::IsInitialized() const {
   return true;
 }
 
@@ -1917,7 +1768,7 @@ void WeldingLinesInfoResponse::InternalSwap(WeldingLinesInfoResponse* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.welding_.InternalSwap(&other->_impl_.welding_);
   _impl_.cell_types_.InternalSwap(&other->_impl_.cell_types_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.error_state_)
       + sizeof(WeldingLinesInfoResponse::_impl_.error_state_)
       - PROTOBUF_FIELD_OFFSET(WeldingLinesInfoResponse, _impl_.id_)>(
@@ -1925,153 +1776,165 @@ void WeldingLinesInfoResponse::InternalSwap(WeldingLinesInfoResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata WeldingLinesInfoResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata WeldingLinesInfoResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[3]);
 }
+
 // ===================================================================
 
 class StraightLineInfoRequest::_Internal {
  public:
 };
 
-StraightLineInfoRequest::StraightLineInfoRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+StraightLineInfoRequest::StraightLineInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
 }
 StraightLineInfoRequest::StraightLineInfoRequest(const StraightLineInfoRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StraightLineInfoRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
 }
-inline void StraightLineInfoRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void StraightLineInfoRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 StraightLineInfoRequest::~StraightLineInfoRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void StraightLineInfoRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void StraightLineInfoRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void StraightLineInfoRequest::Clear() {
+void StraightLineInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* StraightLineInfoRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* StraightLineInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> StraightLineInfoRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_StraightLineInfoRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(StraightLineInfoRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(StraightLineInfoRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* StraightLineInfoRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* StraightLineInfoRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
   return target;
 }
 
-::size_t StraightLineInfoRequest::ByteSizeLong() const {
+size_t StraightLineInfoRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData StraightLineInfoRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StraightLineInfoRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     StraightLineInfoRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*StraightLineInfoRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StraightLineInfoRequest::GetClassData() const { return &_class_data_; }
 
 
-void StraightLineInfoRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void StraightLineInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<StraightLineInfoRequest*>(&to_msg);
   auto& from = static_cast<const StraightLineInfoRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void StraightLineInfoRequest::CopyFrom(const StraightLineInfoRequest& from) {
@@ -2081,238 +1944,232 @@ void StraightLineInfoRequest::CopyFrom(const StraightLineInfoRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool StraightLineInfoRequest::IsInitialized() const {
+bool StraightLineInfoRequest::IsInitialized() const {
   return true;
 }
 
 void StraightLineInfoRequest::InternalSwap(StraightLineInfoRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata StraightLineInfoRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata StraightLineInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[4]);
 }
+
 // ===================================================================
 
 class StraightLineInfoResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<StraightLineInfoResponse>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_._has_bits_);
   static const ::IndyFramework::Protobuf::EyeTask::Point& normal_vector(const StraightLineInfoResponse* msg);
-  static void set_has_normal_vector(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& start_point(const StraightLineInfoResponse* msg);
-  static void set_has_start_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& end_point(const StraightLineInfoResponse* msg);
-  static void set_has_end_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
 };
 
-const ::IndyFramework::Protobuf::EyeTask::Point& StraightLineInfoResponse::_Internal::normal_vector(const StraightLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+StraightLineInfoResponse::_Internal::normal_vector(const StraightLineInfoResponse* msg) {
   return *msg->_impl_.normal_vector_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& StraightLineInfoResponse::_Internal::start_point(const StraightLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+StraightLineInfoResponse::_Internal::start_point(const StraightLineInfoResponse* msg) {
   return *msg->_impl_.start_point_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& StraightLineInfoResponse::_Internal::end_point(const StraightLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+StraightLineInfoResponse::_Internal::end_point(const StraightLineInfoResponse* msg) {
   return *msg->_impl_.end_point_;
 }
-StraightLineInfoResponse::StraightLineInfoResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+StraightLineInfoResponse::StraightLineInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
 }
-StraightLineInfoResponse::StraightLineInfoResponse(const StraightLineInfoResponse& from) : ::google::protobuf::Message() {
-  StraightLineInfoResponse* const _this = this;
-  (void)_this;
+StraightLineInfoResponse::StraightLineInfoResponse(const StraightLineInfoResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StraightLineInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.normal_vector_){nullptr},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
-      decltype(_impl_.id_){},
-      decltype(_impl_.error_state_){},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+      decltype(_impl_.normal_vector_){nullptr}
+    , decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.error_state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_normal_vector()) {
     _this->_impl_.normal_vector_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.normal_vector_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+  if (from._internal_has_start_point()) {
     _this->_impl_.start_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.start_point_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+  if (from._internal_has_end_point()) {
     _this->_impl_.end_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.end_point_);
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
 }
-inline void StraightLineInfoResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void StraightLineInfoResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.normal_vector_){nullptr},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.error_state_){false},
+      decltype(_impl_.normal_vector_){nullptr}
+    , decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.error_state_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 StraightLineInfoResponse::~StraightLineInfoResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void StraightLineInfoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete _impl_.normal_vector_;
   if (this != internal_default_instance()) delete _impl_.start_point_;
   if (this != internal_default_instance()) delete _impl_.end_point_;
 }
+
 void StraightLineInfoResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void StraightLineInfoResponse::Clear() {
+void StraightLineInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(_impl_.normal_vector_ != nullptr);
-      _impl_.normal_vector_->Clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(_impl_.start_point_ != nullptr);
-      _impl_.start_point_->Clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ABSL_DCHECK(_impl_.end_point_ != nullptr);
-      _impl_.end_point_->Clear();
-    }
+  if (GetArenaForAllocation() == nullptr && _impl_.normal_vector_ != nullptr) {
+    delete _impl_.normal_vector_;
   }
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  _impl_.normal_vector_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.start_point_ != nullptr) {
+    delete _impl_.start_point_;
+  }
+  _impl_.start_point_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.end_point_ != nullptr) {
+    delete _impl_.end_point_;
+  }
+  _impl_.end_point_ = nullptr;
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.error_state_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* StraightLineInfoResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* StraightLineInfoResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_normal_vector(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_start_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_end_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 3, 0, 2> StraightLineInfoResponse::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_._has_bits_),
-    0, // no _extensions_
-    5, 56,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967264,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    5,  // num_field_entries
-    3,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_StraightLineInfoResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(StraightLineInfoResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.id_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    {::_pbi::TcParser::FastMtS1,
-     {18, 0, 0, PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.normal_vector_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
-    {::_pbi::TcParser::FastMtS1,
-     {26, 1, 1, PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.start_point_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
-    {::_pbi::TcParser::FastMtS1,
-     {34, 2, 2, PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.end_point_)}},
-    // bool error_state = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(StraightLineInfoResponse, _impl_.error_state_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.error_state_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.id_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.normal_vector_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.start_point_), _Internal::kHasBitsOffset + 1, 1,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.end_point_), _Internal::kHasBitsOffset + 2, 2,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // bool error_state = 5;
-    {PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.error_state_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-  }}, {{
-  }},
-};
-
-::uint8_t* StraightLineInfoResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* StraightLineInfoResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
   // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_normal_vector()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::normal_vector(this),
         _Internal::normal_vector(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_start_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::start_point(this),
         _Internal::start_point(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_end_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::end_point(this),
         _Internal::end_point(this).GetCachedSize(), target, stream);
   }
@@ -2320,94 +2177,85 @@ const ::_pbi::TcParseTable<3, 5, 3, 0, 2> StraightLineInfoResponse::_table_ = {
   // bool error_state = 5;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        5, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_error_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
   return target;
 }
 
-::size_t StraightLineInfoResponse::ByteSizeLong() const {
+size_t StraightLineInfoResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.normal_vector_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.start_point_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.end_point_);
-    }
-
+  // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
+  if (this->_internal_has_normal_vector()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.normal_vector_);
   }
+
+  // .IndyFramework.Protobuf.EyeTask.Point start_point = 3;
+  if (this->_internal_has_start_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.start_point_);
+  }
+
+  // .IndyFramework.Protobuf.EyeTask.Point end_point = 4;
+  if (this->_internal_has_end_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.end_point_);
+  }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // bool error_state = 5;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData StraightLineInfoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StraightLineInfoResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     StraightLineInfoResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*StraightLineInfoResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StraightLineInfoResponse::GetClassData() const { return &_class_data_; }
 
 
-void StraightLineInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void StraightLineInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<StraightLineInfoResponse*>(&to_msg);
   auto& from = static_cast<const StraightLineInfoResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.StraightLineInfoResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_normal_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_normal_vector());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_start_point());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_end_point());
-    }
+  if (from._internal_has_normal_vector()) {
+    _this->_internal_mutable_normal_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_normal_vector());
+  }
+  if (from._internal_has_start_point()) {
+    _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_start_point());
+  }
+  if (from._internal_has_end_point()) {
+    _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_end_point());
   }
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
@@ -2415,7 +2263,7 @@ void StraightLineInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, co
   if (from._internal_error_state() != 0) {
     _this->_internal_set_error_state(from._internal_error_state());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void StraightLineInfoResponse::CopyFrom(const StraightLineInfoResponse& from) {
@@ -2425,15 +2273,14 @@ void StraightLineInfoResponse::CopyFrom(const StraightLineInfoResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool StraightLineInfoResponse::IsInitialized() const {
+bool StraightLineInfoResponse::IsInitialized() const {
   return true;
 }
 
 void StraightLineInfoResponse::InternalSwap(StraightLineInfoResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.error_state_)
       + sizeof(StraightLineInfoResponse::_impl_.error_state_)
       - PROTOBUF_FIELD_OFFSET(StraightLineInfoResponse, _impl_.normal_vector_)>(
@@ -2441,276 +2288,262 @@ void StraightLineInfoResponse::InternalSwap(StraightLineInfoResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.normal_vector_));
 }
 
-::google::protobuf::Metadata StraightLineInfoResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata StraightLineInfoResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[5]);
 }
+
 // ===================================================================
 
 class CircularLineThreePoints::_Internal {
  public:
-  using HasBits = decltype(std::declval<CircularLineThreePoints>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_._has_bits_);
   static const ::IndyFramework::Protobuf::EyeTask::Point& start_point(const CircularLineThreePoints* msg);
-  static void set_has_start_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& via_point(const CircularLineThreePoints* msg);
-  static void set_has_via_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& end_point(const CircularLineThreePoints* msg);
-  static void set_has_end_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
 };
 
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineThreePoints::_Internal::start_point(const CircularLineThreePoints* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineThreePoints::_Internal::start_point(const CircularLineThreePoints* msg) {
   return *msg->_impl_.start_point_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineThreePoints::_Internal::via_point(const CircularLineThreePoints* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineThreePoints::_Internal::via_point(const CircularLineThreePoints* msg) {
   return *msg->_impl_.via_point_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineThreePoints::_Internal::end_point(const CircularLineThreePoints* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineThreePoints::_Internal::end_point(const CircularLineThreePoints* msg) {
   return *msg->_impl_.end_point_;
 }
-CircularLineThreePoints::CircularLineThreePoints(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CircularLineThreePoints::CircularLineThreePoints(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
 }
-CircularLineThreePoints::CircularLineThreePoints(const CircularLineThreePoints& from) : ::google::protobuf::Message() {
-  CircularLineThreePoints* const _this = this;
-  (void)_this;
+CircularLineThreePoints::CircularLineThreePoints(const CircularLineThreePoints& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircularLineThreePoints* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.via_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+      decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.via_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_start_point()) {
     _this->_impl_.start_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.start_point_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+  if (from._internal_has_via_point()) {
     _this->_impl_.via_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.via_point_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+  if (from._internal_has_end_point()) {
     _this->_impl_.end_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.end_point_);
   }
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
 }
-inline void CircularLineThreePoints::SharedCtor(::_pb::Arena* arena) {
+
+inline void CircularLineThreePoints::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.start_point_){nullptr},
-      decltype(_impl_.via_point_){nullptr},
-      decltype(_impl_.end_point_){nullptr},
+      decltype(_impl_.start_point_){nullptr}
+    , decltype(_impl_.via_point_){nullptr}
+    , decltype(_impl_.end_point_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CircularLineThreePoints::~CircularLineThreePoints() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CircularLineThreePoints::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete _impl_.start_point_;
   if (this != internal_default_instance()) delete _impl_.via_point_;
   if (this != internal_default_instance()) delete _impl_.end_point_;
 }
+
 void CircularLineThreePoints::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CircularLineThreePoints::Clear() {
+void CircularLineThreePoints::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(_impl_.start_point_ != nullptr);
-      _impl_.start_point_->Clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(_impl_.via_point_ != nullptr);
-      _impl_.via_point_->Clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ABSL_DCHECK(_impl_.end_point_ != nullptr);
-      _impl_.end_point_->Clear();
-    }
+  if (GetArenaForAllocation() == nullptr && _impl_.start_point_ != nullptr) {
+    delete _impl_.start_point_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _impl_.start_point_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.via_point_ != nullptr) {
+    delete _impl_.via_point_;
+  }
+  _impl_.via_point_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.end_point_ != nullptr) {
+    delete _impl_.end_point_;
+  }
+  _impl_.end_point_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircularLineThreePoints::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CircularLineThreePoints::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_start_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_via_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_end_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 3, 0, 2> CircularLineThreePoints::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_._has_bits_),
-    0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    3,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_CircularLineThreePoints_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
-    {::_pbi::TcParser::FastMtS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.start_point_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
-    {::_pbi::TcParser::FastMtS1,
-     {18, 1, 1, PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.via_point_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    {::_pbi::TcParser::FastMtS1,
-     {26, 2, 2, PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.end_point_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
-    {PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.start_point_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
-    {PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.via_point_), _Internal::kHasBitsOffset + 1, 1,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    {PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.end_point_), _Internal::kHasBitsOffset + 2, 2,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-  }}, {{
-  }},
-};
-
-::uint8_t* CircularLineThreePoints::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CircularLineThreePoints::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
   // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_start_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::start_point(this),
         _Internal::start_point(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_via_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::via_point(this),
         _Internal::via_point(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_end_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::end_point(this),
         _Internal::end_point(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
   return target;
 }
 
-::size_t CircularLineThreePoints::ByteSizeLong() const {
+size_t CircularLineThreePoints::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.start_point_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.via_point_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.end_point_);
-    }
-
+  // .IndyFramework.Protobuf.EyeTask.Point start_point = 1;
+  if (this->_internal_has_start_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.start_point_);
   }
+
+  // .IndyFramework.Protobuf.EyeTask.Point via_point = 2;
+  if (this->_internal_has_via_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.via_point_);
+  }
+
+  // .IndyFramework.Protobuf.EyeTask.Point end_point = 3;
+  if (this->_internal_has_end_point()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.end_point_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CircularLineThreePoints::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircularLineThreePoints::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CircularLineThreePoints::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CircularLineThreePoints::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircularLineThreePoints::GetClassData() const { return &_class_data_; }
 
 
-void CircularLineThreePoints::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CircularLineThreePoints::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CircularLineThreePoints*>(&to_msg);
   auto& from = static_cast<const CircularLineThreePoints&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CircularLineThreePoints)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_start_point());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_via_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_via_point());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_end_point());
-    }
+  if (from._internal_has_start_point()) {
+    _this->_internal_mutable_start_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_start_point());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_via_point()) {
+    _this->_internal_mutable_via_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_via_point());
+  }
+  if (from._internal_has_end_point()) {
+    _this->_internal_mutable_end_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_end_point());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircularLineThreePoints::CopyFrom(const CircularLineThreePoints& from) {
@@ -2720,15 +2553,14 @@ void CircularLineThreePoints::CopyFrom(const CircularLineThreePoints& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CircularLineThreePoints::IsInitialized() const {
+bool CircularLineThreePoints::IsInitialized() const {
   return true;
 }
 
 void CircularLineThreePoints::InternalSwap(CircularLineThreePoints* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.end_point_)
       + sizeof(CircularLineThreePoints::_impl_.end_point_)
       - PROTOBUF_FIELD_OFFSET(CircularLineThreePoints, _impl_.start_point_)>(
@@ -2736,224 +2568,218 @@ void CircularLineThreePoints::InternalSwap(CircularLineThreePoints* other) {
           reinterpret_cast<char*>(&other->_impl_.start_point_));
 }
 
-::google::protobuf::Metadata CircularLineThreePoints::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CircularLineThreePoints::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[6]);
 }
+
 // ===================================================================
 
 class CircularLineCenterRadius::_Internal {
  public:
-  using HasBits = decltype(std::declval<CircularLineCenterRadius>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_._has_bits_);
   static const ::IndyFramework::Protobuf::EyeTask::Point& center_point(const CircularLineCenterRadius* msg);
-  static void set_has_center_point(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
 };
 
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineCenterRadius::_Internal::center_point(const CircularLineCenterRadius* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineCenterRadius::_Internal::center_point(const CircularLineCenterRadius* msg) {
   return *msg->_impl_.center_point_;
 }
-CircularLineCenterRadius::CircularLineCenterRadius(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CircularLineCenterRadius::CircularLineCenterRadius(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
 }
-CircularLineCenterRadius::CircularLineCenterRadius(const CircularLineCenterRadius& from) : ::google::protobuf::Message() {
-  CircularLineCenterRadius* const _this = this;
-  (void)_this;
+CircularLineCenterRadius::CircularLineCenterRadius(const CircularLineCenterRadius& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircularLineCenterRadius* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.center_point_){nullptr},
-      decltype(_impl_.radius_){},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+      decltype(_impl_.center_point_){nullptr}
+    , decltype(_impl_.radius_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_center_point()) {
     _this->_impl_.center_point_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.center_point_);
   }
   _this->_impl_.radius_ = from._impl_.radius_;
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
 }
-inline void CircularLineCenterRadius::SharedCtor(::_pb::Arena* arena) {
+
+inline void CircularLineCenterRadius::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.center_point_){nullptr},
-      decltype(_impl_.radius_){0},
+      decltype(_impl_.center_point_){nullptr}
+    , decltype(_impl_.radius_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CircularLineCenterRadius::~CircularLineCenterRadius() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CircularLineCenterRadius::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete _impl_.center_point_;
 }
+
 void CircularLineCenterRadius::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CircularLineCenterRadius::Clear() {
+void CircularLineCenterRadius::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    ABSL_DCHECK(_impl_.center_point_ != nullptr);
-    _impl_.center_point_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.center_point_ != nullptr) {
+    delete _impl_.center_point_;
   }
+  _impl_.center_point_ = nullptr;
   _impl_.radius_ = 0;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircularLineCenterRadius::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CircularLineCenterRadius::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .IndyFramework.Protobuf.EyeTask.Point center_point = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_center_point(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // float radius = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.radius_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 1, 0, 2> CircularLineCenterRadius::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_._has_bits_),
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    1,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_CircularLineCenterRadius_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // float radius = 2;
-    {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.radius_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point center_point = 1;
-    {::_pbi::TcParser::FastMtS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.center_point_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // .IndyFramework.Protobuf.EyeTask.Point center_point = 1;
-    {PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.center_point_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // float radius = 2;
-    {PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.radius_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-  }}, {{
-  }},
-};
-
-::uint8_t* CircularLineCenterRadius::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CircularLineCenterRadius::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
   // .IndyFramework.Protobuf.EyeTask.Point center_point = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_center_point()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::center_point(this),
         _Internal::center_point(this).GetCachedSize(), target, stream);
   }
 
   // float radius = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_radius = this->_internal_radius();
-  ::uint32_t raw_radius;
+  uint32_t raw_radius;
   memcpy(&raw_radius, &tmp_radius, sizeof(tmp_radius));
   if (raw_radius != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        2, this->_internal_radius(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_radius(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
   return target;
 }
 
-::size_t CircularLineCenterRadius::ByteSizeLong() const {
+size_t CircularLineCenterRadius::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .IndyFramework.Protobuf.EyeTask.Point center_point = 1;
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (this->_internal_has_center_point()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.center_point_);
   }
 
   // float radius = 2;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_radius = this->_internal_radius();
-  ::uint32_t raw_radius;
+  uint32_t raw_radius;
   memcpy(&raw_radius, &tmp_radius, sizeof(tmp_radius));
   if (raw_radius != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CircularLineCenterRadius::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircularLineCenterRadius::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CircularLineCenterRadius::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CircularLineCenterRadius::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircularLineCenterRadius::GetClassData() const { return &_class_data_; }
 
 
-void CircularLineCenterRadius::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CircularLineCenterRadius::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CircularLineCenterRadius*>(&to_msg);
   auto& from = static_cast<const CircularLineCenterRadius&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+  if (from._internal_has_center_point()) {
     _this->_internal_mutable_center_point()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
         from._internal_center_point());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_radius = from._internal_radius();
-  ::uint32_t raw_radius;
+  uint32_t raw_radius;
   memcpy(&raw_radius, &tmp_radius, sizeof(tmp_radius));
   if (raw_radius != 0) {
     _this->_internal_set_radius(from._internal_radius());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircularLineCenterRadius::CopyFrom(const CircularLineCenterRadius& from) {
@@ -2963,15 +2789,14 @@ void CircularLineCenterRadius::CopyFrom(const CircularLineCenterRadius& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CircularLineCenterRadius::IsInitialized() const {
+bool CircularLineCenterRadius::IsInitialized() const {
   return true;
 }
 
 void CircularLineCenterRadius::InternalSwap(CircularLineCenterRadius* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.radius_)
       + sizeof(CircularLineCenterRadius::_impl_.radius_)
       - PROTOBUF_FIELD_OFFSET(CircularLineCenterRadius, _impl_.center_point_)>(
@@ -2979,153 +2804,165 @@ void CircularLineCenterRadius::InternalSwap(CircularLineCenterRadius* other) {
           reinterpret_cast<char*>(&other->_impl_.center_point_));
 }
 
-::google::protobuf::Metadata CircularLineCenterRadius::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CircularLineCenterRadius::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[7]);
 }
+
 // ===================================================================
 
 class CircularLineInfoRequest::_Internal {
  public:
 };
 
-CircularLineInfoRequest::CircularLineInfoRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CircularLineInfoRequest::CircularLineInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
 }
 CircularLineInfoRequest::CircularLineInfoRequest(const CircularLineInfoRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircularLineInfoRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
 }
-inline void CircularLineInfoRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void CircularLineInfoRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CircularLineInfoRequest::~CircularLineInfoRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CircularLineInfoRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void CircularLineInfoRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CircularLineInfoRequest::Clear() {
+void CircularLineInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircularLineInfoRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CircularLineInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CircularLineInfoRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_CircularLineInfoRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CircularLineInfoRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CircularLineInfoRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* CircularLineInfoRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CircularLineInfoRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
   return target;
 }
 
-::size_t CircularLineInfoRequest::ByteSizeLong() const {
+size_t CircularLineInfoRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CircularLineInfoRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircularLineInfoRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CircularLineInfoRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CircularLineInfoRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircularLineInfoRequest::GetClassData() const { return &_class_data_; }
 
 
-void CircularLineInfoRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CircularLineInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CircularLineInfoRequest*>(&to_msg);
   auto& from = static_cast<const CircularLineInfoRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircularLineInfoRequest::CopyFrom(const CircularLineInfoRequest& from) {
@@ -3135,268 +2972,262 @@ void CircularLineInfoRequest::CopyFrom(const CircularLineInfoRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CircularLineInfoRequest::IsInitialized() const {
+bool CircularLineInfoRequest::IsInitialized() const {
   return true;
 }
 
 void CircularLineInfoRequest::InternalSwap(CircularLineInfoRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata CircularLineInfoRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CircularLineInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[8]);
 }
+
 // ===================================================================
 
 class CircularLineInfoResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<CircularLineInfoResponse>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_._has_bits_);
   static const ::IndyFramework::Protobuf::EyeTask::Point& normal_vector(const CircularLineInfoResponse* msg);
-  static void set_has_normal_vector(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::Point& reference_vector(const CircularLineInfoResponse* msg);
-  static void set_has_reference_vector(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints& point_method(const CircularLineInfoResponse* msg);
-  static void set_has_point_method(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
   static const ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius& vector_method(const CircularLineInfoResponse* msg);
-  static void set_has_vector_method(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
 };
 
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineInfoResponse::_Internal::normal_vector(const CircularLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineInfoResponse::_Internal::normal_vector(const CircularLineInfoResponse* msg) {
   return *msg->_impl_.normal_vector_;
 }
-const ::IndyFramework::Protobuf::EyeTask::Point& CircularLineInfoResponse::_Internal::reference_vector(const CircularLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::Point&
+CircularLineInfoResponse::_Internal::reference_vector(const CircularLineInfoResponse* msg) {
   return *msg->_impl_.reference_vector_;
 }
-const ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints& CircularLineInfoResponse::_Internal::point_method(const CircularLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints&
+CircularLineInfoResponse::_Internal::point_method(const CircularLineInfoResponse* msg) {
   return *msg->_impl_.point_method_;
 }
-const ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius& CircularLineInfoResponse::_Internal::vector_method(const CircularLineInfoResponse* msg) {
+const ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius&
+CircularLineInfoResponse::_Internal::vector_method(const CircularLineInfoResponse* msg) {
   return *msg->_impl_.vector_method_;
 }
-CircularLineInfoResponse::CircularLineInfoResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CircularLineInfoResponse::CircularLineInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
 }
-CircularLineInfoResponse::CircularLineInfoResponse(const CircularLineInfoResponse& from) : ::google::protobuf::Message() {
-  CircularLineInfoResponse* const _this = this;
-  (void)_this;
+CircularLineInfoResponse::CircularLineInfoResponse(const CircularLineInfoResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircularLineInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.normal_vector_){nullptr},
-      decltype(_impl_.reference_vector_){nullptr},
-      decltype(_impl_.point_method_){nullptr},
-      decltype(_impl_.vector_method_){nullptr},
-      decltype(_impl_.id_){},
-      decltype(_impl_.error_state_){},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+      decltype(_impl_.normal_vector_){nullptr}
+    , decltype(_impl_.reference_vector_){nullptr}
+    , decltype(_impl_.point_method_){nullptr}
+    , decltype(_impl_.vector_method_){nullptr}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.error_state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_normal_vector()) {
     _this->_impl_.normal_vector_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.normal_vector_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+  if (from._internal_has_reference_vector()) {
     _this->_impl_.reference_vector_ = new ::IndyFramework::Protobuf::EyeTask::Point(*from._impl_.reference_vector_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+  if (from._internal_has_point_method()) {
     _this->_impl_.point_method_ = new ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints(*from._impl_.point_method_);
   }
-  if ((from._impl_._has_bits_[0] & 0x00000008u) != 0) {
+  if (from._internal_has_vector_method()) {
     _this->_impl_.vector_method_ = new ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius(*from._impl_.vector_method_);
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
 }
-inline void CircularLineInfoResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void CircularLineInfoResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.normal_vector_){nullptr},
-      decltype(_impl_.reference_vector_){nullptr},
-      decltype(_impl_.point_method_){nullptr},
-      decltype(_impl_.vector_method_){nullptr},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.error_state_){false},
+      decltype(_impl_.normal_vector_){nullptr}
+    , decltype(_impl_.reference_vector_){nullptr}
+    , decltype(_impl_.point_method_){nullptr}
+    , decltype(_impl_.vector_method_){nullptr}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.error_state_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CircularLineInfoResponse::~CircularLineInfoResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CircularLineInfoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete _impl_.normal_vector_;
   if (this != internal_default_instance()) delete _impl_.reference_vector_;
   if (this != internal_default_instance()) delete _impl_.point_method_;
   if (this != internal_default_instance()) delete _impl_.vector_method_;
 }
+
 void CircularLineInfoResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CircularLineInfoResponse::Clear() {
+void CircularLineInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(_impl_.normal_vector_ != nullptr);
-      _impl_.normal_vector_->Clear();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(_impl_.reference_vector_ != nullptr);
-      _impl_.reference_vector_->Clear();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ABSL_DCHECK(_impl_.point_method_ != nullptr);
-      _impl_.point_method_->Clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      ABSL_DCHECK(_impl_.vector_method_ != nullptr);
-      _impl_.vector_method_->Clear();
-    }
+  if (GetArenaForAllocation() == nullptr && _impl_.normal_vector_ != nullptr) {
+    delete _impl_.normal_vector_;
   }
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  _impl_.normal_vector_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reference_vector_ != nullptr) {
+    delete _impl_.reference_vector_;
+  }
+  _impl_.reference_vector_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.point_method_ != nullptr) {
+    delete _impl_.point_method_;
+  }
+  _impl_.point_method_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vector_method_ != nullptr) {
+    delete _impl_.vector_method_;
+  }
+  _impl_.vector_method_ = nullptr;
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.error_state_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircularLineInfoResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CircularLineInfoResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_normal_vector(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reference_vector(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_point_method(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vector_method(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 4, 0, 2> CircularLineInfoResponse::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_._has_bits_),
-    0, // no _extensions_
-    6, 56,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967232,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    6,  // num_field_entries
-    4,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_CircularLineInfoResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CircularLineInfoResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.id_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    {::_pbi::TcParser::FastMtS1,
-     {18, 0, 0, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.normal_vector_)}},
-    // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
-    {::_pbi::TcParser::FastMtS1,
-     {26, 1, 1, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.reference_vector_)}},
-    // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
-    {::_pbi::TcParser::FastMtS1,
-     {34, 2, 2, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.point_method_)}},
-    // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
-    {::_pbi::TcParser::FastMtS1,
-     {42, 3, 3, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.vector_method_)}},
-    // bool error_state = 6;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(CircularLineInfoResponse, _impl_.error_state_), 63>(),
-     {48, 63, 0, PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.error_state_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.id_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.normal_vector_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.reference_vector_), _Internal::kHasBitsOffset + 1, 1,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.point_method_), _Internal::kHasBitsOffset + 2, 2,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.vector_method_), _Internal::kHasBitsOffset + 3, 3,
-    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // bool error_state = 6;
-    {PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.error_state_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }}, {{
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::Point>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints>()},
-    {::_pbi::TcParser::GetTable<::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius>()},
-  }}, {{
-  }},
-};
-
-::uint8_t* CircularLineInfoResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CircularLineInfoResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
   // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_normal_vector()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::normal_vector(this),
         _Internal::normal_vector(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_reference_vector()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::reference_vector(this),
         _Internal::reference_vector(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_point_method()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::point_method(this),
         _Internal::point_method(this).GetCachedSize(), target, stream);
   }
 
   // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
-  if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::
+  if (this->_internal_has_vector_method()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::vector_method(this),
         _Internal::vector_method(this).GetCachedSize(), target, stream);
   }
@@ -3404,105 +3235,96 @@ const ::_pbi::TcParseTable<3, 6, 4, 0, 2> CircularLineInfoResponse::_table_ = {
   // bool error_state = 6;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        6, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_error_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
   return target;
 }
 
-::size_t CircularLineInfoResponse::ByteSizeLong() const {
+size_t CircularLineInfoResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
-    if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.normal_vector_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.reference_vector_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
-    if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.point_method_);
-    }
-
-    // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
-    if (cached_has_bits & 0x00000008u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.vector_method_);
-    }
-
+  // .IndyFramework.Protobuf.EyeTask.Point normal_vector = 2;
+  if (this->_internal_has_normal_vector()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.normal_vector_);
   }
+
+  // .IndyFramework.Protobuf.EyeTask.Point reference_vector = 3;
+  if (this->_internal_has_reference_vector()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.reference_vector_);
+  }
+
+  // .IndyFramework.Protobuf.EyeTask.CircularLineThreePoints point_method = 4;
+  if (this->_internal_has_point_method()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.point_method_);
+  }
+
+  // .IndyFramework.Protobuf.EyeTask.CircularLineCenterRadius vector_method = 5;
+  if (this->_internal_has_vector_method()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.vector_method_);
+  }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // bool error_state = 6;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CircularLineInfoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircularLineInfoResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CircularLineInfoResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CircularLineInfoResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircularLineInfoResponse::GetClassData() const { return &_class_data_; }
 
 
-void CircularLineInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CircularLineInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CircularLineInfoResponse*>(&to_msg);
   auto& from = static_cast<const CircularLineInfoResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CircularLineInfoResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_normal_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_normal_vector());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_reference_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
-          from._internal_reference_vector());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_point_method()->::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints::MergeFrom(
-          from._internal_point_method());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_vector_method()->::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius::MergeFrom(
-          from._internal_vector_method());
-    }
+  if (from._internal_has_normal_vector()) {
+    _this->_internal_mutable_normal_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_normal_vector());
+  }
+  if (from._internal_has_reference_vector()) {
+    _this->_internal_mutable_reference_vector()->::IndyFramework::Protobuf::EyeTask::Point::MergeFrom(
+        from._internal_reference_vector());
+  }
+  if (from._internal_has_point_method()) {
+    _this->_internal_mutable_point_method()->::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints::MergeFrom(
+        from._internal_point_method());
+  }
+  if (from._internal_has_vector_method()) {
+    _this->_internal_mutable_vector_method()->::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius::MergeFrom(
+        from._internal_vector_method());
   }
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
@@ -3510,7 +3332,7 @@ void CircularLineInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, co
   if (from._internal_error_state() != 0) {
     _this->_internal_set_error_state(from._internal_error_state());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircularLineInfoResponse::CopyFrom(const CircularLineInfoResponse& from) {
@@ -3520,15 +3342,14 @@ void CircularLineInfoResponse::CopyFrom(const CircularLineInfoResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CircularLineInfoResponse::IsInitialized() const {
+bool CircularLineInfoResponse::IsInitialized() const {
   return true;
 }
 
 void CircularLineInfoResponse::InternalSwap(CircularLineInfoResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.error_state_)
       + sizeof(CircularLineInfoResponse::_impl_.error_state_)
       - PROTOBUF_FIELD_OFFSET(CircularLineInfoResponse, _impl_.normal_vector_)>(
@@ -3536,153 +3357,165 @@ void CircularLineInfoResponse::InternalSwap(CircularLineInfoResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.normal_vector_));
 }
 
-::google::protobuf::Metadata CircularLineInfoResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CircularLineInfoResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[9]);
 }
+
 // ===================================================================
 
 class ServerInfoRequest::_Internal {
  public:
 };
 
-ServerInfoRequest::ServerInfoRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ServerInfoRequest::ServerInfoRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
 }
 ServerInfoRequest::ServerInfoRequest(const ServerInfoRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ServerInfoRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
 }
-inline void ServerInfoRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void ServerInfoRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 ServerInfoRequest::~ServerInfoRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ServerInfoRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void ServerInfoRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ServerInfoRequest::Clear() {
+void ServerInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ServerInfoRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ServerInfoRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ServerInfoRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ServerInfoRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ServerInfoRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ServerInfoRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(ServerInfoRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* ServerInfoRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ServerInfoRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
   return target;
 }
 
-::size_t ServerInfoRequest::ByteSizeLong() const {
+size_t ServerInfoRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ServerInfoRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ServerInfoRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ServerInfoRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ServerInfoRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ServerInfoRequest::GetClassData() const { return &_class_data_; }
 
 
-void ServerInfoRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ServerInfoRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ServerInfoRequest*>(&to_msg);
   auto& from = static_cast<const ServerInfoRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.ServerInfoRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ServerInfoRequest::CopyFrom(const ServerInfoRequest& from) {
@@ -3692,109 +3525,121 @@ void ServerInfoRequest::CopyFrom(const ServerInfoRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ServerInfoRequest::IsInitialized() const {
+bool ServerInfoRequest::IsInitialized() const {
   return true;
 }
 
 void ServerInfoRequest::InternalSwap(ServerInfoRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata ServerInfoRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ServerInfoRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[10]);
 }
+
 // ===================================================================
 
 class ServerInfoResponse::_Internal {
  public:
 };
 
-ServerInfoResponse::ServerInfoResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ServerInfoResponse::ServerInfoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
 }
-ServerInfoResponse::ServerInfoResponse(const ServerInfoResponse& from) : ::google::protobuf::Message() {
-  ServerInfoResponse* const _this = this;
-  (void)_this;
+ServerInfoResponse::ServerInfoResponse(const ServerInfoResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ServerInfoResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.version_){},
-      decltype(_impl_.release_date_){},
-      decltype(_impl_.program_name_){},
-      decltype(_impl_.id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.version_){}
+    , decltype(_impl_.release_date_){}
+    , decltype(_impl_.program_name_){}
+    , decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.version_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.version_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.version_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_version().empty()) {
-    _this->_impl_.version_.Set(from._internal_version(), _this->GetArenaForAllocation());
+    _this->_impl_.version_.Set(from._internal_version(), 
+      _this->GetArenaForAllocation());
   }
   _impl_.release_date_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.release_date_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.release_date_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_release_date().empty()) {
-    _this->_impl_.release_date_.Set(from._internal_release_date(), _this->GetArenaForAllocation());
+    _this->_impl_.release_date_.Set(from._internal_release_date(), 
+      _this->GetArenaForAllocation());
   }
   _impl_.program_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.program_name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.program_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_program_name().empty()) {
-    _this->_impl_.program_name_.Set(from._internal_program_name(), _this->GetArenaForAllocation());
+    _this->_impl_.program_name_.Set(from._internal_program_name(), 
+      _this->GetArenaForAllocation());
   }
   _this->_impl_.id_ = from._impl_.id_;
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
 }
-inline void ServerInfoResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void ServerInfoResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.version_){},
-      decltype(_impl_.release_date_){},
-      decltype(_impl_.program_name_){},
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.version_){}
+    , decltype(_impl_.release_date_){}
+    , decltype(_impl_.program_name_){}
+    , decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.version_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.version_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.version_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.release_date_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.release_date_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.release_date_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.program_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.program_name_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.program_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 ServerInfoResponse::~ServerInfoResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ServerInfoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.version_.Destroy();
   _impl_.release_date_.Destroy();
   _impl_.program_name_.Destroy();
 }
+
 void ServerInfoResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ServerInfoResponse::Clear() {
+void ServerInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -3802,164 +3647,176 @@ PROTOBUF_NOINLINE void ServerInfoResponse::Clear() {
   _impl_.release_date_.ClearToEmpty();
   _impl_.program_name_.ClearToEmpty();
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ServerInfoResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ServerInfoResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string version = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_version();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.version"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string release_date = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_release_date();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.release_date"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string program_name = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_program_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.program_name"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 89, 2> ServerInfoResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ServerInfoResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string program_name = 4;
-    {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.program_name_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ServerInfoResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.id_)}},
-    // string version = 2;
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.version_)}},
-    // string release_date = 3;
-    {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.release_date_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // string version = 2;
-    {PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.version_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string release_date = 3;
-    {PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.release_date_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string program_name = 4;
-    {PROTOBUF_FIELD_OFFSET(ServerInfoResponse, _impl_.program_name_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\61\0\7\14\14\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.ServerInfoResponse"
-    "version"
-    "release_date"
-    "program_name"
-  }},
-};
-
-::uint8_t* ServerInfoResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ServerInfoResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // string version = 2;
   if (!this->_internal_version().empty()) {
-    const std::string& _s = this->_internal_version();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.version");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.version");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_version(), target);
   }
 
   // string release_date = 3;
   if (!this->_internal_release_date().empty()) {
-    const std::string& _s = this->_internal_release_date();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.release_date");
-    target = stream->WriteStringMaybeAliased(3, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_release_date().data(), static_cast<int>(this->_internal_release_date().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.release_date");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_release_date(), target);
   }
 
   // string program_name = 4;
   if (!this->_internal_program_name().empty()) {
-    const std::string& _s = this->_internal_program_name();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.program_name");
-    target = stream->WriteStringMaybeAliased(4, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_program_name().data(), static_cast<int>(this->_internal_program_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.ServerInfoResponse.program_name");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_program_name(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
   return target;
 }
 
-::size_t ServerInfoResponse::ByteSizeLong() const {
+size_t ServerInfoResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string version = 2;
   if (!this->_internal_version().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_version());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
   // string release_date = 3;
   if (!this->_internal_release_date().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_release_date());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_release_date());
   }
 
   // string program_name = 4;
   if (!this->_internal_program_name().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_program_name());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_program_name());
   }
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ServerInfoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ServerInfoResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ServerInfoResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ServerInfoResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ServerInfoResponse::GetClassData() const { return &_class_data_; }
 
 
-void ServerInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ServerInfoResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ServerInfoResponse*>(&to_msg);
   auto& from = static_cast<const ServerInfoResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.ServerInfoResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_version().empty()) {
@@ -3974,7 +3831,7 @@ void ServerInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ServerInfoResponse::CopyFrom(const ServerInfoResponse& from) {
@@ -3984,7 +3841,7 @@ void ServerInfoResponse::CopyFrom(const ServerInfoResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ServerInfoResponse::IsInitialized() const {
+bool ServerInfoResponse::IsInitialized() const {
   return true;
 }
 
@@ -3993,162 +3850,180 @@ void ServerInfoResponse::InternalSwap(ServerInfoResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.version_, lhs_arena,
-                                       &other->_impl_.version_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.release_date_, lhs_arena,
-                                       &other->_impl_.release_date_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.program_name_, lhs_arena,
-                                       &other->_impl_.program_name_, rhs_arena);
-        swap(_impl_.id_, other->_impl_.id_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.version_, lhs_arena,
+      &other->_impl_.version_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.release_date_, lhs_arena,
+      &other->_impl_.release_date_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.program_name_, lhs_arena,
+      &other->_impl_.program_name_, rhs_arena
+  );
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata ServerInfoResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ServerInfoResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[11]);
 }
+
 // ===================================================================
 
 class CalibrationRequest::_Internal {
  public:
 };
 
-CalibrationRequest::CalibrationRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CalibrationRequest::CalibrationRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
 }
 CalibrationRequest::CalibrationRequest(const CalibrationRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CalibrationRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
 }
-inline void CalibrationRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void CalibrationRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CalibrationRequest::~CalibrationRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CalibrationRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void CalibrationRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CalibrationRequest::Clear() {
+void CalibrationRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CalibrationRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CalibrationRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CalibrationRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_CalibrationRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CalibrationRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CalibrationRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* CalibrationRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CalibrationRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
   return target;
 }
 
-::size_t CalibrationRequest::ByteSizeLong() const {
+size_t CalibrationRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CalibrationRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CalibrationRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CalibrationRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CalibrationRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CalibrationRequest::GetClassData() const { return &_class_data_; }
 
 
-void CalibrationRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CalibrationRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CalibrationRequest*>(&to_msg);
   auto& from = static_cast<const CalibrationRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CalibrationRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CalibrationRequest::CopyFrom(const CalibrationRequest& from) {
@@ -4158,144 +4033,160 @@ void CalibrationRequest::CopyFrom(const CalibrationRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CalibrationRequest::IsInitialized() const {
+bool CalibrationRequest::IsInitialized() const {
   return true;
 }
 
 void CalibrationRequest::InternalSwap(CalibrationRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata CalibrationRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CalibrationRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[12]);
 }
+
 // ===================================================================
 
 class CalibrationResponse::_Internal {
  public:
 };
 
-CalibrationResponse::CalibrationResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CalibrationResponse::CalibrationResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
 }
-CalibrationResponse::CalibrationResponse(const CalibrationResponse& from) : ::google::protobuf::Message() {
-  CalibrationResponse* const _this = this;
-  (void)_this;
+CalibrationResponse::CalibrationResponse(const CalibrationResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CalibrationResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.is_succeeded_){from._impl_.is_succeeded_},
-      decltype(_impl_.indy_cam_rms_){from._impl_.indy_cam_rms_},
-      decltype(_impl_.id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _this->_impl_.id_ = from._impl_.id_;
+      decltype(_impl_.is_succeeded_){from._impl_.is_succeeded_}
+    , decltype(_impl_.indy_cam_rms_){from._impl_.indy_cam_rms_}
+    , decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
 }
-inline void CalibrationResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void CalibrationResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.is_succeeded_){arena},
-      decltype(_impl_.indy_cam_rms_){arena},
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.is_succeeded_){arena}
+    , decltype(_impl_.indy_cam_rms_){arena}
+    , decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CalibrationResponse::~CalibrationResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CalibrationResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.is_succeeded_.~RepeatedField();
   _impl_.indy_cam_rms_.~RepeatedField();
 }
+
 void CalibrationResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CalibrationResponse::Clear() {
+void CalibrationResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_is_succeeded()->Clear();
-  _internal_mutable_indy_cam_rms()->Clear();
+  _impl_.is_succeeded_.Clear();
+  _impl_.indy_cam_rms_.Clear();
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CalibrationResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CalibrationResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated bool is_succeeded = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedBoolParser(_internal_mutable_is_succeeded(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 16) {
+          _internal_add_is_succeeded(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float indy_cam_rms = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_indy_cam_rms(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 29) {
+          _internal_add_indy_cam_rms(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 0, 2> CalibrationResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    3, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967288,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_CalibrationResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CalibrationResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.id_)}},
-    // repeated bool is_succeeded = 2;
-    {::_pbi::TcParser::FastV8P1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.is_succeeded_)}},
-    // repeated float indy_cam_rms = 3;
-    {::_pbi::TcParser::FastF32P1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.indy_cam_rms_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // repeated bool is_succeeded = 2;
-    {PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.is_succeeded_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedBool)},
-    // repeated float indy_cam_rms = 3;
-    {PROTOBUF_FIELD_OFFSET(CalibrationResponse, _impl_.indy_cam_rms_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* CalibrationResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CalibrationResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // repeated bool is_succeeded = 2;
@@ -4309,76 +4200,72 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> CalibrationResponse::_table_ = {
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
   return target;
 }
 
-::size_t CalibrationResponse::ByteSizeLong() const {
+size_t CalibrationResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated bool is_succeeded = 2;
   {
-    std::size_t data_size = std::size_t{1} *
-        ::_pbi::FromIntSize(this->_internal_is_succeeded_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_is_succeeded_size());
+    size_t data_size = 1UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // repeated float indy_cam_rms = 3;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_indy_cam_rms_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_indy_cam_rms_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CalibrationResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CalibrationResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CalibrationResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CalibrationResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CalibrationResponse::GetClassData() const { return &_class_data_; }
 
 
-void CalibrationResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CalibrationResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CalibrationResponse*>(&to_msg);
   auto& from = static_cast<const CalibrationResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CalibrationResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_is_succeeded()->MergeFrom(from._internal_is_succeeded());
-  _this->_internal_mutable_indy_cam_rms()->MergeFrom(from._internal_indy_cam_rms());
+  _this->_impl_.is_succeeded_.MergeFrom(from._impl_.is_succeeded_);
+  _this->_impl_.indy_cam_rms_.MergeFrom(from._impl_.indy_cam_rms_);
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CalibrationResponse::CopyFrom(const CalibrationResponse& from) {
@@ -4388,7 +4275,7 @@ void CalibrationResponse::CopyFrom(const CalibrationResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CalibrationResponse::IsInitialized() const {
+bool CalibrationResponse::IsInitialized() const {
   return true;
 }
 
@@ -4397,156 +4284,168 @@ void CalibrationResponse::InternalSwap(CalibrationResponse* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.is_succeeded_.InternalSwap(&other->_impl_.is_succeeded_);
   _impl_.indy_cam_rms_.InternalSwap(&other->_impl_.indy_cam_rms_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata CalibrationResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CalibrationResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[13]);
 }
+
 // ===================================================================
 
 class CalibrationDoneRequest::_Internal {
  public:
 };
 
-CalibrationDoneRequest::CalibrationDoneRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CalibrationDoneRequest::CalibrationDoneRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
 }
 CalibrationDoneRequest::CalibrationDoneRequest(const CalibrationDoneRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CalibrationDoneRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
 }
-inline void CalibrationDoneRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void CalibrationDoneRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CalibrationDoneRequest::~CalibrationDoneRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CalibrationDoneRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void CalibrationDoneRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CalibrationDoneRequest::Clear() {
+void CalibrationDoneRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CalibrationDoneRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CalibrationDoneRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CalibrationDoneRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_CalibrationDoneRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CalibrationDoneRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationDoneRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CalibrationDoneRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* CalibrationDoneRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CalibrationDoneRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
   return target;
 }
 
-::size_t CalibrationDoneRequest::ByteSizeLong() const {
+size_t CalibrationDoneRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CalibrationDoneRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CalibrationDoneRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CalibrationDoneRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CalibrationDoneRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CalibrationDoneRequest::GetClassData() const { return &_class_data_; }
 
 
-void CalibrationDoneRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CalibrationDoneRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CalibrationDoneRequest*>(&to_msg);
   auto& from = static_cast<const CalibrationDoneRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CalibrationDoneRequest::CopyFrom(const CalibrationDoneRequest& from) {
@@ -4556,162 +4455,180 @@ void CalibrationDoneRequest::CopyFrom(const CalibrationDoneRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CalibrationDoneRequest::IsInitialized() const {
+bool CalibrationDoneRequest::IsInitialized() const {
   return true;
 }
 
 void CalibrationDoneRequest::InternalSwap(CalibrationDoneRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata CalibrationDoneRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CalibrationDoneRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[14]);
 }
+
 // ===================================================================
 
 class CalibrationDoneResponse::_Internal {
  public:
 };
 
-CalibrationDoneResponse::CalibrationDoneResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+CalibrationDoneResponse::CalibrationDoneResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
 }
-CalibrationDoneResponse::CalibrationDoneResponse(const CalibrationDoneResponse& from) : ::google::protobuf::Message() {
-  CalibrationDoneResponse* const _this = this;
-  (void)_this;
+CalibrationDoneResponse::CalibrationDoneResponse(const CalibrationDoneResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CalibrationDoneResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.is_succeeded_){from._impl_.is_succeeded_},
-      decltype(_impl_.indy_cam_rms_){from._impl_.indy_cam_rms_},
-      decltype(_impl_.id_){},
-      decltype(_impl_.is_calibrated_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.is_calibrated_) -
-    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.is_calibrated_));
+      decltype(_impl_.is_succeeded_){from._impl_.is_succeeded_}
+    , decltype(_impl_.indy_cam_rms_){from._impl_.indy_cam_rms_}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.is_calibrated_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.is_calibrated_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.is_calibrated_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
 }
-inline void CalibrationDoneResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void CalibrationDoneResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.is_succeeded_){arena},
-      decltype(_impl_.indy_cam_rms_){arena},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.is_calibrated_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.is_succeeded_){arena}
+    , decltype(_impl_.indy_cam_rms_){arena}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.is_calibrated_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 CalibrationDoneResponse::~CalibrationDoneResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void CalibrationDoneResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.is_succeeded_.~RepeatedField();
   _impl_.indy_cam_rms_.~RepeatedField();
 }
+
 void CalibrationDoneResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void CalibrationDoneResponse::Clear() {
+void CalibrationDoneResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_is_succeeded()->Clear();
-  _internal_mutable_indy_cam_rms()->Clear();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  _impl_.is_succeeded_.Clear();
+  _impl_.indy_cam_rms_.Clear();
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.is_calibrated_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.is_calibrated_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CalibrationDoneResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* CalibrationDoneResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool is_calibrated = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.is_calibrated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated bool is_succeeded = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedBoolParser(_internal_mutable_is_succeeded(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 24) {
+          _internal_add_is_succeeded(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float indy_cam_rms = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_indy_cam_rms(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 37) {
+          _internal_add_indy_cam_rms(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 0, 2> CalibrationDoneResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_CalibrationDoneResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // repeated float indy_cam_rms = 4;
-    {::_pbi::TcParser::FastF32P1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.indy_cam_rms_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CalibrationDoneResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.id_)}},
-    // bool is_calibrated = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(CalibrationDoneResponse, _impl_.is_calibrated_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.is_calibrated_)}},
-    // repeated bool is_succeeded = 3;
-    {::_pbi::TcParser::FastV8P1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.is_succeeded_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // bool is_calibrated = 2;
-    {PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.is_calibrated_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // repeated bool is_succeeded = 3;
-    {PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.is_succeeded_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedBool)},
-    // repeated float indy_cam_rms = 4;
-    {PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.indy_cam_rms_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* CalibrationDoneResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* CalibrationDoneResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // bool is_calibrated = 2;
   if (this->_internal_is_calibrated() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        2, this->_internal_is_calibrated(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_is_calibrated(), target);
   }
 
   // repeated bool is_succeeded = 3;
@@ -4725,84 +4642,80 @@ const ::_pbi::TcParseTable<2, 4, 0, 0, 2> CalibrationDoneResponse::_table_ = {
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
   return target;
 }
 
-::size_t CalibrationDoneResponse::ByteSizeLong() const {
+size_t CalibrationDoneResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated bool is_succeeded = 3;
   {
-    std::size_t data_size = std::size_t{1} *
-        ::_pbi::FromIntSize(this->_internal_is_succeeded_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_is_succeeded_size());
+    size_t data_size = 1UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // repeated float indy_cam_rms = 4;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_indy_cam_rms_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_indy_cam_rms_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // bool is_calibrated = 2;
   if (this->_internal_is_calibrated() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData CalibrationDoneResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CalibrationDoneResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     CalibrationDoneResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*CalibrationDoneResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CalibrationDoneResponse::GetClassData() const { return &_class_data_; }
 
 
-void CalibrationDoneResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void CalibrationDoneResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CalibrationDoneResponse*>(&to_msg);
   auto& from = static_cast<const CalibrationDoneResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.CalibrationDoneResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_is_succeeded()->MergeFrom(from._internal_is_succeeded());
-  _this->_internal_mutable_indy_cam_rms()->MergeFrom(from._internal_indy_cam_rms());
+  _this->_impl_.is_succeeded_.MergeFrom(from._impl_.is_succeeded_);
+  _this->_impl_.indy_cam_rms_.MergeFrom(from._impl_.indy_cam_rms_);
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
   if (from._internal_is_calibrated() != 0) {
     _this->_internal_set_is_calibrated(from._internal_is_calibrated());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CalibrationDoneResponse::CopyFrom(const CalibrationDoneResponse& from) {
@@ -4812,7 +4725,7 @@ void CalibrationDoneResponse::CopyFrom(const CalibrationDoneResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool CalibrationDoneResponse::IsInitialized() const {
+bool CalibrationDoneResponse::IsInitialized() const {
   return true;
 }
 
@@ -4821,7 +4734,7 @@ void CalibrationDoneResponse::InternalSwap(CalibrationDoneResponse* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.is_succeeded_.InternalSwap(&other->_impl_.is_succeeded_);
   _impl_.indy_cam_rms_.InternalSwap(&other->_impl_.indy_cam_rms_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.is_calibrated_)
       + sizeof(CalibrationDoneResponse::_impl_.is_calibrated_)
       - PROTOBUF_FIELD_OFFSET(CalibrationDoneResponse, _impl_.id_)>(
@@ -4829,169 +4742,184 @@ void CalibrationDoneResponse::InternalSwap(CalibrationDoneResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata CalibrationDoneResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata CalibrationDoneResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[15]);
 }
+
 // ===================================================================
 
 class ImageRequest::_Internal {
  public:
 };
 
-ImageRequest::ImageRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ImageRequest::ImageRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.ImageRequest)
 }
 ImageRequest::ImageRequest(const ImageRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ImageRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.type_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.type_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.ImageRequest)
 }
-inline void ImageRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void ImageRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      decltype(_impl_.type_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 ImageRequest::~ImageRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.ImageRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ImageRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void ImageRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ImageRequest::Clear() {
+void ImageRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.ImageRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.type_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.type_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ImageRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ImageRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 type = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ImageRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ImageRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 type = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageRequest, _impl_.type_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.type_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 type = 2;
-    {PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.type_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* ImageRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ImageRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.ImageRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 type = 2;
   if (this->_internal_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_type(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_type(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.ImageRequest)
   return target;
 }
 
-::size_t ImageRequest::ByteSizeLong() const {
+size_t ImageRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.ImageRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 type = 2;
   if (this->_internal_type() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_type());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_type());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ImageRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ImageRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ImageRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ImageRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ImageRequest::GetClassData() const { return &_class_data_; }
 
 
-void ImageRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ImageRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ImageRequest*>(&to_msg);
   auto& from = static_cast<const ImageRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.ImageRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
@@ -5000,7 +4928,7 @@ void ImageRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google
   if (from._internal_type() != 0) {
     _this->_internal_set_type(from._internal_type());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ImageRequest::CopyFrom(const ImageRequest& from) {
@@ -5010,14 +4938,14 @@ void ImageRequest::CopyFrom(const ImageRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ImageRequest::IsInitialized() const {
+bool ImageRequest::IsInitialized() const {
   return true;
 }
 
 void ImageRequest::InternalSwap(ImageRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.type_)
       + sizeof(ImageRequest::_impl_.type_)
       - PROTOBUF_FIELD_OFFSET(ImageRequest, _impl_.id_)>(
@@ -5025,337 +4953,352 @@ void ImageRequest::InternalSwap(ImageRequest* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata ImageRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ImageRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[16]);
 }
+
 // ===================================================================
 
 class ImageResponse::_Internal {
  public:
 };
 
-ImageResponse::ImageResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ImageResponse::ImageResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.ImageResponse)
 }
-ImageResponse::ImageResponse(const ImageResponse& from) : ::google::protobuf::Message() {
-  ImageResponse* const _this = this;
-  (void)_this;
+ImageResponse::ImageResponse(const ImageResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ImageResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.color_){},
-      decltype(_impl_.depth_){},
-      decltype(_impl_.id_){},
-      decltype(_impl_.type_){},
-      decltype(_impl_.width_){},
-      decltype(_impl_.height_){},
-      decltype(_impl_.depth_scale_){},
-      decltype(_impl_.error_state_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.color_){}
+    , decltype(_impl_.depth_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.height_){}
+    , decltype(_impl_.depth_scale_){}
+    , decltype(_impl_.error_state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.color_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_color().empty()) {
-    _this->_impl_.color_.Set(from._internal_color(), _this->GetArenaForAllocation());
+    _this->_impl_.color_.Set(from._internal_color(), 
+      _this->GetArenaForAllocation());
   }
   _impl_.depth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.depth_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.depth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_depth().empty()) {
-    _this->_impl_.depth_.Set(from._internal_depth(), _this->GetArenaForAllocation());
+    _this->_impl_.depth_.Set(from._internal_depth(), 
+      _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.ImageResponse)
 }
-inline void ImageResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void ImageResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.color_){},
-      decltype(_impl_.depth_){},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.type_){0},
-      decltype(_impl_.width_){0},
-      decltype(_impl_.height_){0},
-      decltype(_impl_.depth_scale_){0},
-      decltype(_impl_.error_state_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.color_){}
+    , decltype(_impl_.depth_){}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.type_){0}
+    , decltype(_impl_.width_){0}
+    , decltype(_impl_.height_){0}
+    , decltype(_impl_.depth_scale_){0}
+    , decltype(_impl_.error_state_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.color_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.color_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.depth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.depth_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.depth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 ImageResponse::~ImageResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.ImageResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ImageResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.color_.Destroy();
   _impl_.depth_.Destroy();
 }
+
 void ImageResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ImageResponse::Clear() {
+void ImageResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.ImageResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.color_.ClearToEmpty();
   _impl_.depth_.ClearToEmpty();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.error_state_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ImageResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ImageResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 type = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 width = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.width_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 height = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bytes color = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_color();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bytes depth = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          auto str = _internal_mutable_depth();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // float depth_scale = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
+          _impl_.depth_scale_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 8, 0, 0, 2> ImageResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    8, 56,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967040,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    8,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ImageResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // bool error_state = 8;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ImageResponse, _impl_.error_state_), 63>(),
-     {64, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.error_state_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.id_)}},
-    // int32 type = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageResponse, _impl_.type_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.type_)}},
-    // int32 width = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageResponse, _impl_.width_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.width_)}},
-    // int32 height = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ImageResponse, _impl_.height_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.height_)}},
-    // bytes color = 5;
-    {::_pbi::TcParser::FastBS1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.color_)}},
-    // bytes depth = 6;
-    {::_pbi::TcParser::FastBS1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.depth_)}},
-    // float depth_scale = 7;
-    {::_pbi::TcParser::FastF32S1,
-     {61, 63, 0, PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.depth_scale_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 type = 2;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.type_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 width = 3;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.width_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 height = 4;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.height_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // bytes color = 5;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.color_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBytes | ::_fl::kRepAString)},
-    // bytes depth = 6;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.depth_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBytes | ::_fl::kRepAString)},
-    // float depth_scale = 7;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.depth_scale_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // bool error_state = 8;
-    {PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.error_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* ImageResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ImageResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.ImageResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 type = 2;
   if (this->_internal_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_type(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_type(), target);
   }
 
   // int32 width = 3;
   if (this->_internal_width() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<3>(
-            stream, this->_internal_width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_width(), target);
   }
 
   // int32 height = 4;
   if (this->_internal_height() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<4>(
-            stream, this->_internal_height(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_height(), target);
   }
 
   // bytes color = 5;
   if (!this->_internal_color().empty()) {
-    const std::string& _s = this->_internal_color();
-    target = stream->WriteBytesMaybeAliased(5, _s, target);
+    target = stream->WriteBytesMaybeAliased(
+        5, this->_internal_color(), target);
   }
 
   // bytes depth = 6;
   if (!this->_internal_depth().empty()) {
-    const std::string& _s = this->_internal_depth();
-    target = stream->WriteBytesMaybeAliased(6, _s, target);
+    target = stream->WriteBytesMaybeAliased(
+        6, this->_internal_depth(), target);
   }
 
   // float depth_scale = 7;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_depth_scale = this->_internal_depth_scale();
-  ::uint32_t raw_depth_scale;
+  uint32_t raw_depth_scale;
   memcpy(&raw_depth_scale, &tmp_depth_scale, sizeof(tmp_depth_scale));
   if (raw_depth_scale != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(
-        7, this->_internal_depth_scale(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(7, this->_internal_depth_scale(), target);
   }
 
   // bool error_state = 8;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        8, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_error_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.ImageResponse)
   return target;
 }
 
-::size_t ImageResponse::ByteSizeLong() const {
+size_t ImageResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.ImageResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // bytes color = 5;
   if (!this->_internal_color().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::BytesSize(
-                                    this->_internal_color());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_color());
   }
 
   // bytes depth = 6;
   if (!this->_internal_depth().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::BytesSize(
-                                    this->_internal_depth());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_depth());
   }
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 type = 2;
   if (this->_internal_type() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_type());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_type());
   }
 
   // int32 width = 3;
   if (this->_internal_width() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_width());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_width());
   }
 
   // int32 height = 4;
   if (this->_internal_height() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_height());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_height());
   }
 
   // float depth_scale = 7;
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_depth_scale = this->_internal_depth_scale();
-  ::uint32_t raw_depth_scale;
+  uint32_t raw_depth_scale;
   memcpy(&raw_depth_scale, &tmp_depth_scale, sizeof(tmp_depth_scale));
   if (raw_depth_scale != 0) {
-    total_size += 5;
+    total_size += 1 + 4;
   }
 
   // bool error_state = 8;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ImageResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ImageResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ImageResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ImageResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ImageResponse::GetClassData() const { return &_class_data_; }
 
 
-void ImageResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ImageResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ImageResponse*>(&to_msg);
   auto& from = static_cast<const ImageResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.ImageResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_color().empty()) {
@@ -5376,10 +5319,9 @@ void ImageResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::googl
   if (from._internal_height() != 0) {
     _this->_internal_set_height(from._internal_height());
   }
-  static_assert(sizeof(::uint32_t) == sizeof(float),
-                "Code assumes ::uint32_t and float are the same size.");
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_depth_scale = from._internal_depth_scale();
-  ::uint32_t raw_depth_scale;
+  uint32_t raw_depth_scale;
   memcpy(&raw_depth_scale, &tmp_depth_scale, sizeof(tmp_depth_scale));
   if (raw_depth_scale != 0) {
     _this->_internal_set_depth_scale(from._internal_depth_scale());
@@ -5387,7 +5329,7 @@ void ImageResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::googl
   if (from._internal_error_state() != 0) {
     _this->_internal_set_error_state(from._internal_error_state());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ImageResponse::CopyFrom(const ImageResponse& from) {
@@ -5397,7 +5339,7 @@ void ImageResponse::CopyFrom(const ImageResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ImageResponse::IsInitialized() const {
+bool ImageResponse::IsInitialized() const {
   return true;
 }
 
@@ -5406,11 +5348,15 @@ void ImageResponse::InternalSwap(ImageResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.color_, lhs_arena,
-                                       &other->_impl_.color_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.depth_, lhs_arena,
-                                       &other->_impl_.depth_, rhs_arena);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.color_, lhs_arena,
+      &other->_impl_.color_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.depth_, lhs_arena,
+      &other->_impl_.depth_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.error_state_)
       + sizeof(ImageResponse::_impl_.error_state_)
       - PROTOBUF_FIELD_OFFSET(ImageResponse, _impl_.id_)>(
@@ -5418,153 +5364,165 @@ void ImageResponse::InternalSwap(ImageResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata ImageResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ImageResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[17]);
 }
+
 // ===================================================================
 
 class Request::_Internal {
  public:
 };
 
-Request::Request(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Request::Request(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.Request)
 }
 Request::Request(const Request& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Request* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.id_ = from._impl_.id_;
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.Request)
 }
-inline void Request::SharedCtor(::_pb::Arena* arena) {
+
+inline void Request::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 Request::~Request() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.Request)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void Request::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void Request::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void Request::Clear() {
+void Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.Request)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.id_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Request::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Request::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> Request::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Request_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Request, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Request, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(Request, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* Request::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* Request::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.Request)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.Request)
   return target;
 }
 
-::size_t Request::ByteSizeLong() const {
+size_t Request::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.Request)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Request::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Request::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     Request::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Request::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Request::GetClassData() const { return &_class_data_; }
 
 
-void Request::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Request*>(&to_msg);
   auto& from = static_cast<const Request&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.Request)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Request::CopyFrom(const Request& from) {
@@ -5574,226 +5532,241 @@ void Request::CopyFrom(const Request& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Request::IsInitialized() const {
+bool Request::IsInitialized() const {
   return true;
 }
 
 void Request::InternalSwap(Request* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.id_, other->_impl_.id_);
 }
 
-::google::protobuf::Metadata Request::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Request::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[18]);
 }
+
 // ===================================================================
 
 class ClassList::_Internal {
  public:
 };
 
-ClassList::ClassList(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+ClassList::ClassList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.ClassList)
 }
-ClassList::ClassList(const ClassList& from) : ::google::protobuf::Message() {
-  ClassList* const _this = this;
-  (void)_this;
+ClassList::ClassList(const ClassList& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ClassList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.class_names_){from._impl_.class_names_},
-      decltype(_impl_.id_){},
-      decltype(_impl_.error_state_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
-    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
+      decltype(_impl_.class_names_){from._impl_.class_names_}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.error_state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.error_state_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.ClassList)
 }
-inline void ClassList::SharedCtor(::_pb::Arena* arena) {
+
+inline void ClassList::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.class_names_){arena},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.error_state_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.class_names_){arena}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.error_state_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 ClassList::~ClassList() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.ClassList)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ClassList::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _internal_mutable_class_names()->~RepeatedPtrField();
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.class_names_.~RepeatedPtrField();
 }
+
 void ClassList::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void ClassList::Clear() {
+void ClassList::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.ClassList)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_class_names()->Clear();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  _impl_.class_names_.Clear();
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.error_state_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.error_state_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ClassList::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ClassList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated string class_names = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_class_names();
+            ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.ClassList.class_names"));
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 60, 2> ClassList::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    8, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967164,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    3,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ClassList_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // bool error_state = 8;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(ClassList, _impl_.error_state_), 63>(),
-     {64, 63, 0, PROTOBUF_FIELD_OFFSET(ClassList, _impl_.error_state_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ClassList, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ClassList, _impl_.id_)}},
-    // repeated string class_names = 2;
-    {::_pbi::TcParser::FastUR1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ClassList, _impl_.class_names_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(ClassList, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // repeated string class_names = 2;
-    {PROTOBUF_FIELD_OFFSET(ClassList, _impl_.class_names_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
-    // bool error_state = 8;
-    {PROTOBUF_FIELD_OFFSET(ClassList, _impl_.error_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-  }},
-  // no aux_entries
-  {{
-    "\50\0\13\0\0\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.ClassList"
-    "class_names"
-  }},
-};
-
-::uint8_t* ClassList::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* ClassList::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.ClassList)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // repeated string class_names = 2;
-  for (int i = 0, n = this->_internal_class_names_size(); i < n; ++i) {
-    const auto& s = this->_internal_class_names().Get(i);
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.ClassList.class_names");
+  for (int i = 0, n = this->_internal_class_names_size(); i < n; i++) {
+    const auto& s = this->_internal_class_names(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.ClassList.class_names");
     target = stream->WriteString(2, s, target);
   }
 
   // bool error_state = 8;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        8, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_error_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.ClassList)
   return target;
 }
 
-::size_t ClassList::ByteSizeLong() const {
+size_t ClassList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.ClassList)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated string class_names = 2;
-  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_class_names().size());
-  for (int i = 0, n = _internal_class_names().size(); i < n; ++i) {
-    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
-        _internal_class_names().Get(i));
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.class_names_.size());
+  for (int i = 0, n = _impl_.class_names_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      _impl_.class_names_.Get(i));
   }
+
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // bool error_state = 8;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ClassList::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ClassList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     ClassList::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ClassList::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ClassList::GetClassData() const { return &_class_data_; }
 
 
-void ClassList::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void ClassList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ClassList*>(&to_msg);
   auto& from = static_cast<const ClassList&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.ClassList)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_class_names()->MergeFrom(from._internal_class_names());
+  _this->_impl_.class_names_.MergeFrom(from._impl_.class_names_);
   if (from._internal_id() != 0) {
     _this->_internal_set_id(from._internal_id());
   }
   if (from._internal_error_state() != 0) {
     _this->_internal_set_error_state(from._internal_error_state());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ClassList::CopyFrom(const ClassList& from) {
@@ -5803,7 +5776,7 @@ void ClassList::CopyFrom(const ClassList& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ClassList::IsInitialized() const {
+bool ClassList::IsInitialized() const {
   return true;
 }
 
@@ -5811,7 +5784,7 @@ void ClassList::InternalSwap(ClassList* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.class_names_.InternalSwap(&other->_impl_.class_names_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ClassList, _impl_.error_state_)
       + sizeof(ClassList::_impl_.error_state_)
       - PROTOBUF_FIELD_OFFSET(ClassList, _impl_.id_)>(
@@ -5819,166 +5792,181 @@ void ClassList::InternalSwap(ClassList* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata ClassList::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ClassList::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[19]);
 }
+
 // ===================================================================
 
 class DetectRequest::_Internal {
  public:
 };
 
-DetectRequest::DetectRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+DetectRequest::DetectRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.DetectRequest)
 }
-DetectRequest::DetectRequest(const DetectRequest& from) : ::google::protobuf::Message() {
-  DetectRequest* const _this = this;
-  (void)_this;
+DetectRequest::DetectRequest(const DetectRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DetectRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.pose_cmd_){from._impl_.pose_cmd_},
-      decltype(_impl_.robot_ip_){},
-      decltype(_impl_.id_){},
-      decltype(_impl_.cls_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.pose_cmd_){from._impl_.pose_cmd_}
+    , decltype(_impl_.robot_ip_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.cls_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.robot_ip_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.robot_ip_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.robot_ip_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_robot_ip().empty()) {
-    _this->_impl_.robot_ip_.Set(from._internal_robot_ip(), _this->GetArenaForAllocation());
+    _this->_impl_.robot_ip_.Set(from._internal_robot_ip(), 
+      _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.cls_) -
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.cls_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.cls_));
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.DetectRequest)
 }
-inline void DetectRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void DetectRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.pose_cmd_){arena},
-      decltype(_impl_.robot_ip_){},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.cls_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.pose_cmd_){arena}
+    , decltype(_impl_.robot_ip_){}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.cls_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.robot_ip_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.robot_ip_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.robot_ip_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 DetectRequest::~DetectRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.DetectRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void DetectRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.pose_cmd_.~RepeatedField();
   _impl_.robot_ip_.Destroy();
 }
+
 void DetectRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void DetectRequest::Clear() {
+void DetectRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.DetectRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_pose_cmd()->Clear();
+  _impl_.pose_cmd_.Clear();
   _impl_.robot_ip_.ClearToEmpty();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.cls_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.cls_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* DetectRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* DetectRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 cls = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.cls_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float pose_cmd = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_pose_cmd(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 29) {
+          _internal_add_pose_cmd(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // string robot_ip = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_robot_ip();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.DetectRequest.robot_ip"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 61, 2> DetectRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_DetectRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string robot_ip = 4;
-    {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.robot_ip_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(DetectRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.id_)}},
-    // int32 cls = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(DetectRequest, _impl_.cls_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.cls_)}},
-    // repeated float pose_cmd = 3;
-    {::_pbi::TcParser::FastF32P1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.pose_cmd_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 cls = 2;
-    {PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.cls_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // repeated float pose_cmd = 3;
-    {PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.pose_cmd_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // string robot_ip = 4;
-    {PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.robot_ip_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\54\0\0\0\10\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.DetectRequest"
-    "robot_ip"
-  }},
-};
-
-::uint8_t* DetectRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* DetectRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.DetectRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 cls = 2;
   if (this->_internal_cls() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_cls(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_cls(), target);
   }
 
   // repeated float pose_cmd = 3;
@@ -5988,78 +5976,77 @@ const ::_pbi::TcParseTable<2, 4, 0, 61, 2> DetectRequest::_table_ = {
 
   // string robot_ip = 4;
   if (!this->_internal_robot_ip().empty()) {
-    const std::string& _s = this->_internal_robot_ip();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.DetectRequest.robot_ip");
-    target = stream->WriteStringMaybeAliased(4, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_robot_ip().data(), static_cast<int>(this->_internal_robot_ip().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.DetectRequest.robot_ip");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_robot_ip(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.DetectRequest)
   return target;
 }
 
-::size_t DetectRequest::ByteSizeLong() const {
+size_t DetectRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.DetectRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float pose_cmd = 3;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_pose_cmd_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_pose_cmd_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // string robot_ip = 4;
   if (!this->_internal_robot_ip().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_robot_ip());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_robot_ip());
   }
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 cls = 2;
   if (this->_internal_cls() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_cls());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cls());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData DetectRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DetectRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     DetectRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*DetectRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DetectRequest::GetClassData() const { return &_class_data_; }
 
 
-void DetectRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void DetectRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<DetectRequest*>(&to_msg);
   auto& from = static_cast<const DetectRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.DetectRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_pose_cmd()->MergeFrom(from._internal_pose_cmd());
+  _this->_impl_.pose_cmd_.MergeFrom(from._impl_.pose_cmd_);
   if (!from._internal_robot_ip().empty()) {
     _this->_internal_set_robot_ip(from._internal_robot_ip());
   }
@@ -6069,7 +6056,7 @@ void DetectRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::googl
   if (from._internal_cls() != 0) {
     _this->_internal_set_cls(from._internal_cls());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DetectRequest::CopyFrom(const DetectRequest& from) {
@@ -6079,7 +6066,7 @@ void DetectRequest::CopyFrom(const DetectRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool DetectRequest::IsInitialized() const {
+bool DetectRequest::IsInitialized() const {
   return true;
 }
 
@@ -6089,9 +6076,11 @@ void DetectRequest::InternalSwap(DetectRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.pose_cmd_.InternalSwap(&other->_impl_.pose_cmd_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.robot_ip_, lhs_arena,
-                                       &other->_impl_.robot_ip_, rhs_arena);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.robot_ip_, lhs_arena,
+      &other->_impl_.robot_ip_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.cls_)
       + sizeof(DetectRequest::_impl_.cls_)
       - PROTOBUF_FIELD_OFFSET(DetectRequest, _impl_.id_)>(
@@ -6099,169 +6088,184 @@ void DetectRequest::InternalSwap(DetectRequest* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata DetectRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata DetectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[20]);
 }
+
 // ===================================================================
 
 class RetrieveRequest::_Internal {
  public:
 };
 
-RetrieveRequest::RetrieveRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+RetrieveRequest::RetrieveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
 }
 RetrieveRequest::RetrieveRequest(const RetrieveRequest& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RetrieveRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , decltype(_impl_.cls_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.cls_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.cls_));
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
 }
-inline void RetrieveRequest::SharedCtor(::_pb::Arena* arena) {
+
+inline void RetrieveRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.id_){0},
-      decltype(_impl_.cls_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.id_){0}
+    , decltype(_impl_.cls_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
+
 RetrieveRequest::~RetrieveRequest() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void RetrieveRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
+
 void RetrieveRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void RetrieveRequest::Clear() {
+void RetrieveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.cls_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.cls_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RetrieveRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* RetrieveRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 cls = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.cls_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> RetrieveRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_RetrieveRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int32 cls = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(RetrieveRequest, _impl_.cls_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.cls_)}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(RetrieveRequest, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 cls = 2;
-    {PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.cls_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* RetrieveRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* RetrieveRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 cls = 2;
   if (this->_internal_cls() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_cls(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_cls(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
   return target;
 }
 
-::size_t RetrieveRequest::ByteSizeLong() const {
+size_t RetrieveRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 cls = 2;
   if (this->_internal_cls() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_cls());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cls());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData RetrieveRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RetrieveRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     RetrieveRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*RetrieveRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RetrieveRequest::GetClassData() const { return &_class_data_; }
 
 
-void RetrieveRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void RetrieveRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RetrieveRequest*>(&to_msg);
   auto& from = static_cast<const RetrieveRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.RetrieveRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_id() != 0) {
@@ -6270,7 +6274,7 @@ void RetrieveRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::goo
   if (from._internal_cls() != 0) {
     _this->_internal_set_cls(from._internal_cls());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RetrieveRequest::CopyFrom(const RetrieveRequest& from) {
@@ -6280,14 +6284,14 @@ void RetrieveRequest::CopyFrom(const RetrieveRequest& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool RetrieveRequest::IsInitialized() const {
+bool RetrieveRequest::IsInitialized() const {
   return true;
 }
 
 void RetrieveRequest::InternalSwap(RetrieveRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.cls_)
       + sizeof(RetrieveRequest::_impl_.cls_)
       - PROTOBUF_FIELD_OFFSET(RetrieveRequest, _impl_.id_)>(
@@ -6295,238 +6299,263 @@ void RetrieveRequest::InternalSwap(RetrieveRequest* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata RetrieveRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RetrieveRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[21]);
 }
+
 // ===================================================================
 
 class DetectResponse::_Internal {
  public:
 };
 
-DetectResponse::DetectResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+DetectResponse::DetectResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.EyeTask.DetectResponse)
 }
-DetectResponse::DetectResponse(const DetectResponse& from) : ::google::protobuf::Message() {
-  DetectResponse* const _this = this;
-  (void)_this;
+DetectResponse::DetectResponse(const DetectResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DetectResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.tar_ee_pose_){from._impl_.tar_ee_pose_},
-      decltype(_impl_.tar_tool_pose_){from._impl_.tar_tool_pose_},
-      decltype(_impl_.tar_obj_pose_){from._impl_.tar_obj_pose_},
-      decltype(_impl_.error_module_){},
-      decltype(_impl_.id_){},
-      decltype(_impl_.cls_){},
-      decltype(_impl_.detected_){},
-      decltype(_impl_.passed_){},
-      decltype(_impl_.error_state_){},
-      decltype(_impl_.tool_idx_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.tar_ee_pose_){from._impl_.tar_ee_pose_}
+    , decltype(_impl_.tar_tool_pose_){from._impl_.tar_tool_pose_}
+    , decltype(_impl_.tar_obj_pose_){from._impl_.tar_obj_pose_}
+    , decltype(_impl_.error_module_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.cls_){}
+    , decltype(_impl_.detected_){}
+    , decltype(_impl_.passed_){}
+    , decltype(_impl_.error_state_){}
+    , decltype(_impl_.tool_idx_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.error_module_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.error_module_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.error_module_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_error_module().empty()) {
-    _this->_impl_.error_module_.Set(from._internal_error_module(), _this->GetArenaForAllocation());
+    _this->_impl_.error_module_.Set(from._internal_error_module(), 
+      _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.tool_idx_) -
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.tool_idx_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.tool_idx_));
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.EyeTask.DetectResponse)
 }
-inline void DetectResponse::SharedCtor(::_pb::Arena* arena) {
+
+inline void DetectResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.tar_ee_pose_){arena},
-      decltype(_impl_.tar_tool_pose_){arena},
-      decltype(_impl_.tar_obj_pose_){arena},
-      decltype(_impl_.error_module_){},
-      decltype(_impl_.id_){0},
-      decltype(_impl_.cls_){0},
-      decltype(_impl_.detected_){false},
-      decltype(_impl_.passed_){false},
-      decltype(_impl_.error_state_){false},
-      decltype(_impl_.tool_idx_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.tar_ee_pose_){arena}
+    , decltype(_impl_.tar_tool_pose_){arena}
+    , decltype(_impl_.tar_obj_pose_){arena}
+    , decltype(_impl_.error_module_){}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.cls_){0}
+    , decltype(_impl_.detected_){false}
+    , decltype(_impl_.passed_){false}
+    , decltype(_impl_.error_state_){false}
+    , decltype(_impl_.tool_idx_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.error_module_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.error_module_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.error_module_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 DetectResponse::~DetectResponse() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.EyeTask.DetectResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void DetectResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.tar_ee_pose_.~RepeatedField();
   _impl_.tar_tool_pose_.~RepeatedField();
   _impl_.tar_obj_pose_.~RepeatedField();
   _impl_.error_module_.Destroy();
 }
+
 void DetectResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void DetectResponse::Clear() {
+void DetectResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.EyeTask.DetectResponse)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_tar_ee_pose()->Clear();
-  _internal_mutable_tar_tool_pose()->Clear();
-  _internal_mutable_tar_obj_pose()->Clear();
+  _impl_.tar_ee_pose_.Clear();
+  _impl_.tar_tool_pose_.Clear();
+  _impl_.tar_obj_pose_.Clear();
   _impl_.error_module_.ClearToEmpty();
-  ::memset(&_impl_.id_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.tool_idx_) -
       reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.tool_idx_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* DetectResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* DetectResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool detected = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.detected_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool passed = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.passed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 cls = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.cls_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float tar_ee_pose = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_tar_ee_pose(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 45) {
+          _internal_add_tar_ee_pose(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float tar_tool_pose = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_tar_tool_pose(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 53) {
+          _internal_add_tar_tool_pose(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // repeated float tar_obj_pose = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_tar_obj_pose(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 61) {
+          _internal_add_tar_obj_pose(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
+        } else
+          goto handle_unusual;
+        continue;
+      // int32 tool_idx = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.tool_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool error_state = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _impl_.error_state_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string error_module = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
+          auto str = _internal_mutable_error_module();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.EyeTask.DetectResponse.error_module"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<4, 10, 0, 74, 2> DetectResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    10, 120,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294966272,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    10,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_DetectResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    {::_pbi::TcParser::MiniParse, {}},
-    // int32 id = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(DetectResponse, _impl_.id_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.id_)}},
-    // bool detected = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(DetectResponse, _impl_.detected_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.detected_)}},
-    // bool passed = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(DetectResponse, _impl_.passed_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.passed_)}},
-    // int32 cls = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(DetectResponse, _impl_.cls_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.cls_)}},
-    // repeated float tar_ee_pose = 5;
-    {::_pbi::TcParser::FastF32P1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_ee_pose_)}},
-    // repeated float tar_tool_pose = 6;
-    {::_pbi::TcParser::FastF32P1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_tool_pose_)}},
-    // repeated float tar_obj_pose = 7;
-    {::_pbi::TcParser::FastF32P1,
-     {58, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_obj_pose_)}},
-    // int32 tool_idx = 8;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(DetectResponse, _impl_.tool_idx_), 63>(),
-     {64, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tool_idx_)}},
-    // bool error_state = 9;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(DetectResponse, _impl_.error_state_), 63>(),
-     {72, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.error_state_)}},
-    // string error_module = 10;
-    {::_pbi::TcParser::FastUS1,
-     {82, 63, 0, PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.error_module_)}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-    {::_pbi::TcParser::MiniParse, {}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int32 id = 1;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // bool detected = 2;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.detected_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // bool passed = 3;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.passed_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // int32 cls = 4;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.cls_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // repeated float tar_ee_pose = 5;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_ee_pose_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float tar_tool_pose = 6;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_tool_pose_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // repeated float tar_obj_pose = 7;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tar_obj_pose_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kPackedFloat)},
-    // int32 tool_idx = 8;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tool_idx_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // bool error_state = 9;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.error_state_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
-    // string error_module = 10;
-    {PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.error_module_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\55\0\0\0\0\0\0\0\0\0\14\0\0\0\0\0"
-    "IndyFramework.Protobuf.EyeTask.DetectResponse"
-    "error_module"
-  }},
-};
-
-::uint8_t* DetectResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* DetectResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.EyeTask.DetectResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // bool detected = 2;
   if (this->_internal_detected() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        2, this->_internal_detected(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_detected(), target);
   }
 
   // bool passed = 3;
   if (this->_internal_passed() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        3, this->_internal_passed(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_passed(), target);
   }
 
   // int32 cls = 4;
   if (this->_internal_cls() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<4>(
-            stream, this->_internal_cls(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_cls(), target);
   }
 
   // repeated float tar_ee_pose = 5;
@@ -6546,139 +6575,133 @@ const ::_pbi::TcParseTable<4, 10, 0, 74, 2> DetectResponse::_table_ = {
 
   // int32 tool_idx = 8;
   if (this->_internal_tool_idx() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<8>(
-            stream, this->_internal_tool_idx(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_tool_idx(), target);
   }
 
   // bool error_state = 9;
   if (this->_internal_error_state() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(
-        9, this->_internal_error_state(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_error_state(), target);
   }
 
   // string error_module = 10;
   if (!this->_internal_error_module().empty()) {
-    const std::string& _s = this->_internal_error_module();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.EyeTask.DetectResponse.error_module");
-    target = stream->WriteStringMaybeAliased(10, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_error_module().data(), static_cast<int>(this->_internal_error_module().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.EyeTask.DetectResponse.error_module");
+    target = stream->WriteStringMaybeAliased(
+        10, this->_internal_error_module(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.EyeTask.DetectResponse)
   return target;
 }
 
-::size_t DetectResponse::ByteSizeLong() const {
+size_t DetectResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.EyeTask.DetectResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float tar_ee_pose = 5;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_tar_ee_pose_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_tar_ee_pose_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // repeated float tar_tool_pose = 6;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_tar_tool_pose_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_tar_tool_pose_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // repeated float tar_obj_pose = 7;
   {
-    std::size_t data_size = std::size_t{4} *
-        ::_pbi::FromIntSize(this->_internal_tar_obj_pose_size())
-    ;
-    std::size_t tag_size = data_size == 0
-        ? 0
-        : 1 + ::_pbi::WireFormatLite::Int32Size(
-                            static_cast<int32_t>(data_size))
-    ;
-    total_size += tag_size + data_size;
+    unsigned int count = static_cast<unsigned int>(this->_internal_tar_obj_pose_size());
+    size_t data_size = 4UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    total_size += data_size;
   }
+
   // string error_module = 10;
   if (!this->_internal_error_module().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_error_module());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_error_module());
   }
 
   // int32 id = 1;
   if (this->_internal_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 cls = 4;
   if (this->_internal_cls() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_cls());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cls());
   }
 
   // bool detected = 2;
   if (this->_internal_detected() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   // bool passed = 3;
   if (this->_internal_passed() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   // bool error_state = 9;
   if (this->_internal_error_state() != 0) {
-    total_size += 2;
+    total_size += 1 + 1;
   }
 
   // int32 tool_idx = 8;
   if (this->_internal_tool_idx() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_tool_idx());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_tool_idx());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData DetectResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DetectResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     DetectResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*DetectResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DetectResponse::GetClassData() const { return &_class_data_; }
 
 
-void DetectResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void DetectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<DetectResponse*>(&to_msg);
   auto& from = static_cast<const DetectResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.EyeTask.DetectResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_tar_ee_pose()->MergeFrom(from._internal_tar_ee_pose());
-  _this->_internal_mutable_tar_tool_pose()->MergeFrom(from._internal_tar_tool_pose());
-  _this->_internal_mutable_tar_obj_pose()->MergeFrom(from._internal_tar_obj_pose());
+  _this->_impl_.tar_ee_pose_.MergeFrom(from._impl_.tar_ee_pose_);
+  _this->_impl_.tar_tool_pose_.MergeFrom(from._impl_.tar_tool_pose_);
+  _this->_impl_.tar_obj_pose_.MergeFrom(from._impl_.tar_obj_pose_);
   if (!from._internal_error_module().empty()) {
     _this->_internal_set_error_module(from._internal_error_module());
   }
@@ -6700,7 +6723,7 @@ void DetectResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::goog
   if (from._internal_tool_idx() != 0) {
     _this->_internal_set_tool_idx(from._internal_tool_idx());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DetectResponse::CopyFrom(const DetectResponse& from) {
@@ -6710,7 +6733,7 @@ void DetectResponse::CopyFrom(const DetectResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool DetectResponse::IsInitialized() const {
+bool DetectResponse::IsInitialized() const {
   return true;
 }
 
@@ -6722,9 +6745,11 @@ void DetectResponse::InternalSwap(DetectResponse* other) {
   _impl_.tar_ee_pose_.InternalSwap(&other->_impl_.tar_ee_pose_);
   _impl_.tar_tool_pose_.InternalSwap(&other->_impl_.tar_tool_pose_);
   _impl_.tar_obj_pose_.InternalSwap(&other->_impl_.tar_obj_pose_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.error_module_, lhs_arena,
-                                       &other->_impl_.error_module_, rhs_arena);
-  ::google::protobuf::internal::memswap<
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.error_module_, lhs_arena,
+      &other->_impl_.error_module_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.tool_idx_)
       + sizeof(DetectResponse::_impl_.tool_idx_)
       - PROTOBUF_FIELD_OFFSET(DetectResponse, _impl_.id_)>(
@@ -6732,18 +6757,110 @@ void DetectResponse::InternalSwap(DetectResponse* other) {
           reinterpret_cast<char*>(&other->_impl_.id_));
 }
 
-::google::protobuf::Metadata DetectResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata DetectResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_indyeye_2eproto_getter, &descriptor_table_indyeye_2eproto_once,
       file_level_metadata_indyeye_2eproto[22]);
 }
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace EyeTask
 }  // namespace Protobuf
 }  // namespace IndyFramework
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::Point*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::Point >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::Point >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfo >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::WeldingLinesInfoResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::StraightLineInfoRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::StraightLineInfoResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CircularLineThreePoints >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CircularLineCenterRadius >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CircularLineInfoRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CircularLineInfoResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::ServerInfoRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::ServerInfoRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::ServerInfoRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::ServerInfoResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::ServerInfoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::ServerInfoResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CalibrationRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CalibrationRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CalibrationRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CalibrationResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CalibrationResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CalibrationResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CalibrationDoneRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::CalibrationDoneResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::ImageRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::ImageRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::ImageRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::ImageResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::ImageResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::ImageResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::Request*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::Request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::Request >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::ClassList*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::ClassList >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::ClassList >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::DetectRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::DetectRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::DetectRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::RetrieveRequest*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::RetrieveRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::RetrieveRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::EyeTask::DetectResponse*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::EyeTask::DetectResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::EyeTask::DetectResponse >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>

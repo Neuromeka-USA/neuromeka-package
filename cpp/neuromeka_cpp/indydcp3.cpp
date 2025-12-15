@@ -4636,10 +4636,10 @@ bool IndyDCP3::get_ft_zero() {
     return true;
 }
 
-bool IndyDCP3::set_inference_data(const Nrmk::IndyFramework::ControlInferenceDataSet& data) {
+bool IndyDCP3::set_inference_data(const Nrmk::IndyFramework::ControlInferenceDataSet& inference_data) {
     Nrmk::IndyFramework::Response response;
     grpc::ClientContext context;
-    grpc::Status status = control_stub->SetControlInferenceData(&context, data, &response);
+    grpc::Status status = control_stub->SetControlInferenceData(&context, inference_data, &response);
     if (!status.ok()) {
         std::cerr << "SetControlInferenceData RPC failed: " << status.error_message() << std::endl;
         return false;
@@ -4647,10 +4647,10 @@ bool IndyDCP3::set_inference_data(const Nrmk::IndyFramework::ControlInferenceDat
     return response.code() == 0;
 }
 
-bool IndyDCP3::get_inference_data(Nrmk::IndyFramework::ControlInferenceDataSet& data) {
+bool IndyDCP3::get_inference_data(Nrmk::IndyFramework::ControlInferenceDataSet& inference_data) {
     Nrmk::IndyFramework::Empty request;
     grpc::ClientContext context;
-    grpc::Status status = control_stub->GetControlInferenceData(&context, request, &data);
+    grpc::Status status = control_stub->GetControlInferenceData(&context, request, &inference_data);
     if (!status.ok()) {
         std::cerr << "GetControlInferenceData RPC failed: " << status.error_message() << std::endl;
         return false;

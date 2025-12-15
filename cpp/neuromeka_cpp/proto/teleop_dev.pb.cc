@@ -4,361 +4,328 @@
 #include "teleop_dev.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
-// @@protoc_insertion_point(includes)
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
+// @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace IndyFramework {
 namespace Protobuf {
 namespace TeleDev {
-        template <typename>
-PROTOBUF_CONSTEXPR TeleOpStreamReq::TeleOpStreamReq(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.ip_indy_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.port_)*/ 0u,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_CONSTEXPR TeleOpStreamReq::TeleOpStreamReq(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.ip_indy_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.port_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct TeleOpStreamReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR TeleOpStreamReqDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TeleOpStreamReqDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~TeleOpStreamReqDefaultTypeInternal() {}
   union {
     TeleOpStreamReq _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TeleOpStreamReqDefaultTypeInternal _TeleOpStreamReq_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Empty::Empty(::_pbi::ConstantInitialized) {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TeleOpStreamReqDefaultTypeInternal _TeleOpStreamReq_default_instance_;
+PROTOBUF_CONSTEXPR Empty::Empty(
+    ::_pbi::ConstantInitialized) {}
 struct EmptyDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR EmptyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EmptyDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~EmptyDefaultTypeInternal() {}
   union {
     Empty _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmptyDefaultTypeInternal _Empty_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR Response::Response(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.msg_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.code_)*/ ::int64_t{0},
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmptyDefaultTypeInternal _Empty_default_instance_;
+PROTOBUF_CONSTEXPR Response::Response(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.msg_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.code_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResponseDefaultTypeInternal() {}
   union {
     Response _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResponseDefaultTypeInternal _Response_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResponseDefaultTypeInternal _Response_default_instance_;
 }  // namespace TeleDev
 }  // namespace Protobuf
 }  // namespace IndyFramework
 static ::_pb::Metadata file_level_metadata_teleop_5fdev_2eproto[3];
-static constexpr const ::_pb::EnumDescriptor**
-    file_level_enum_descriptors_teleop_5fdev_2eproto = nullptr;
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_teleop_5fdev_2eproto = nullptr;
-const ::uint32_t TableStruct_teleop_5fdev_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _impl_.ip_indy_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _impl_.port_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Empty, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _impl_.code_),
-    PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _impl_.msg_),
-};
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_teleop_5fdev_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_teleop_5fdev_2eproto = nullptr;
 
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq)},
-        {10, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::Empty)},
-        {18, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::Response)},
+const uint32_t TableStruct_teleop_5fdev_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _impl_.ip_indy_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq, _impl_.port_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Empty, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _impl_.code_),
+  PROTOBUF_FIELD_OFFSET(::IndyFramework::Protobuf::TeleDev::Response, _impl_.msg_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq)},
+  { 8, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::Empty)},
+  { 14, -1, -1, sizeof(::IndyFramework::Protobuf::TeleDev::Response)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::IndyFramework::Protobuf::TeleDev::_TeleOpStreamReq_default_instance_._instance,
-    &::IndyFramework::Protobuf::TeleDev::_Empty_default_instance_._instance,
-    &::IndyFramework::Protobuf::TeleDev::_Response_default_instance_._instance,
-};
-const char descriptor_table_protodef_teleop_5fdev_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\020teleop_dev.proto\022\036IndyFramework.Protob"
-    "uf.TeleDev\"0\n\017TeleOpStreamReq\022\017\n\007ip_indy"
-    "\030\001 \001(\t\022\014\n\004port\030\002 \001(\r\"\007\n\005Empty\"%\n\010Respons"
-    "e\022\014\n\004code\030\001 \001(\003\022\013\n\003msg\030\002 \001(\t2\347\001\n\014TeleOpD"
-    "evice\022p\n\021StartTeleOpStream\022/.IndyFramewo"
-    "rk.Protobuf.TeleDev.TeleOpStreamReq\032(.In"
-    "dyFramework.Protobuf.TeleDev.Response\"\000\022"
-    "e\n\020StopTeleOpStream\022%.IndyFramework.Prot"
-    "obuf.TeleDev.Empty\032(.IndyFramework.Proto"
-    "buf.TeleDev.Response\"\000b\006proto3"
-};
-static ::absl::once_flag descriptor_table_teleop_5fdev_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_teleop_5fdev_2eproto = {
-    false,
-    false,
-    390,
-    descriptor_table_protodef_teleop_5fdev_2eproto,
-    "teleop_dev.proto",
-    &descriptor_table_teleop_5fdev_2eproto_once,
-    nullptr,
-    0,
-    3,
-    schemas,
-    file_default_instances,
-    TableStruct_teleop_5fdev_2eproto::offsets,
-    file_level_metadata_teleop_5fdev_2eproto,
-    file_level_enum_descriptors_teleop_5fdev_2eproto,
-    file_level_service_descriptors_teleop_5fdev_2eproto,
+  &::IndyFramework::Protobuf::TeleDev::_TeleOpStreamReq_default_instance_._instance,
+  &::IndyFramework::Protobuf::TeleDev::_Empty_default_instance_._instance,
+  &::IndyFramework::Protobuf::TeleDev::_Response_default_instance_._instance,
 };
 
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
+const char descriptor_table_protodef_teleop_5fdev_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\020teleop_dev.proto\022\036IndyFramework.Protob"
+  "uf.TeleDev\"0\n\017TeleOpStreamReq\022\017\n\007ip_indy"
+  "\030\001 \001(\t\022\014\n\004port\030\002 \001(\r\"\007\n\005Empty\"%\n\010Respons"
+  "e\022\014\n\004code\030\001 \001(\003\022\013\n\003msg\030\002 \001(\t2\347\001\n\014TeleOpD"
+  "evice\022p\n\021StartTeleOpStream\022/.IndyFramewo"
+  "rk.Protobuf.TeleDev.TeleOpStreamReq\032(.In"
+  "dyFramework.Protobuf.TeleDev.Response\"\000\022"
+  "e\n\020StopTeleOpStream\022%.IndyFramework.Prot"
+  "obuf.TeleDev.Empty\032(.IndyFramework.Proto"
+  "buf.TeleDev.Response\"\000b\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_teleop_5fdev_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_teleop_5fdev_2eproto = {
+    false, false, 390, descriptor_table_protodef_teleop_5fdev_2eproto,
+    "teleop_dev.proto",
+    &descriptor_table_teleop_5fdev_2eproto_once, nullptr, 0, 3,
+    schemas, file_default_instances, TableStruct_teleop_5fdev_2eproto::offsets,
+    file_level_metadata_teleop_5fdev_2eproto, file_level_enum_descriptors_teleop_5fdev_2eproto,
+    file_level_service_descriptors_teleop_5fdev_2eproto,
+};
 PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_teleop_5fdev_2eproto_getter() {
   return &descriptor_table_teleop_5fdev_2eproto;
 }
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_teleop_5fdev_2eproto(&descriptor_table_teleop_5fdev_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_teleop_5fdev_2eproto(&descriptor_table_teleop_5fdev_2eproto);
 namespace IndyFramework {
 namespace Protobuf {
 namespace TeleDev {
+
 // ===================================================================
 
 class TeleOpStreamReq::_Internal {
  public:
 };
 
-TeleOpStreamReq::TeleOpStreamReq(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+TeleOpStreamReq::TeleOpStreamReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
 }
-TeleOpStreamReq::TeleOpStreamReq(const TeleOpStreamReq& from) : ::google::protobuf::Message() {
-  TeleOpStreamReq* const _this = this;
-  (void)_this;
+TeleOpStreamReq::TeleOpStreamReq(const TeleOpStreamReq& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  TeleOpStreamReq* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.ip_indy_){},
-      decltype(_impl_.port_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.ip_indy_){}
+    , decltype(_impl_.port_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.ip_indy_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.ip_indy_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ip_indy_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_ip_indy().empty()) {
-    _this->_impl_.ip_indy_.Set(from._internal_ip_indy(), _this->GetArenaForAllocation());
+    _this->_impl_.ip_indy_.Set(from._internal_ip_indy(), 
+      _this->GetArenaForAllocation());
   }
   _this->_impl_.port_ = from._impl_.port_;
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
 }
-inline void TeleOpStreamReq::SharedCtor(::_pb::Arena* arena) {
+
+inline void TeleOpStreamReq::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.ip_indy_){},
-      decltype(_impl_.port_){0u},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.ip_indy_){}
+    , decltype(_impl_.port_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.ip_indy_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.ip_indy_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.ip_indy_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 TeleOpStreamReq::~TeleOpStreamReq() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void TeleOpStreamReq::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.ip_indy_.Destroy();
 }
+
 void TeleOpStreamReq::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void TeleOpStreamReq::Clear() {
+void TeleOpStreamReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.ip_indy_.ClearToEmpty();
   _impl_.port_ = 0u;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* TeleOpStreamReq::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* TeleOpStreamReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string ip_indy = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_ip_indy();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.TeleDev.TeleOpStreamReq.ip_indy"));
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 port = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 62, 2> TeleOpStreamReq::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_TeleOpStreamReq_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // uint32 port = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(TeleOpStreamReq, _impl_.port_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(TeleOpStreamReq, _impl_.port_)}},
-    // string ip_indy = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(TeleOpStreamReq, _impl_.ip_indy_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string ip_indy = 1;
-    {PROTOBUF_FIELD_OFFSET(TeleOpStreamReq, _impl_.ip_indy_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // uint32 port = 2;
-    {PROTOBUF_FIELD_OFFSET(TeleOpStreamReq, _impl_.port_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-  }},
-  // no aux_entries
-  {{
-    "\56\7\0\0\0\0\0\0"
-    "IndyFramework.Protobuf.TeleDev.TeleOpStreamReq"
-    "ip_indy"
-  }},
-};
-
-::uint8_t* TeleOpStreamReq::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* TeleOpStreamReq::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string ip_indy = 1;
   if (!this->_internal_ip_indy().empty()) {
-    const std::string& _s = this->_internal_ip_indy();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.TeleDev.TeleOpStreamReq.ip_indy");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_ip_indy().data(), static_cast<int>(this->_internal_ip_indy().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.TeleDev.TeleOpStreamReq.ip_indy");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_ip_indy(), target);
   }
 
   // uint32 port = 2;
   if (this->_internal_port() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        2, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_port(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
   return target;
 }
 
-::size_t TeleOpStreamReq::ByteSizeLong() const {
+size_t TeleOpStreamReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string ip_indy = 1;
   if (!this->_internal_ip_indy().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_ip_indy());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_ip_indy());
   }
 
   // uint32 port = 2;
   if (this->_internal_port() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_port());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_port());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData TeleOpStreamReq::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TeleOpStreamReq::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     TeleOpStreamReq::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*TeleOpStreamReq::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TeleOpStreamReq::GetClassData() const { return &_class_data_; }
 
 
-void TeleOpStreamReq::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void TeleOpStreamReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TeleOpStreamReq*>(&to_msg);
   auto& from = static_cast<const TeleOpStreamReq&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.TeleDev.TeleOpStreamReq)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_ip_indy().empty()) {
@@ -367,7 +334,7 @@ void TeleOpStreamReq::MergeImpl(::google::protobuf::Message& to_msg, const ::goo
   if (from._internal_port() != 0) {
     _this->_internal_set_port(from._internal_port());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TeleOpStreamReq::CopyFrom(const TeleOpStreamReq& from) {
@@ -377,7 +344,7 @@ void TeleOpStreamReq::CopyFrom(const TeleOpStreamReq& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool TeleOpStreamReq::IsInitialized() const {
+bool TeleOpStreamReq::IsInitialized() const {
   return true;
 }
 
@@ -386,43 +353,46 @@ void TeleOpStreamReq::InternalSwap(TeleOpStreamReq* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.ip_indy_, lhs_arena,
-                                       &other->_impl_.ip_indy_, rhs_arena);
-        swap(_impl_.port_, other->_impl_.port_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.ip_indy_, lhs_arena,
+      &other->_impl_.ip_indy_, rhs_arena
+  );
+  swap(_impl_.port_, other->_impl_.port_);
 }
 
-::google::protobuf::Metadata TeleOpStreamReq::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata TeleOpStreamReq::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_teleop_5fdev_2eproto_getter, &descriptor_table_teleop_5fdev_2eproto_once,
       file_level_metadata_teleop_5fdev_2eproto[0]);
 }
+
 // ===================================================================
 
 class Empty::_Internal {
  public:
 };
 
-Empty::Empty(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+Empty::Empty(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.TeleDev.Empty)
 }
-Empty::Empty(const Empty& from) : ::google::protobuf::internal::ZeroFieldsBase() {
-  Empty* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
+Empty::Empty(const Empty& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  Empty* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.TeleDev.Empty)
 }
 
 
 
 
-const ::google::protobuf::Message::ClassData Empty::_class_data_ = {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl,
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl,
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Empty::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
 };
-const ::google::protobuf::Message::ClassData*Empty::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Empty::GetClassData() const { return &_class_data_; }
 
 
 
@@ -430,192 +400,202 @@ const ::google::protobuf::Message::ClassData*Empty::GetClassData() const { retur
 
 
 
-::google::protobuf::Metadata Empty::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Empty::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_teleop_5fdev_2eproto_getter, &descriptor_table_teleop_5fdev_2eproto_once,
       file_level_metadata_teleop_5fdev_2eproto[1]);
 }
+
 // ===================================================================
 
 class Response::_Internal {
  public:
 };
 
-Response::Response(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+Response::Response(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:IndyFramework.Protobuf.TeleDev.Response)
 }
-Response::Response(const Response& from) : ::google::protobuf::Message() {
-  Response* const _this = this;
-  (void)_this;
+Response::Response(const Response& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Response* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){},
-      decltype(_impl_.code_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
+      decltype(_impl_.msg_){}
+    , decltype(_impl_.code_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.msg_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.msg_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.msg_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_msg().empty()) {
-    _this->_impl_.msg_.Set(from._internal_msg(), _this->GetArenaForAllocation());
+    _this->_impl_.msg_.Set(from._internal_msg(), 
+      _this->GetArenaForAllocation());
   }
   _this->_impl_.code_ = from._impl_.code_;
-
   // @@protoc_insertion_point(copy_constructor:IndyFramework.Protobuf.TeleDev.Response)
 }
-inline void Response::SharedCtor(::_pb::Arena* arena) {
+
+inline void Response::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
+  (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){},
-      decltype(_impl_.code_){::int64_t{0}},
-      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.msg_){}
+    , decltype(_impl_.code_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.msg_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.msg_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.msg_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 Response::~Response() {
   // @@protoc_insertion_point(destructor:IndyFramework.Protobuf.TeleDev.Response)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void Response::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.msg_.Destroy();
 }
+
 void Response::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-PROTOBUF_NOINLINE void Response::Clear() {
+void Response::Clear() {
 // @@protoc_insertion_point(message_clear_start:IndyFramework.Protobuf.TeleDev.Response)
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.msg_.ClearToEmpty();
-  _impl_.code_ = ::int64_t{0};
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _impl_.code_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Response::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Response::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int64 code = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string msg = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_msg();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "IndyFramework.Protobuf.TeleDev.Response.msg"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 51, 2> Response::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Response_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string msg = 2;
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Response, _impl_.msg_)}},
-    // int64 code = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Response, _impl_.code_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Response, _impl_.code_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int64 code = 1;
-    {PROTOBUF_FIELD_OFFSET(Response, _impl_.code_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string msg = 2;
-    {PROTOBUF_FIELD_OFFSET(Response, _impl_.msg_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\47\0\3\0\0\0\0\0"
-    "IndyFramework.Protobuf.TeleDev.Response"
-    "msg"
-  }},
-};
-
-::uint8_t* Response::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* Response::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:IndyFramework.Protobuf.TeleDev.Response)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int64 code = 1;
   if (this->_internal_code() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_code(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_code(), target);
   }
 
   // string msg = 2;
   if (!this->_internal_msg().empty()) {
-    const std::string& _s = this->_internal_msg();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "IndyFramework.Protobuf.TeleDev.Response.msg");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "IndyFramework.Protobuf.TeleDev.Response.msg");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_msg(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:IndyFramework.Protobuf.TeleDev.Response)
   return target;
 }
 
-::size_t Response::ByteSizeLong() const {
+size_t Response::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:IndyFramework.Protobuf.TeleDev.Response)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string msg = 2;
   if (!this->_internal_msg().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_msg());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_msg());
   }
 
   // int64 code = 1;
   if (this->_internal_code() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_code());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_code());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Response::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Response::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
     Response::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Response::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Response::GetClassData() const { return &_class_data_; }
 
 
-void Response::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+void Response::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Response*>(&to_msg);
   auto& from = static_cast<const Response&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:IndyFramework.Protobuf.TeleDev.Response)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_msg().empty()) {
@@ -624,7 +604,7 @@ void Response::MergeImpl(::google::protobuf::Message& to_msg, const ::google::pr
   if (from._internal_code() != 0) {
     _this->_internal_set_code(from._internal_code());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Response::CopyFrom(const Response& from) {
@@ -634,7 +614,7 @@ void Response::CopyFrom(const Response& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Response::IsInitialized() const {
+bool Response::IsInitialized() const {
   return true;
 }
 
@@ -643,23 +623,37 @@ void Response::InternalSwap(Response* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.msg_, lhs_arena,
-                                       &other->_impl_.msg_, rhs_arena);
-        swap(_impl_.code_, other->_impl_.code_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.msg_, lhs_arena,
+      &other->_impl_.msg_, rhs_arena
+  );
+  swap(_impl_.code_, other->_impl_.code_);
 }
 
-::google::protobuf::Metadata Response::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Response::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_teleop_5fdev_2eproto_getter, &descriptor_table_teleop_5fdev_2eproto_once,
       file_level_metadata_teleop_5fdev_2eproto[2]);
 }
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace TeleDev
 }  // namespace Protobuf
 }  // namespace IndyFramework
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::TeleDev::TeleOpStreamReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::TeleDev::Empty*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::TeleDev::Empty >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::TeleDev::Empty >(arena);
+}
+template<> PROTOBUF_NOINLINE ::IndyFramework::Protobuf::TeleDev::Response*
+Arena::CreateMaybeMessage< ::IndyFramework::Protobuf::TeleDev::Response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::IndyFramework::Protobuf::TeleDev::Response >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>

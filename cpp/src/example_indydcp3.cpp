@@ -83,11 +83,11 @@ void example_reference_frame_io(IndyDCP3& indy) {
 }
 
 void example_control_inference_data(IndyDCP3& indy) {
-    Nrmk::IndyFramework::ControlInferenceDataSet data;
-    bool ok = indy.get_inference_data(data);
+    Nrmk::IndyFramework::ControlInferenceDataSet inference_data;
+    bool ok = indy.get_inference_data(inference_data);
     std::cout << (ok ? "Got" : "Failed to get") << " ControlInferenceDataSet\n";
     if (ok) {
-        ok = indy.set_inference_data(data);
+        ok = indy.set_inference_data(inference_data);
         std::cout << (ok ? "Set" : "Failed to set") << " ControlInferenceDataSet\n";
     }
 }
