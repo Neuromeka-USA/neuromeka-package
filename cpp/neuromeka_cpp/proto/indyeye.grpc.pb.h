@@ -24,6 +24,7 @@
 #include <grpcpp/support/status.h>
 #include <grpcpp/support/stub_options.h>
 #include <grpcpp/support/sync_stream.h>
+#include <grpcpp/ports_def.inc>
 
 namespace IndyFramework {
 namespace Protobuf {
@@ -1654,4 +1655,5 @@ class EyeTask final {
 }  // namespace IndyFramework
 
 
+#include <grpcpp/ports_undef.inc>
 #endif  // GRPC_indyeye_2eproto__INCLUDED

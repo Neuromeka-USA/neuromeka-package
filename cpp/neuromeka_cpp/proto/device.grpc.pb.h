@@ -24,6 +24,7 @@
 #include <grpcpp/support/status.h>
 #include <grpcpp/support/stub_options.h>
 #include <grpcpp/support/sync_stream.h>
+#include <grpcpp/ports_def.inc>
 
 namespace Nrmk {
 namespace IndyFramework {
@@ -10471,4 +10472,5 @@ class Device final {
 }  // namespace Nrmk
 
 
+#include <grpcpp/ports_undef.inc>
 #endif  // GRPC_device_2eproto__INCLUDED

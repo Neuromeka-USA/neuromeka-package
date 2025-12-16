@@ -19,6 +19,7 @@
 #include <grpcpp/server_context.h>
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
+#include <grpcpp/ports_def.inc>
 namespace Nrmk {
 namespace IndyFramework {
 
@@ -126,9 +127,6 @@ static const char* Control_method_names[] = {
   "/Nrmk.IndyFramework.Control/GetForceMode",
   "/Nrmk.IndyFramework.Control/GetTransformedFTSensorData",
   "/Nrmk.IndyFramework.Control/FTZero",
-  "/Nrmk.IndyFramework.Control/SetControlInferenceData",
-  "/Nrmk.IndyFramework.Control/GetControlInferenceData",
-  "/Nrmk.IndyFramework.Control/MoveLF",
   "/Nrmk.IndyFramework.Control/GetMotionJ",
   "/Nrmk.IndyFramework.Control/GetMotionL",
   "/Nrmk.IndyFramework.Control/GetMotionC",
@@ -244,12 +242,9 @@ Control::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, c
   , rpcmethod_GetForceMode_(Control_method_names[100], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetTransformedFTSensorData_(Control_method_names[101], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_FTZero_(Control_method_names[102], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_SetControlInferenceData_(Control_method_names[103], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetControlInferenceData_(Control_method_names[104], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_MoveLF_(Control_method_names[105], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetMotionJ_(Control_method_names[106], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetMotionL_(Control_method_names[107], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetMotionC_(Control_method_names[108], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetMotionJ_(Control_method_names[103], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetMotionL_(Control_method_names[104], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetMotionC_(Control_method_names[105], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status Control::Stub::GetControlInfo(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty& request, ::Nrmk::IndyFramework::ControlInfo* response) {
@@ -2621,75 +2616,6 @@ void Control::Stub::async::FTZero(::grpc::ClientContext* context, const ::Nrmk::
   return result;
 }
 
-::grpc::Status Control::Stub::SetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet& request, ::Nrmk::IndyFramework::Response* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::Nrmk::IndyFramework::ControlInferenceDataSet, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SetControlInferenceData_, context, request, response);
-}
-
-void Control::Stub::async::SetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet* request, ::Nrmk::IndyFramework::Response* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::Nrmk::IndyFramework::ControlInferenceDataSet, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetControlInferenceData_, context, request, response, std::move(f));
-}
-
-void Control::Stub::async::SetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet* request, ::Nrmk::IndyFramework::Response* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SetControlInferenceData_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::Response>* Control::Stub::PrepareAsyncSetControlInferenceDataRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::Nrmk::IndyFramework::Response, ::Nrmk::IndyFramework::ControlInferenceDataSet, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SetControlInferenceData_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::Response>* Control::Stub::AsyncSetControlInferenceDataRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncSetControlInferenceDataRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status Control::Stub::GetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty& request, ::Nrmk::IndyFramework::ControlInferenceDataSet* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::Nrmk::IndyFramework::Empty, ::Nrmk::IndyFramework::ControlInferenceDataSet, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetControlInferenceData_, context, request, response);
-}
-
-void Control::Stub::async::GetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty* request, ::Nrmk::IndyFramework::ControlInferenceDataSet* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::Nrmk::IndyFramework::Empty, ::Nrmk::IndyFramework::ControlInferenceDataSet, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetControlInferenceData_, context, request, response, std::move(f));
-}
-
-void Control::Stub::async::GetControlInferenceData(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty* request, ::Nrmk::IndyFramework::ControlInferenceDataSet* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetControlInferenceData_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::ControlInferenceDataSet>* Control::Stub::PrepareAsyncGetControlInferenceDataRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::Nrmk::IndyFramework::ControlInferenceDataSet, ::Nrmk::IndyFramework::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetControlInferenceData_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::ControlInferenceDataSet>* Control::Stub::AsyncGetControlInferenceDataRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::Empty& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetControlInferenceDataRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status Control::Stub::MoveLF(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::MoveLFReq& request, ::Nrmk::IndyFramework::Response* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::Nrmk::IndyFramework::MoveLFReq, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_MoveLF_, context, request, response);
-}
-
-void Control::Stub::async::MoveLF(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::MoveLFReq* request, ::Nrmk::IndyFramework::Response* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::Nrmk::IndyFramework::MoveLFReq, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_MoveLF_, context, request, response, std::move(f));
-}
-
-void Control::Stub::async::MoveLF(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::MoveLFReq* request, ::Nrmk::IndyFramework::Response* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_MoveLF_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::Response>* Control::Stub::PrepareAsyncMoveLFRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::MoveLFReq& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::Nrmk::IndyFramework::Response, ::Nrmk::IndyFramework::MoveLFReq, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_MoveLF_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::Nrmk::IndyFramework::Response>* Control::Stub::AsyncMoveLFRaw(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::MoveLFReq& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncMoveLFRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status Control::Stub::GetMotionJ(::grpc::ClientContext* context, const ::Nrmk::IndyFramework::GetMotionJReq& request, ::Nrmk::IndyFramework::GetMotionRes* response) {
   return ::grpc::internal::BlockingUnaryCall< ::Nrmk::IndyFramework::GetMotionJReq, ::Nrmk::IndyFramework::GetMotionRes, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetMotionJ_, context, request, response);
 }
@@ -3793,36 +3719,6 @@ Control::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Control_method_names[103],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::ControlInferenceDataSet, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](Control::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::Nrmk::IndyFramework::ControlInferenceDataSet* req,
-             ::Nrmk::IndyFramework::Response* resp) {
-               return service->SetControlInferenceData(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Control_method_names[104],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::Empty, ::Nrmk::IndyFramework::ControlInferenceDataSet, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](Control::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::Nrmk::IndyFramework::Empty* req,
-             ::Nrmk::IndyFramework::ControlInferenceDataSet* resp) {
-               return service->GetControlInferenceData(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Control_method_names[105],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::MoveLFReq, ::Nrmk::IndyFramework::Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](Control::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::Nrmk::IndyFramework::MoveLFReq* req,
-             ::Nrmk::IndyFramework::Response* resp) {
-               return service->MoveLF(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Control_method_names[106],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::GetMotionJReq, ::Nrmk::IndyFramework::GetMotionRes, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](Control::Service* service,
              ::grpc::ServerContext* ctx,
@@ -3831,7 +3727,7 @@ Control::Service::Service() {
                return service->GetMotionJ(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Control_method_names[107],
+      Control_method_names[104],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::GetMotionLReq, ::Nrmk::IndyFramework::GetMotionRes, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](Control::Service* service,
@@ -3841,7 +3737,7 @@ Control::Service::Service() {
                return service->GetMotionL(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Control_method_names[108],
+      Control_method_names[105],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Control::Service, ::Nrmk::IndyFramework::GetMotionCReq, ::Nrmk::IndyFramework::GetMotionRes, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](Control::Service* service,
@@ -4576,27 +4472,6 @@ Control::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status Control::Service::SetControlInferenceData(::grpc::ServerContext* context, const ::Nrmk::IndyFramework::ControlInferenceDataSet* request, ::Nrmk::IndyFramework::Response* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status Control::Service::GetControlInferenceData(::grpc::ServerContext* context, const ::Nrmk::IndyFramework::Empty* request, ::Nrmk::IndyFramework::ControlInferenceDataSet* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status Control::Service::MoveLF(::grpc::ServerContext* context, const ::Nrmk::IndyFramework::MoveLFReq* request, ::Nrmk::IndyFramework::Response* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
 ::grpc::Status Control::Service::GetMotionJ(::grpc::ServerContext* context, const ::Nrmk::IndyFramework::GetMotionJReq* request, ::Nrmk::IndyFramework::GetMotionRes* response) {
   (void) context;
   (void) request;
@@ -4621,4 +4496,5 @@ Control::Service::~Service() {
 
 }  // namespace Nrmk
 }  // namespace IndyFramework
+#include <grpcpp/ports_undef.inc>
 

@@ -19,6 +19,7 @@
 #include <grpcpp/server_context.h>
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
+#include <grpcpp/ports_def.inc>
 namespace IndyFramework {
 namespace Protobuf {
 namespace EyeTask {
@@ -465,4 +466,5 @@ EyeTask::Service::~Service() {
 }  // namespace IndyFramework
 }  // namespace Protobuf
 }  // namespace EyeTask
+#include <grpcpp/ports_undef.inc>
 

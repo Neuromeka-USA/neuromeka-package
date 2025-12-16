@@ -41,39 +41,41 @@ if(USE_FETCH_CONTENT_GRPC)
     # We will assume standard absl targets are available.
     set(_ABSL_LOG absl::log)
     set(_UTF8_RANGE utf8_range::utf8_range)
- endif()
-
-if(WIN32)
-    message(STATUS "Configuring for Windows")
-    
-    # Manual link cmake
-    set(absl_DIR "E:/Example/install/lib/cmake/absl")
-    set(utf8_range_DIR "E:/Example/install/lib/cmake/utf8_range")
-    set(protobuf_DIR "E:/Example/install/cmake")
-    set(gRPC_DIR "E:/Example/install/lib/cmake/grpc")
-
-    # Find Protobuf and gRPC packages
-    find_package(protobuf CONFIG REQUIRED)
-    message(STATUS "Using protobuf ${Protobuf_VERSION}")
-
-    find_package(gRPC CONFIG REQUIRED)
-    message(STATUS "Using gRPC ${gRPC_VERSION}")
 
 else()
-    message(STATUS "Configuring for Linux")
+    # Initial Logic for System/FindPackage
+    if(WIN32)
+        message(STATUS "Configuring for Windows")
+        
+        # Manual link cmake
+        set(absl_DIR "E:/Example/install/lib/cmake/absl")
+        set(utf8_range_DIR "E:/Example/install/lib/cmake/utf8_range")
+        set(protobuf_DIR "E:/Example/install/cmake")
+        set(gRPC_DIR "E:/Example/install/lib/cmake/grpc")
 
-    # Find Protobuf and gRPC packages
-    find_package(Protobuf REQUIRED)
-    message(STATUS "Using protobuf ${Protobuf_VERSION}")
+        # Find Protobuf and gRPC packages
+        find_package(protobuf CONFIG REQUIRED)
+        message(STATUS "Using protobuf ${Protobuf_VERSION}")
 
-    find_package(gRPC REQUIRED)
-    message(STATUS "Using gRPC ${gRPC_VERSION}")
+        find_package(gRPC CONFIG REQUIRED)
+        message(STATUS "Using gRPC ${gRPC_VERSION}")
 
+    else()
+        message(STATUS "Configuring for Linux")
+
+        # Find Protobuf and gRPC packages
+        find_package(Protobuf REQUIRED)
+        message(STATUS "Using protobuf ${Protobuf_VERSION}")
+
+        find_package(gRPC REQUIRED)
+        message(STATUS "Using gRPC ${gRPC_VERSION}")
+
+    endif()
+
+    set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
+    set(_REFLECTION gRPC::grpc++_reflection)
+    set(_GRPC_GRPCPP gRPC::grpc++)
 endif()
-
-set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
-set(_REFLECTION gRPC::grpc++_reflection)
-set(_GRPC_GRPCPP gRPC::grpc++)
 
 # Include directories for source files
 include_directories(${Protobuf_INCLUDE_DIRS})
